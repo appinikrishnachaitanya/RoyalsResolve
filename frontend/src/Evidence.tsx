@@ -44,17 +44,25 @@ export function UsualChart({ players, bowling }: { players: Player[]; bowling: b
   const values = players.flatMap((p) => [p.usual, p.interval[0], p.interval[1], p.score]);
   const low = Math.min(-30, ...values);
   const high = Math.max(30, ...values);
-  const left = 62; const right = 400; const top = 32; const bottom = 352;
+  const left = 190; const right = 790; const rowHeight = 34; const top = 38;
+  const height = Math.max(135, players.length * rowHeight + 85);
+  const ticks = [...new Set([...Array.from({ length: 5 }, (_, i) => low + ((high - low) * i) / 4), 0])].sort((a, b) => a - b);
   const x = (value: number) => left + ((value - low) / (high - low)) * (right - left);
-  const y = (value: number) => bottom - ((value - low) / (high - low)) * (bottom - top);
-  return <figure className="chart-card"><figcaption>Pressure result vs usual result</figcaption><p className="chart-subtitle">{bowling ? 'Runs saved vs expected' : 'Runs above expected'}, per 100 deliveries. Vertical bars show pressure-score intervals. The usual baseline is unshrunk; pressure score is shrunk.</p>
-    {players.length ? <div className="chart-scroll"><svg viewBox="0 0 460 420" role="img" aria-label="Scatter plot comparing each player's non-pressure baseline to pressure contribution, with vertical 95 percent intervals">
-      <line x1={left} x2={right} y1={y(0)} y2={y(0)} className="grid-line" /><line x1={x(0)} x2={x(0)} y1={top} y2={bottom} className="grid-line" />
-      <line x1={x(low)} x2={x(high)} y1={y(low)} y2={y(high)} className="reference-line" />
-      {[low, 0, high].map((value) => <g key={value}><text x={x(value)} y={bottom + 18} textAnchor="middle" className="axis-label">{fmt(value)}</text><text x={left - 8} y={y(value) + 4} textAnchor="end" className="axis-label">{fmt(value)}</text></g>)}
-      {players.map((p) => <g key={p.id}><line x1={x(p.usual)} x2={x(p.usual)} y1={y(p.interval[0])} y2={y(p.interval[1])} className="interval-line" /><circle cx={x(p.usual)} cy={y(p.score)} r="8" className="estimate-dot"><title>{p.name}: non-pressure {fmt(p.usual)}, pressure {fmt(p.score)}, 95% interval [{p.interval.map(fmt).join(', ')}].</title></circle><text x={x(p.usual)} y={y(p.score) + 3} textAnchor="middle" className="point-rank">{p.rank}</text></g>)}
-      <text x={(left + right) / 2} y="405" textAnchor="middle" className="axis-title">Non-pressure usual contribution</text><text transform="rotate(-90 15 210)" x="15" y="210" textAnchor="middle" className="axis-title">Pressure contribution</text>
+  return <figure className="chart-card"><figcaption>Pressure performance compared with usual</figcaption><p className="chart-subtitle">Each row is one player. The pink bar is the pressure estimate and its 95% interval; the blue dot is their non-pressure baseline. Both use the same run scale.</p>
+    {players.length ? <div className="chart-scroll"><svg className="player-comparison-svg" viewBox={`0 0 830 ${height}`} role="img" aria-label="Aligned comparison of each player's pressure score and non-pressure baseline, with uncertainty intervals">
+      {ticks.map((value) => <g key={value}><line x1={x(value)} x2={x(value)} y1="20" y2={height - 38} className={value === 0 ? 'zero-line' : 'grid-line'} /><text x={x(value)} y={height - 20} textAnchor="middle" className="axis-label">{fmt(value)}</text></g>)}
+      {players.map((p, i) => {
+        const y = top + i * rowHeight;
+        return <g key={p.id}>
+          <text x="8" y={y + 4} className="chart-label">{String(p.rank).padStart(2, '0')}  {p.name}</text>
+          <line x1={x(p.usual)} x2={x(p.score)} y1={y} y2={y} className="dumbbell-connector" />
+          <line x1={x(p.interval[0])} x2={x(p.interval[1])} y1={y} y2={y} className="interval-line" />
+          <circle cx={x(p.usual)} cy={y} r="5" className="baseline-dot" />
+          <circle cx={x(p.score)} cy={y} r="5" className="estimate-dot"><title>{p.name}: pressure {fmt(p.score)}, 95% interval [{p.interval.map(fmt).join(', ')}]; non-pressure baseline {fmt(p.usual)}.</title></circle>
+        </g>;
+      })}
+      <text x={(left + right) / 2} y={height - 3} textAnchor="middle" className="axis-title">{bowling ? 'Runs saved vs expected' : 'Runs above expected'} per 100 deliveries</text>
     </svg></div> : <p className="empty">Choose another role or clear the search to see players.</p>}
-    <div className="chart-legend"><span><i className="legend-dot" /> Player estimate</span><span><i className="legend-line" /> 95% interval</span><span><i className="legend-dash" /> Equal contribution reference</span></div><p className="caption">The dashed line is a visual reference only. The two estimates use different shrinkage, so their difference is not an adjusted player comparison.</p>
+    <div className="chart-legend"><span><i className="legend-dot" /> Pressure estimate</span><span><i className="legend-line" /> 95% interval</span><span><i className="legend-dot legend-baseline" /> Usual baseline</span></div><p className="caption">The usual baseline is unshrunk while the pressure score is shrunk toward zero. Compare their positions as context, not as a statistical difference test.</p>
   </figure>;
 }

@@ -20,19 +20,20 @@ export function RawComparison({ stars }: { stars: RawStar[] }) {
   </div></details>;
 }
 
-function HoldoutChart({ rows }: { rows: SelectionCheck[] }) {
+function HoldoutChart({ rows, bowling }: { rows: SelectionCheck[]; bowling: boolean }) {
   const years = [...new Set(rows.filter((x) => x.future_contribution !== null).map((x) => x.year))].sort();
   const policies = [...new Set(rows.filter((x) => x.future_contribution !== null).map((x) => x.policy))];
   const values = rows.flatMap((x) => x.future_contribution === null ? [] : [x.future_contribution]);
   if (!values.length) return <p>No comparable future-segment selection results are available.</p>;
   const lo = Math.min(-10, ...values); const hi = Math.max(10, ...values);
+  const ticks = [...new Set([...Array.from({ length: 5 }, (_, i) => lo + ((hi - lo) * i) / 4), 0])].sort((a, b) => a - b);
   const top = 25; const bottom = 230; const left = 54; const right = 700;
   const y = (v: number) => bottom - ((v - lo) / (hi - lo)) * (bottom - top);
   const groupWidth = (right - left) / Math.max(1, years.length);
   const colors = ['#c21868', '#263967', '#a57937', '#287565', '#78519a'];
-  return <figure className="chart-card holdout-card"><figcaption>Later contribution by selection policy</figcaption><p className="chart-subtitle">Observed later-season contextual runs per 100 pressure events. Dots are separate year estimates; no line implies a continuous trend.</p>
+  return <figure className="chart-card holdout-card"><figcaption>How selected players performed later</figcaption><p className="chart-subtitle">{bowling ? 'Runs saved vs expected' : 'Runs above expected'} per 100 pressure deliveries. Each dot is a separate test year; no line implies a continuous trend.</p>
     <div className="chart-scroll"><svg viewBox="0 0 760 320" role="img" aria-label="Grouped dot chart of later-season run contribution by selection policy">
-      {[lo, 0, hi].map((v) => <g key={v}><line x1={left} x2={right} y1={y(v)} y2={y(v)} className={v === 0 ? 'zero-line' : 'grid-line'} /><text x={left - 8} y={y(v) + 4} textAnchor="end" className="axis-label">{fmt(v)}</text></g>)}
+      {ticks.map((v) => <g key={v}><line x1={left} x2={right} y1={y(v)} y2={y(v)} className={v === 0 ? 'zero-line' : 'grid-line'} /><text x={left - 8} y={y(v) + 4} textAnchor="end" className="axis-label">{fmt(v)}</text></g>)}
       {years.map((year, yi) => <g key={year}><text x={left + groupWidth * (yi + 0.5)} y="258" textAnchor="middle" className="axis-label">{year}{year === 2026 ? ' *' : ''}</text>{policies.map((policy, pi) => {
         const row = rows.find((r) => r.year === year && r.policy === policy && r.future_contribution !== null);
         if (!row) return null;
@@ -57,9 +58,9 @@ export function Backtest({ d }: { d: Analysis }) {
   const rows = role === 'batting' ? d.batters_selection_validation : d.bowlers_selection_validation;
   return <div className="backtest" id="backtest"><small>RETROSPECTIVE SELECTION CHECK</small><h3>Did the selected players contribute later?</h3>
     <div className="filters"><div><button className={role === 'batting' ? 'active' : ''} onClick={() => setRole('batting')}>Batters</button><button className={role === 'bowling' ? 'active' : ''} onClick={() => setRole('bowling')}>Bowlers</button></div></div>
-    <HoldoutChart rows={rows} />
+    <HoldoutChart rows={rows} bowling={role === 'bowling'} />
     <p>Earlier-season lists are compared with those players' later observed pressure deliveries. Results vary, and later participation differs between lists. These are retrospective outcomes, not evidence of causal improvement. The 2026 holdout was available during this build.</p>
-    <details className="secondary-details"><summary>View the underlying selection results</summary><div className="details-content table-wrap"><table><thead><tr><th>Selection year / policy</th><th>Observed / selected players</th><th>Later pressure events</th><th>Later runs / 100</th></tr></thead><tbody>{rows.map((x) => <tr key={`${x.year}-${x.policy}`}><th>{x.year} / {policyLabel(x.policy)}</th><td>{x.observed_later} / {x.selected}</td><td>{x.future_events}</td><td>{x.future_contribution === null ? 'Unavailable' : fmt(x.future_contribution)}</td></tr>)}</tbody></table></div></details>
+    <details className="secondary-details"><summary>View the underlying selection results</summary><div className="details-content table-wrap"><table><thead><tr><th>Selection year / policy</th><th>Observed / selected players</th><th>Later pressure events</th><th>{role === 'bowling' ? 'Runs saved / 100' : 'Runs above expected / 100'}</th></tr></thead><tbody>{rows.map((x) => <tr key={`${x.year}-${x.policy}`}><th>{x.year} / {policyLabel(x.policy)}</th><td>{x.observed_later} / {x.selected}</td><td>{x.future_events}</td><td>{x.future_contribution === null ? 'Unavailable' : fmt(x.future_contribution)}</td></tr>)}</tbody></table></div></details>
   </div>;
 }
 

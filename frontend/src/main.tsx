@@ -12,8 +12,9 @@ function IntervalChart({ players, bowling }: { players: Player[]; bowling: boole
   const width = 700;
   const labelWidth = 190;
   const chartWidth = width - labelWidth - 24;
-  const low = Math.min(-20, ...players.map((p) => p.interval[0]));
-  const high = Math.max(20, ...players.map((p) => p.interval[1]));
+  const low = Math.min(-20, ...players.flatMap((p) => [p.interval[0], p.score]));
+  const high = Math.max(20, ...players.flatMap((p) => [p.interval[1], p.score]));
+  const ticks = [...new Set([...Array.from({ length: 5 }, (_, i) => low + ((high - low) * i) / 4), 0])].sort((a, b) => a - b);
   const x = (value: number) => labelWidth + ((value - low) / (high - low)) * chartWidth;
   const height = Math.max(100, players.length * 38 + 46);
 
@@ -21,8 +22,11 @@ function IntervalChart({ players, bowling }: { players: Player[]; bowling: boole
     <figure className="chart-card">
       <figcaption>{bowling ? 'Runs saved vs expected' : 'Runs above expected'}</figcaption>
       <p className="chart-subtitle">Per 100 pressure deliveries. Bars show 95% match-bootstrap intervals.</p>
-      {players.length ? <div className="chart-scroll"><svg viewBox={`0 0 ${width} ${height}`} role="img" aria-label="Player pressure contribution estimates and 95 percent intervals">
-        <line x1={x(0)} x2={x(0)} y1="8" y2={height - 34} className="zero-line" />
+      {players.length ? <div className="chart-scroll"><svg className="interval-chart-svg" viewBox={`0 0 ${width} ${height + 24}`} role="img" aria-label="Player pressure contribution estimates and 95 percent intervals">
+        {ticks.map((value) => <g key={value}>
+          <line x1={x(value)} x2={x(value)} y1="8" y2={height - 34} className={Math.abs(value) < 0.001 ? 'zero-line' : 'grid-line'} />
+          <text x={x(value)} y={height - 10} textAnchor="middle" className="axis-label">{fmt(value)}</text>
+        </g>)}
         {players.map((p, i) => {
           const y = i * 38 + 20;
           return <g key={p.id}>
@@ -32,8 +36,9 @@ function IntervalChart({ players, bowling }: { players: Player[]; bowling: boole
             <title>{p.name}: {signed(p.score)} {bowling ? 'runs saved vs expected' : 'runs above expected'} per 100 pressure deliveries; 95% interval {p.interval.map((v) => fmt(v)).join(' to ')}; {p.matches} matches and {p.balls} events.</title>
           </g>;
         })}
-        {[low, 0, high].map((v) => <text key={v} x={x(v)} y={height - 10} textAnchor="middle" className="axis-label">{fmt(v)}</text>)}
+        <text x={labelWidth + chartWidth / 2} y={height + 12} textAnchor="middle" className="axis-title">{bowling ? 'Runs saved vs expected' : 'Runs above expected'} per 100 pressure deliveries</text>
       </svg></div> : <p className="empty">Choose another role or clear the search to see players.</p>}
+      <div className="chart-legend"><span><i className="legend-dot" /> Score estimate</span><span><i className="legend-line" /> 95% match interval</span><span><i className="legend-dash" /> Zero reference</span></div>
     </figure>
   );
 }

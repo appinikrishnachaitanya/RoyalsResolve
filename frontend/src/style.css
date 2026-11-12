@@ -83,12 +83,15 @@ tbody tr:hover { background: #fbf9fc; }
 .interval { min-width: 135px; white-space: nowrap; }
 .case-button { padding: 7px 9px; border: 1px solid #d9dfe9; border-radius: 5px; background: white; color: var(--ink); font-size: 10px; white-space: nowrap; }
 .case-button:hover { border-color: var(--pink); color: var(--pink); }
-.chart-grid { display: grid; grid-template-columns: 1.1fr 1fr; align-items: stretch; gap: 18px; margin-bottom: 20px; }
+.chart-grid { display: grid; grid-template-columns: 1fr; align-items: stretch; gap: 16px; margin-bottom: 20px; }
 .chart-card { margin: 0; padding: 20px; }
 .chart-card figcaption { font-size: 15px; font-weight: 750; }
 .chart-subtitle { min-height: 32px; margin: 6px 0 14px; color: var(--muted); font-size: 10px; line-height: 1.5; }
 .chart-scroll { width: 100%; overflow-x: auto; }
-.chart-scroll svg { display: block; width: 100%; height: auto; min-width: 440px; overflow: visible; }
+.chart-scroll svg { display: block; height: auto; overflow: visible; }
+.interval-chart-svg { width: min(100%, 860px); min-width: 700px; }
+.player-comparison-svg { width: min(100%, 1000px); min-width: 830px; }
+.holdout-card .chart-scroll svg { width: min(100%, 900px); min-width: 760px; }
 .chart-label { fill: #303b56; font: 11px system-ui, sans-serif; }
 .axis-label { fill: #647087; font: 10px system-ui, sans-serif; }
 .axis-title { fill: #47536b; font: 10px system-ui, sans-serif; }
@@ -96,11 +99,14 @@ tbody tr:hover { background: #fbf9fc; }
 .grid-line { stroke: #e1e5ec; stroke-width: 1; }
 .reference-line { stroke: #aab1bd; stroke-width: 1.5; stroke-dasharray: 5 4; }
 .interval-line { stroke: var(--pink); stroke-width: 2.5; stroke-linecap: round; }
+.dumbbell-connector { stroke: #cbd2df; stroke-width: 3; stroke-linecap: round; }
 .estimate-dot { fill: var(--ink); }
+.baseline-dot { fill: #39877b; stroke: white; stroke-width: 1.5; }
 .point-rank { fill: white; font: 9px system-ui, sans-serif; pointer-events: none; }
 .chart-legend { display: flex; flex-wrap: wrap; gap: 13px; margin: 8px 0 0; color: var(--muted); font-size: 10px; }
 .chart-legend span { display: inline-flex; align-items: center; gap: 6px; }
 .legend-dot { width: 9px; height: 9px; display: inline-block; border-radius: 50%; background: var(--ink); }
+.legend-baseline { background: #39877b; }
 .legend-line { width: 16px; border-top: 2px solid var(--pink); }
 .legend-dash { width: 16px; border-top: 2px dashed #aab1bd; }
 .stress { padding: 26px; background: #172447; color: white; }
@@ -154,7 +160,6 @@ details.secondary-details[open] > summary { border-bottom: 1px solid var(--line)
 .backtest { margin-top: 14px; padding-top: 15px; border-top: 1px solid var(--line); }
 .backtest > small { color: var(--gold); }
 .holdout-card { margin: 14px 0; border-color: #e8ebf0; background: #fcfcfd; }
-.holdout-card .chart-scroll svg { min-width: 620px; }
 .backtest .secondary-details { margin-top: 10px; border: 1px solid var(--line); border-radius: 6px; }
 .supporting-evidence { margin-top: 20px; padding-top: 4px; border-top: 1px solid var(--line); }
 dl div { padding: 11px 0; border-bottom: 1px solid #edf0f4; }
