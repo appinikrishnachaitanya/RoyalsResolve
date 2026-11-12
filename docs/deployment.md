@@ -24,4 +24,4 @@ gcloud run deploy royals-resolve --project $projectId --region $region --image $
 gcloud run services describe royals-resolve --project $projectId --region $region --format='value(status.url)'
 ```
 
-Default deployment is authenticated. Make it public only if the competition permits publication of these selected aggregates and that is your intended audience. Verify the served analysis ID, both lists, PDF, mobile view and actual IAM audience. A successful local build does not prove Cloud Run deployment.
+Default deployment is authenticated. Make it public only if the competition permits publication of these eligible-player aggregates and that is your intended audience. Verify the served analysis ID, both lists, PDF, mobile view and actual IAM audience. A successful local build does not prove Cloud Run deployment.

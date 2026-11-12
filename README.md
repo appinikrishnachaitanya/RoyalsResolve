@@ -80,7 +80,7 @@ flowchart LR
   E --> F[Static React dashboard]
 ```
 
-The dashboard provides the two ordered top-ten lists, a Top Picks landing section, player score audits, role and matchup evidence, raw-stat comparisons, backtests, RR coverage context, and candidate comparisons. The source data stays local; only selected aggregates are included in the public results and static build.
+The dashboard provides top-ten, top-twenty and all-eligible ranking filters, a side-by-side player scorecard, player score audits, role and matchup evidence, raw-stat comparisons, backtests and verified RR coverage context. The source delivery files stay local; the public results include only eligible-player aggregates and the analysis outputs needed by the dashboard.
 
 ### Repository map
 

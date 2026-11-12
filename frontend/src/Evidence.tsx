@@ -4,9 +4,10 @@ const fmt = (value: number) => value.toLocaleString('en-IN', { maximumFractionDi
 
 export function Supporting({ p }: { p: Player }) {
   const s = p.supporting;
+  if (!s) return <section className="supporting-evidence"><h3>Extra match details</h3><p>These extra matchup and coaching details were not included for this player. The scorecard above still shows the available player, role, sample and season measures.</p></section>;
   return <section className="supporting-evidence"><h3>Additional observed evidence</h3>
     <p>These metrics describe observed assignments. They do not add weight to the published ranking. Cells without five independent matches are not shown.</p>
-    {p.matchups.length > 0 && <><h4>Pressure matchup splits</h4><div className="table-wrap"><table><thead><tr><th>Context</th><th>Events / matches</th><th>Runs / 100 (95% interval)</th></tr></thead><tbody>{p.matchups.map((x) => <tr key={x.dimension + x.value}><td>{x.dimension}: {x.value}</td><td>{x.events} / {x.matches}</td><td>{fmt(x.runs_per_100)} [{x.interval.map(fmt).join(', ')}]</td></tr>)}</tbody></table></div><p>Descriptive splits, not causal matchup effects. Batter handedness is the batter's own; bowler handedness is the opposing striker's.</p></>}
+    {(p.matchups?.length || 0) > 0 && <><h4>Pressure matchup splits</h4><div className="table-wrap"><table><thead><tr><th>Context</th><th>Events / matches</th><th>Runs / 100 (95% interval)</th></tr></thead><tbody>{p.matchups?.map((x) => <tr key={x.dimension + x.value}><td>{x.dimension}: {x.value}</td><td>{x.events} / {x.matches}</td><td>{fmt(x.runs_per_100)} [{x.interval.map(fmt).join(', ')}]</td></tr>)}</tbody></table></div><p>Descriptive splits, not causal matchup effects. Batter handedness is the batter's own; bowler handedness is the opposing striker's.</p></>}
     {s.scoring_without_boundaries && <><h4>Scoring without boundaries</h4><p>{fmt(s.scoring_without_boundaries.nonboundary_runs_per_100_legal)} non-boundary runs per 100 legal balls; {fmt(s.scoring_without_boundaries.nonboundary_scoring_percent)}% non-boundary scoring events; {fmt(s.scoring_without_boundaries.boundary_share_bat_runs_percent)}% of batter runs from boundaries. Sample: {s.scoring_without_boundaries.legal_balls} legal balls across {s.scoring_without_boundaries.innings} innings.</p></>}
     {s.entry_readiness && <><h4>First six legal balls after entry</h4><div className="table-wrap"><table><thead><tr><th>Entry / prior collapse</th><th>Innings / legal balls</th><th>Runs / 100 legal</th><th>Dismissal probability</th></tr></thead><tbody>{s.entry_readiness.map((x, i) => <tr key={i}><td>{x.entry_phase} / {x.collapse_entry ? 'after collapse' : 'stable entry'}</td><td>{x.innings} / {x.legal_balls}</td><td>{fmt(x.runs_per_100_legal)}</td><td>{fmt(x.dismissal_probability_per_innings)}</td></tr>)}</tbody></table></div><p>Includes innings ending before six legal balls. A collapse means at least two wickets in the 12 legal balls before entry.</p></>}
     {s.recovery_assignments && <><h4>Observed recovery assignments</h4>{s.recovery_assignments.length ? <div className="table-wrap"><table><thead><tr><th>Entry / prior collapse</th><th>Events / matches</th><th>Contextual runs / 100</th></tr></thead><tbody>{s.recovery_assignments.map((x, i) => <tr key={i}><td>{x.entry_phase} / {x.collapse_entry ? 'after collapse' : 'stable entry'}</td><td>{x.events} / {x.matches}</td><td>{fmt(x.contextual_runs_per_100)}</td></tr>)}</tbody></table></div> : <p>Insufficient evidence.</p>}</>}
@@ -25,6 +26,7 @@ const caseLabels: Record<string, string> = {
 };
 
 export function RRCase({ p }: { p: Player }) {
+  if (!p.rr_case) return <section><h3>RR roster comparison</h3><p>A verified RR role comparison is not available for this player.</p></section>;
   const entries = Object.entries(p.rr_case).filter(([key]) => key !== 'actionability');
   return <section><h3>What the RR data can support</h3><dl>{entries.map(([key, value]) => <div key={key}><dt>{caseLabels[key] || key.replaceAll('_', ' ')}</dt><dd>{value}</dd></div>)}</dl><p className="caption">RR comparison uses official 2026 squad coverage. It does not verify 2027 retention or a roster gap.</p></section>;
 }
@@ -40,29 +42,9 @@ export function ComparisonEvidence({ comparison, reverse = false }: { comparison
   </div>;
 }
 
-export function UsualChart({ players, bowling }: { players: Player[]; bowling: boolean }) {
-  const values = players.flatMap((p) => [p.usual, p.interval[0], p.interval[1], p.score]);
-  const low = Math.min(-30, ...values);
-  const high = Math.max(30, ...values);
-  const left = 190; const right = 790; const rowHeight = 34; const top = 38;
-  const height = Math.max(135, players.length * rowHeight + 85);
-  const ticks = [...new Set([...Array.from({ length: 5 }, (_, i) => low + ((high - low) * i) / 4), 0])].sort((a, b) => a - b);
-  const x = (value: number) => left + ((value - low) / (high - low)) * (right - left);
-  return <figure className="chart-card"><figcaption>Pressure performance compared with usual</figcaption><p className="chart-subtitle">Each row is one player. The pink bar is the pressure estimate and its 95% interval; the blue dot is their non-pressure baseline. Both use the same run scale.</p>
-    {players.length ? <div className="chart-scroll"><svg className="player-comparison-svg" viewBox={`0 0 830 ${height}`} role="img" aria-label="Aligned comparison of each player's pressure score and non-pressure baseline, with uncertainty intervals">
-      {ticks.map((value) => <g key={value}><line x1={x(value)} x2={x(value)} y1="20" y2={height - 38} className={value === 0 ? 'zero-line' : 'grid-line'} /><text x={x(value)} y={height - 20} textAnchor="middle" className="axis-label">{fmt(value)}</text></g>)}
-      {players.map((p, i) => {
-        const y = top + i * rowHeight;
-        return <g key={p.id}>
-          <text x="8" y={y + 4} className="chart-label">{String(p.rank).padStart(2, '0')}  {p.name}</text>
-          <line x1={x(p.usual)} x2={x(p.score)} y1={y} y2={y} className="dumbbell-connector" />
-          <line x1={x(p.interval[0])} x2={x(p.interval[1])} y1={y} y2={y} className="interval-line" />
-          <circle cx={x(p.usual)} cy={y} r="5" className="baseline-dot" />
-          <circle cx={x(p.score)} cy={y} r="5" className="estimate-dot"><title>{p.name}: pressure {fmt(p.score)}, 95% interval [{p.interval.map(fmt).join(', ')}]; non-pressure baseline {fmt(p.usual)}.</title></circle>
-        </g>;
-      })}
-      <text x={(left + right) / 2} y={height - 3} textAnchor="middle" className="axis-title">{bowling ? 'Runs saved vs expected' : 'Runs above expected'} per 100 deliveries</text>
-    </svg></div> : <p className="empty">Choose another role or clear the search to see players.</p>}
-    <div className="chart-legend"><span><i className="legend-dot" /> Pressure estimate</span><span><i className="legend-line" /> 95% interval</span><span><i className="legend-dot legend-baseline" /> Usual baseline</span></div><p className="caption">The usual baseline is unshrunk while the pressure score is shrunk toward zero. Compare their positions as context, not as a statistical difference test.</p>
-  </figure>;
+export function ScoreBar({ value, scale, label, tone = '' }: { value: number; scale: number; label: string; tone?: string }) {
+  const width = Math.min(48, (Math.abs(value) / Math.max(1, scale)) * 48);
+  return <div className="score-track" role="img" aria-label={label} title={label}>
+    <span className={`score-fill ${value < 0 ? 'negative' : 'positive'} ${tone}`} style={{ left: value < 0 ? `${50 - width}%` : '50%', width: `${width}%` }} />
+  </div>;
 }
