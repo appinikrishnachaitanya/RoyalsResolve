@@ -1,92 +1,128 @@
+<div align="center">
+
 # Royals' Resolve
 
-**Find the nerve. Back the talent.** Independent SupeRR Selector research entry; not an official Rajasthan Royals product.
+### Find the nerve. Back the talent.
 
-## Implemented
+**An independent SupeRR Selector research entry for Rajasthan Royals' IPL 2027 auction**
 
-Local ZIP/CSVs -> audit/DuckDB/Parquet -> chronological Python models -> selected aggregate JSON/PDF -> static React/TypeScript dashboard. No cloud training, runtime AI, source-data upload or API backend.
+[Run locally](#run-the-dashboard-locally) · [Rebuild the analysis](#rebuild-the-analysis) · [Methodology](docs/methodology.md) · [Deployment](docs/deployment.md)
 
-Two ordered top-ten lists, four-pick landing panel, three core tabs, role filters, score audits, six coach metrics, supported matchup splits, raw-stat comparisons, later-season backtests, candidate/incumbent comparisons and fixed-fit sensitivity checks. Every pick has a six-part conditional RR case. A private replay of real passages stays outside publication.
+</div>
 
-Unsupported price, age, availability, replacement-win and squad-simulation features are omitted. The latest verified RR source is labelled **Squad 2026**, accessed 2026-11-12, not a 2027 retention list. No quality gap or purchase recommendation is invented.
+> This is an independent competition entry, not an official Rajasthan Royals product.
 
-## Actual findings
+## Run the dashboard locally
 
-The supplied pack contains **200,999 deliveries / 883 matches**, dated **2022-01-22 to 2026-11-01**. All six CSVs and the bundled brief were read. Upstream provider (for example Cricsheet) is not established by these files.
+The repository includes the generated analysis and report. To run them without rerunning the Python pipeline, open PowerShell at the repository root and run:
 
-Conservative reconstruction retains **80,902 events / 345 matches / 690 innings**, excluding **120,097 events / 538 matches / 1,034 observed innings**. Reasons overlap. Ambiguous Overstep/other extras affect 486 matches, causing major selection bias. Revised target timing, incomplete innings, super overs, ties and unreconciled results are quarantined. Impact substitutes retain separate IDs and actual exposures; XI rows are not forced into eleven unique players.
+```powershell
+npm --prefix frontend ci
+npm --prefix frontend run build
 
-Strict margin tolerance leaves **one eligible batter and 58 bowlers**, failing two-list coverage. The provisional published lists use the explicit **phase/required-rate fallback for both roles**, yielding 116 eligible batters and 132 bowlers. Sample requirements were not lowered to fill the lists.
+$env:STATIC_ROOT = (Resolve-Path frontend/dist).Path
+$env:PORT = '8080'
+node deploy/server.mjs
+```
 
-Fallback: chase with <=60 legal balls remaining and required rate >=8 runs/over, or first innings with <=30 balls remaining and >=3 wickets lost. Rank contextual run residuals; wickets stay separate. This is a coverage fallback, not a validated superior pressure measure.
+Then open **http://localhost:8080**. Keep that terminal open while using the dashboard; press **Ctrl+C** to stop the local server.
 
-2022 is warm-up. 63,226 events / 271 matches are evaluated using earlier-year models in 2023-2026. Logistic Brier scores are approximately 0.127, 0.148, 0.134, 0.135: task viability, not psychological-pressure accuracy. Later-player checks are mixed. In 2026 batting, contextual picks show +29.637 runs/100 versus +27.132 for ordinary-rate picks, with different participation (6/10 versus 5/10). All displayed 2026 bowling policies have negative future residuals. No uniform superiority or prospectively sealed holdout is claimed.
+For a development server with hot reload, use a second terminal:
 
-## Layout
+```powershell
+npm --prefix frontend run dev
+```
 
-| Path | Purpose |
-| --- | --- |
-| analysis/audit.py | Safe ZIP/directory input, hashes, schema, aliases, private DuckDB/Parquet |
-| analysis/pipeline.py | Reconstruction, chronological models, pressure labels, scores/export |
-| analysis/supporting.py | Coach metrics, common-assignment comparisons, selection checks |
-| analysis/decision_views.py | Small decision aggregates, matchups, private replay |
-| analysis/report.py | Matching PDF and frontend publication copies |
-| analysis/tests/ | Synthetic contracts and real export consistency |
-| config/ | Executable methodology and public-source provenance |
-| docs/methodology.md | Equations, denominators, exclusions and limitations |
-| results/public/ | Selected aggregate JSON and generated PDF only |
-| frontend/ | React/TypeScript/Vite source and dependency lock |
-| deploy/ | Non-root production server and HTTP checks |
-| artifacts/private/ | Local-only audit, full tables, replay, PDF review images |
+Vite prints the local address. The data is served from saved results; the browser does not train models.
 
-## Reproduce (PowerShell)
+## Rebuild the analysis
 
-Use **Python 3.10 and Node 24**. Exact Python versions are in analysis/requirements.lock.txt; JavaScript versions in frontend/package-lock.json.
+Use **Python 3.10** and **Node.js 24**. The exact Python dependency versions are pinned in `analysis/requirements.lock.txt`; frontend dependencies are pinned in `frontend/package-lock.json`.
 
-Place the supplied ZIP at data/incoming/pack.zip or pass the actual path. The current checkout already contains the operator-supplied ZIP, ignored by Git. Missing/invalid input raises an error; no silent synthetic fallback.
+1. Put the supplied ZIP at `data/incoming/pack.zip`. This folder is ignored by Git. The supplied pack is not included in the repository.
+2. From the repository root, install Python dependencies and audit the pack:
 
 ```powershell
 python -m venv .venv
 .venv\Scripts\python -m pip install -r analysis/requirements.lock.txt
 .venv\Scripts\python analysis/audit.py --input-zip data/incoming/pack.zip
-# Alternative: --input-dir C:\path\to\CSVs
-.venv\Scripts\python analysis/pipeline.py
-.venv\Scripts\python analysis/report.py
-.venv\Scripts\python -m unittest discover -s analysis/tests -v
-npm --prefix frontend ci
-npm --prefix frontend run build
-.venv\Scripts\python analysis/check_publication.py
-npm --prefix frontend run preview
 ```
 
-Without input arguments, audit checks pack.zip, then accepts a single ZIP in data/incoming/. Multiple candidates require an explicit path. Nested archives are capped at three levels and 512 MiB expanded members. Traversal, absolute paths, symlinks and ambiguous duplicate CSVs are rejected.
+You can instead pass `--input-zip PATH` or `--input-dir PATH` to a directory containing the six CSVs. The audit rejects unsafe archive paths and symlinks, limits nested archives to three levels and 512 MiB expanded data, and fails if required inputs are missing.
 
-Private reconciliation: artifacts/private/exclusions.json. Real-passage review: artifacts/private/replay.html (do not publish). Public JSON contains selected aggregates, schema names, counts, hashes and diagnostics, never complete source records. Source maps are disabled.
-
-Production server:
+3. Run the chronological analysis and create the report:
 
 ```powershell
+.venv\Scripts\python analysis/pipeline.py
+.venv\Scripts\python analysis/report.py
+```
+
+4. Rebuild and serve the dashboard:
+
+```powershell
+npm --prefix frontend ci
+npm --prefix frontend run build
 $env:STATIC_ROOT = (Resolve-Path frontend/dist).Path
 $env:PORT = '8080'
 node deploy/server.mjs
-# Separate terminal:
+```
+
+The report command writes the publication-safe analysis JSON and matching PDF under `results/public/`, then copies them into the frontend build inputs. The Vite build packages those saved results into `frontend/dist/`.
+
+## What the project does
+
+```mermaid
+flowchart LR
+  A[Local ZIP or CSVs] --> B[Audit and validate]
+  B --> C[Private DuckDB and Parquet]
+  C --> D[Chronological Python analysis]
+  D --> E[Selected aggregate JSON and PDF]
+  E --> F[Static React dashboard]
+```
+
+The dashboard provides the two ordered top-ten lists, a Top Picks landing section, player score audits, role and matchup evidence, raw-stat comparisons, backtests, RR coverage context, and candidate comparisons. The source data stays local; only selected aggregates are included in the public results and static build.
+
+### Repository map
+
+| Location | Contents |
+| --- | --- |
+| `analysis/audit.py` | Input safety, hashes, schemas, relational checks, private DuckDB/Parquet |
+| `analysis/pipeline.py` | Delivery reconstruction, chronological models, pressure labels, player aggregates |
+| `analysis/supporting.py` | Coach metrics, match-cluster comparisons, selection backtests |
+| `analysis/decision_views.py` | Matchup summaries and private local pressure-passage replay |
+| `analysis/report.py` | PDF generation from the same saved analysis as the dashboard |
+| `analysis/tests/` | Synthetic contracts and real-export consistency checks |
+| `config/` | Method settings and public-source provenance |
+| `docs/methodology.md` | Definitions, equations, exclusions, assumptions and limits |
+| `results/public/` | Publication-safe aggregate JSON and methodology PDF |
+| `frontend/` | React, TypeScript and Vite dashboard |
+| `deploy/` | Static HTTP server and deployment checks |
+| `artifacts/private/` | Local audit tables, exclusions, replay and PDF review images; never publish |
+
+## Current data and findings
+
+The supplied pack contains **200,999 deliveries across 883 matches**, dated 2022-01-22 through 2026-11-01. It includes all six required CSVs and the competition brief. The pack does not identify its upstream provider, so this project does not label it Cricsheet.
+
+The conservative audit retains **80,902 events in 345 matches and 690 innings**. It excludes **120,097 events in 538 matches and 1,034 innings**; exclusion reasons overlap. Ambiguous `Overstep` and `other` extras affect 486 matches and create substantial coverage bias. Revised-target timing, incomplete innings, super overs, ties and result-reconciliation failures are also handled explicitly. Impact-player appearances remain separate player IDs with their observed delivery exposure.
+
+The strict room-for-error method leaves one eligible batter at the declared minimum of 30 pressure events across five matches, so it cannot support a batting top ten. The current provisional lists use the documented phase/required-rate fallback for both roles: 116 eligible batters and 132 bowlers. The fallback is not presented as a validated superior pressure measure. Rankings use contextual run residuals; wicket value is shown separately and is not added as an unvalidated bonus.
+
+Chronological task-viability Brier scores for 2023–2026 are approximately 0.127, 0.148, 0.134 and 0.135. These assess task outcome calibration, not psychological pressure accuracy. Later-season selection checks are mixed and do not establish uniform superiority. Full results and caveats are in the dashboard and PDF.
+
+## Verify the outputs
+
+To run the repository checks after rebuilding:
+
+```powershell
+.venv\Scripts\python -m unittest discover -s analysis/tests -v
+.venv\Scripts\python analysis/check_publication.py
 node deploy/check-static.mjs http://127.0.0.1:8080
 ```
 
-## Score contract
+The static check expects the local server to be running. The analysis check confirms the publication allowlist and checks for source maps or source records in the build.
 
-Batting residual = bat runs minus earlier-year contextual expectation. Bowling residual = expected charged runs minus observed charged runs. Score = `100 * residual_sum / (pressure_events + 60)`. This is fixed-prior pseudo-exposure shrinkage, not an empirically fitted hierarchical posterior. Tie rules: pressure matches descending, player ID ascending. Minimum: 30 pressure events / five matches. Role support: 60 events / five matches.
+## Deployment
 
-Uncertainty resamples independent match clusters, 400 seeded replicates. Usual means **nonpressure** contextual contribution; all-situation overall stays separately labelled. The six dimensions are never summed. Role filters retain frozen ranks. Formal pairwise comparisons use equal weights across shared innings/phase/IPL strata, match-cluster intervals and excluded non-overlap counts. No causal replacement wins are estimated.
+The project includes a Dockerfile and Cloud Build configuration for manual Cloud Run deployment. Docker execution and cloud deployment were not verified in this environment. Follow [the deployment guide](docs/deployment.md); set your own Google Cloud project, region, Artifact Registry repository, and service accounts. No live deployment URL is claimed.
 
-First-innings viability uses an earlier complete-innings median, not a validated venue-adjusted par. First/chase figures remain separate. Contextual wicket value, learned venue/opponent effects and prospective validation are not established. See the full methodology for remaining limitations.
-
-## Verification and deployment
-
-Tests cover pre-delivery state, terminal transitions, stress caps, episodes, wide/bye/run-out attribution, nested ZIP traversal, chronology, score/order, publication safety and PDF/list agreement. TypeScript strict and unused-local/parameter checks plus production build pass. Installed frontend dependency audit reports zero known vulnerabilities after patching Vite.
-
-Production HTTP index, JSON, PDF, HEAD/POST behavior and denial of private paths were checked. PDF pages were rendered and inspected; version and list order match JSON.
-
-**Unverified:** desktop/mobile interactive browser QA. In-app loopback failed; Windows computer-use stopped because it could not confidently determine the current URL. No successful UI check is claimed. **Container execution is unverified:** Docker engine is stopped. The user chose manual Cloud Run deployment; no live URL is claimed. See [manual deployment](docs/deployment.md).
-
-The bundled brief requires two top-ten dropdown lists and methodology upload. Public Unstop listing was checked; numeric judging rubric and account dropdown IDs were unavailable. No submission was sent. This is reviewable research with real findings, not a final validated auction strategy.
+Interactive desktop and mobile browser checks also remain unverified because the local browser tool could not access the preview. The static production build, report output, and local HTTP routes were checked.
