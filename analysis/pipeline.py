@@ -165,15 +165,44 @@ def summarize(d,role,mask=None,minimum=True):
     result=[];rng=np.random.default_rng(CFG['seed'])
     for pid,g in q.groupby(player):
         matches=g.match_id.nunique()
-        if minimum and (len(g)<CFG['min_pressure_balls'] or matches<CFG['min_pressure_matches']):continue
-        allg=d[d[player]==pid];r=g[role+'_residual'];nonpressure=allg[~allg[key]];usual=(nonpressure[role+'_residual'].mean()*100 if len(nonpressure) else 0)
-        score=100*r.sum()/(len(g)+CFG['pooling_balls'])
-        bymatch=g.groupby('match_id')[role+'_residual'].agg(['sum','count'])
-        sums=bymatch['sum'].to_numpy();counts=bymatch['count'].to_numpy()
-        ix=rng.integers(0,len(sums),(CFG['bootstrap_replicates'],len(sums)))
-        boot=100*sums[ix].sum(axis=1)/(counts[ix].sum(axis=1)+CFG['pooling_balls'])
-        low,high=np.quantile(boot,[.025,.975])
-        best=int(np.argmax(sums));lbmo=100*(r.sum()-sums[best])/(len(g)-counts[best]+CFG['pooling_balls'])
+        allg=d[d[player]==pid];r=g[role+'_residual'];selected_idx=allg.index.isin(g.index);pressure_all=allg.loc[selected_idx];nonpressure=allg.loc[~selected_idx]
+        pressure_format_counts=g.groupby('is_ipl').size().to_dict()
+        normal_by_format=nonpressure.groupby('is_ipl')[role+'_residual'].agg(['mean','count'])
+        format_supported=all(fmt in normal_by_format.index and int(normal_by_format.loc[fmt,'count'])>=CFG['min_usual_format_balls'] and nonpressure[nonpressure.is_ipl==fmt].match_id.nunique()>=CFG['min_usual_format_matches'] for fmt in pressure_format_counts)
+        ipl_role=allg[allg.is_ipl]
+        if minimum and (len(g)<CFG['min_pressure_balls'] or matches<CFG['min_pressure_matches'] or len(nonpressure)<CFG['min_usual_balls'] or nonpressure.match_id.nunique()<CFG['min_usual_matches'] or not format_supported):continue
+        usual_by_format={fmt:float(normal_by_format.loc[fmt,'mean']) for fmt in pressure_format_counts if fmt in normal_by_format.index}
+        pressure_n=len(g)
+        usual_residual=sum(count*usual_by_format.get(fmt,0.0) for fmt,count in pressure_format_counts.items())/max(1,pressure_n)
+        usual=100*usual_residual
+        uplift_sum=float(sum(g.loc[g.is_ipl==fmt,role+'_residual'].sum()-count*usual_by_format.get(fmt,0.0) for fmt,count in pressure_format_counts.items()))
+        score=100*uplift_sum/(pressure_n+CFG['pooling_balls'])
+        pressure_score=100*float(r.sum())/(pressure_n+CFG['pooling_balls'])
+        # Resample whole matches; within each replicate, compare pressure and usual
+        # residuals inside the same format and reweight to that replicate's pressure mix.
+        mids=allg.match_id.unique();ix=rng.integers(0,len(mids),(CFG['bootstrap_replicates'],len(mids)))
+        pparts=pressure_all.groupby(['is_ipl','match_id'])[role+'_residual'].agg(['sum','count'])
+        uparts=nonpressure.groupby(['is_ipl','match_id'])[role+'_residual'].agg(['sum','count'])
+        boot_delta=np.zeros(CFG['bootstrap_replicates']);boot_pressure=np.zeros(CFG['bootstrap_replicates']);boot_valid=np.ones(CFG['bootstrap_replicates'],dtype=bool)
+        for fmt in pressure_format_counts:
+            pa=pparts.xs(fmt,level='is_ipl').reindex(mids,fill_value=0)[['sum','count']].to_numpy()
+            ua=uparts.xs(fmt,level='is_ipl').reindex(mids,fill_value=0)[['sum','count']].to_numpy()
+            ps,pc=pa[ix,0].sum(axis=1),pa[ix,1].sum(axis=1)
+            us,uc=ua[ix,0].sum(axis=1),ua[ix,1].sum(axis=1)
+            base=np.divide(us,uc,out=np.zeros_like(us),where=uc>0)
+            boot_valid &= uc>0
+            boot_delta+=ps-pc*base;boot_pressure+=pc
+        boot=100*boot_delta/(boot_pressure+CFG['pooling_balls'])
+        valid_boot=boot[boot_valid]
+        if len(valid_boot)<100:valid_boot=boot
+        low,high=np.quantile(valid_boot,[.025,.975])
+        pby=pparts.groupby(level='match_id')['sum'].sum().reindex(mids,fill_value=0).to_numpy()
+        best_match=mids[int(np.argmax(pby))]
+        remaining_pressure=g[g.match_id!=best_match];remaining_all=allg[allg.match_id!=best_match];remaining_normal=remaining_all.loc[~remaining_all.index.isin(remaining_pressure.index)]
+        remaining_usual=remaining_normal.groupby('is_ipl')[role+'_residual'].mean().to_dict()
+        remaining_counts=remaining_pressure.groupby('is_ipl').size().to_dict()
+        remaining_delta=sum(remaining_pressure.loc[remaining_pressure.is_ipl==fmt,role+'_residual'].sum()-count*remaining_usual.get(fmt,0.0) for fmt,count in remaining_counts.items())
+        lbmo=100*remaining_delta/(len(remaining_pressure)+CFG['pooling_balls'])
         phases=[]
         for phase,pg in allg.groupby('phase'):
             if len(pg)<CFG['min_role_balls'] or pg.match_id.nunique()<CFG['min_role_matches']:continue
@@ -193,12 +222,14 @@ def summarize(d,role,mask=None,minimum=True):
         season_rows=[]
         for year,yg in g.groupby('year'):
             all_season=allg[allg.year==year];outside=all_season[~all_season[key]]
-            season_usual=float(outside[role+'_residual'].mean()*100) if len(outside) else None
+            season_counts=yg.groupby('is_ipl').size().to_dict()
+            season_usual=(100*sum(count*usual_by_format.get(fmt,0.0) for fmt,count in season_counts.items())/max(1,len(yg))) if len(outside) else None
             season_runs=float(yg.runs.sum() if role=='batting' else yg.bowler_runs.sum());season_legal=int(yg.legal.sum())
             season_dismissals=int(((yg.dismissed_player_id==pid)&yg.is_wicket).sum()) if role=='batting' else int(yg.credit_wicket.sum())
             season_rate=100*season_runs/max(1,len(yg[yg.extra!='wide'])) if role=='batting' else 6*season_runs/max(1,season_legal)
-            season_rows.append({'year':int(year),'balls':int(len(yg)),'matches':int(yg.match_id.nunique()),'episodes':int(yg[key+'_episode'].nunique()),'score':round(float(100*yg[role+'_residual'].sum()/(len(yg)+CFG['pooling_balls'])),4),'runs':round(season_runs,2),'expected_runs':round(float(yg[role+'_expected'].sum()),4),'rate':round(float(season_rate),2),'legal_balls':season_legal,'overs':f'{season_legal//6}.{season_legal%6}','dismissals':season_dismissals,'expected_dismissals':round(float(yg.dismissal_expected.sum()),3),'dot_rate':round(float(yg['dot'].mean()*100),2),'boundary_rate':round(float((yg.is_four|yg.is_six).mean()*100),2),'extras':int((yg.extras1_runs+yg.extras_2_runs).sum()),'usual':round(season_usual,4) if season_usual is not None else None,'nonpressure_balls':int(len(outside)),'difference':round(float(yg[role+'_residual'].mean()*100-season_usual),4) if season_usual is not None else None,'first_innings_score':round(float(yg.loc[yg.innings==1,role+'_residual'].mean()*100),2) if (yg.innings==1).any() else None,'chase_score':round(float(yg.loc[yg.innings==2,role+'_residual'].mean()*100),2) if (yg.innings==2).any() else None})
-        result.append({'overall_usual':round(float(allg[role+'_residual'].mean()*100),4),'nonpressure_balls':len(nonpressure),'expected_dismissals':round(float(g.dismissal_expected.sum()),3),'id':int(pid),'name':str(g[name].mode().iloc[0]),'roles':roles,'balls':int(len(g)),'legal_balls':legal,'overs':f'{legal//6}.{legal%6}','matches':int(matches),'episodes':int(g[key+'_episode'].nunique()),'runs':runs,'rate':round(100*runs/max(1,len(g[g.extra!='wide'])),2) if role=='batting' else round(6*runs/max(1,legal),2),'dismissals':dismissals,'dot_rate':round(float(g['dot'].mean()*100),2),'boundary_rate':round(float((g.is_four|g.is_six).mean()*100),2),'extras':int((g.extras1_runs+g.extras_2_runs).sum()),'expected_runs':round(float(g[role+'_expected'].sum()),4),'residual_sum':round(float(r.sum()),4),'score':round(float(score),4),'usual':round(float(usual),4),'difference':round(float(r.mean()*100-usual),4),'interval':[round(float(low),4),round(float(high),4)],'between_match_sd':round(float((100*bymatch['sum']/bymatch['count']).std()),3),'leave_best_out':round(float(lbmo),4),'phases':phases,'ipl_balls':int(g.is_ipl.sum()),'first_innings_balls':int((g.innings==1).sum()),'chase_balls':int((g.innings==2).sum()),'first_innings_score':round(float(g.loc[g.innings==1,role+'_residual'].mean()*100),2) if (g.innings==1).any() else None,'chase_score':round(float(g.loc[g.innings==2,role+'_residual'].mean()*100),2) if (g.innings==2).any() else None,'seasons':season_rows,'actionability':'CONDITIONAL WATCH','objection':'Run-only ranking omits wicket value; intervals and cross-competition transport remain uncertain.','rr_contribution':'Conditional capability evidence: '+(', '.join(roles) or 'role not established')+'. Registration and 2027 retention are unverified; no purchase recommendation.'})
+            season_uplift=(float(sum(yg.loc[yg.is_ipl==fmt,role+'_residual'].sum()-count*usual_by_format.get(fmt,0.0) for fmt,count in season_counts.items())) if season_usual is not None else float(yg[role+'_residual'].sum()))
+            season_rows.append({'year':int(year),'balls':int(len(yg)),'matches':int(yg.match_id.nunique()),'episodes':int(yg[key+'_episode'].nunique()),'score':round(float(100*season_uplift/(len(yg)+CFG['pooling_balls'])),4),'pressure_score':round(float(100*yg[role+'_residual'].sum()/(len(yg)+CFG['pooling_balls'])),4),'runs':round(season_runs,2),'expected_runs':round(float(yg[role+'_expected'].sum()),4),'rate':round(float(season_rate),2),'legal_balls':season_legal,'overs':f'{season_legal//6}.{season_legal%6}','dismissals':season_dismissals,'expected_dismissals':round(float(yg.dismissal_expected.sum()),3),'dot_rate':round(float(yg['dot'].mean()*100),2),'boundary_rate':round(float((yg.is_four|yg.is_six).mean()*100),2),'extras':int((yg.extras1_runs+yg.extras_2_runs).sum()),'usual':round(season_usual,4) if season_usual is not None else None,'nonpressure_balls':int(len(outside)),'difference':round(float(yg[role+'_residual'].mean()*100-season_usual),4) if season_usual is not None else None,'first_innings_score':round(float(yg.loc[yg.innings==1,role+'_residual'].mean()*100),2) if (yg.innings==1).any() else None,'chase_score':round(float(yg.loc[yg.innings==2,role+'_residual'].mean()*100),2) if (yg.innings==2).any() else None})
+        result.append({'nonpressure_balls':len(nonpressure),'expected_dismissals':round(float(g.dismissal_expected.sum()),3),'id':int(pid),'name':str(g[name].mode().iloc[0]),'roles':roles,'balls':int(len(g)),'legal_balls':legal,'overs':f'{legal//6}.{legal%6}','matches':int(matches),'episodes':int(g[key+'_episode'].nunique()),'runs':runs,'rate':round(100*runs/max(1,len(g[g.extra!='wide'])),2) if role=='batting' else round(6*runs/max(1,legal),2),'dismissals':dismissals,'dot_rate':round(float(g['dot'].mean()*100),2),'boundary_rate':round(float((g.is_four|g.is_six).mean()*100),2),'extras':int((g.extras1_runs+g.extras_2_runs).sum()),'expected_runs':round(float(g[role+'_expected'].sum()),4),'residual_sum':round(float(r.sum()),4),'uplift_sum':round(float(uplift_sum),4),'pressure_score':round(float(pressure_score),4),'score':round(float(score),4),'usual':round(float(usual),4),'usual_matches':int(nonpressure.match_id.nunique()),'difference':round(float(r.mean()*100-usual),4),'interval':[round(float(low),4),round(float(high),4)],'between_match_sd':round(float((100*pparts['sum']/pparts['count'].replace(0,np.nan)).std()),3),'leave_best_out':round(float(lbmo),4),'phases':phases,'ipl_balls':int(g.is_ipl.sum()),'ipl_role_events':int(len(ipl_role)),'ipl_role_matches':int(ipl_role.match_id.nunique()),'t20i_balls':int(g.is_t20i.sum()),'first_innings_balls':int((g.innings==1).sum()),'chase_balls':int((g.innings==2).sum()),'first_innings_score':round(float(g.loc[g.innings==1,role+'_residual'].mean()*100),2) if (g.innings==1).any() else None,'chase_score':round(float(g.loc[g.innings==2,role+'_residual'].mean()*100),2) if (g.innings==2).any() else None,'seasons':season_rows,'actionability':'Statistical evidence only; 2027 auction status unverified','objection':'Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.','rr_contribution':'Observed role evidence: '+(', '.join(roles) or 'role not established')+'. IPL role exposure in the evaluated window: '+str(int(len(ipl_role)))+' deliveries across '+str(int(ipl_role.match_id.nunique()))+' matches. Pressure samples include '+str(int(g.is_ipl.sum()))+' IPL and '+str(int(g.is_t20i.sum()))+' T20I deliveries. 2027 auction registration and availability are not established.'})
     result.sort(key=lambda x:(-x['score'],-x['matches'],x['id']))
     for i,r in enumerate(result):r['rank']=i+1
     return result
@@ -206,11 +237,19 @@ def summarize(d,role,mask=None,minimum=True):
 def main():
     tables={n:pd.read_parquet(ROOT/f'artifacts/private/{n}.parquet') for n in ['ball_by_ball','matches','competitions','playing_eleven','teams','competition_team_player_mapping']}
     b,m=tables['ball_by_ball'],tables['matches']
+    source_deliveries=len(b);source_matches=len(m)
     assert not m.match_id.duplicated().any()
     assert not tables['teams'].duplicated(['comp_id','team_id']).any()
     b,finals,reasons=reconstruct(b,m)
     comps=tables['competitions'];assert not comps.comp_id.duplicated().any()
-    b=b.merge(comps[['comp_id','comp_name','season']],on='comp_id',validate='many_to_one');b['is_ipl']=b.comp_name.str.startswith('IPL ')
+    b=b.merge(comps[['comp_id','comp_name','match_format','season']],on='comp_id',validate='many_to_one');b['is_ipl']=b.comp_name.str.startswith('IPL ');b['is_t20i']=b.match_format.str.upper().eq('T20I')
+    # The problem statement defines the source scope as IPL + T20 Internationals.
+    # Exclude other domestic/franchise T20 competitions from pressure estimation.
+    in_scope=b.is_ipl|b.is_t20i;scope_match_ids=set(b.loc[in_scope,'match_id'].astype(int))
+    scope_deliveries=int(in_scope.sum());scope_matches=len(scope_match_ids)
+    b=b.loc[in_scope].copy();m=m[m.match_id.isin(scope_match_ids)].copy()
+    finals=finals[finals.index.get_level_values(0).isin(scope_match_ids)]
+    reasons={mid:rs for mid,rs in reasons.items() if mid in scope_match_ids}
     xi=tables['playing_eleven'];xi=xi.groupby(['match_id','team_id','player_id']).batting_order.agg(lambda s:s.iloc[0] if s.nunique()==1 else np.nan).reset_index()
     n=len(b);b=b.merge(xi.rename(columns={'team_id':'batting_team_id','player_id':'striker_id','batting_order':'xi_order'}),on=['match_id','batting_team_id','striker_id'],how='left',validate='many_to_one');assert len(b)==n
     oos,validation=fit_oos(b,finals)
@@ -232,7 +271,7 @@ def main():
     configraw=(ROOT/'config/methodology_v1.yaml').read_bytes()
     codehash=hashlib.sha256(b''.join(p.read_bytes() for p in sorted((ROOT/'analysis').glob('*.py')))).hexdigest()
     aid=hashlib.sha256(configraw+json.dumps(audit['manifest'],sort_keys=True).encode()+codehash.encode()).hexdigest()[:16]
-    result={'analysis_id':aid,'version':CFG['version'],'generated':datetime.now(timezone.utc).isoformat(),'status':'RESEARCH BASELINE - participant review required; not submission-ready','config':CFG,'provenance':{'code_sha256':codehash,'config_sha256':hashlib.sha256(configraw).hexdigest(),'python':platform.python_version(),'input_zip_sha256':audit.get('input_zip_sha256'),'input_manifest':audit['manifest']},'pressure_policy':('phase_required_rate_fallback' if fallback else 'margin'),'margin_eligible_counts':margin_coverage,'audit':{'excluded_innings':int(b.loc[~b.retained].groupby(KEYS).ngroups),'retained_innings':int(b.loc[b.retained].groupby(KEYS).ngroups),'deliveries':n,'matches':len(m),'date_range':audit['date_range'],'retained_matches':int(b.loc[b.retained,'match_id'].nunique()),'retained_deliveries':int(b.retained.sum()),'excluded_matches':len(reasons),'excluded_deliveries':int((~b.retained).sum()),'exclusion_reasons_overlapping':exclusion_counts,'oos_matches':int(oos.match_id.nunique()),'oos_deliveries':len(oos),'warmup_deliveries':int(b.retained.sum()-len(oos)),'duplicate_delivery_keys':audit['duplicate_delivery_keys'],'competitions':int(b.comp_id.nunique()),'missing_xi_order':int(b.xi_order.isna().sum()),'schema':{k:{'rows':v['rows'],'columns':list(v['columns'])} for k,v in audit['tables'].items()}},'validation':validation,'limitations':['No validated combined wicket/run-equivalent model: rankings use contextual run residuals and publish wickets separately. Strict margin coverage failed; the fallback is not a validated superior pressure measure.','Primary model is linear logistic; quadratic candidate evaluated but no superiority claim or automatic selection.','Margin labels are an operational hypothesis; no psychological pressure ground truth. Stress support/extrapolation validation is pending.','First-innings median benchmark is a modelling assumption; first/chase figures are separate. Overall run residual ranking pools their exposure without claiming identical viability scales.','Opponent strength, venue effects, hierarchical season effects and supported pace/spin comparisons are not yet fitted.','Player estimates use fixed exposure shrinkage and match bootstrap, not a fitted hierarchical posterior.','2026 holdout metrics are reported; models and policy were developed in this implementation, not prospectively preregistered. Policy comparisons are retrospective and not confirmatory evidence of superiority.','Auction availability, 2027 rules, purse and submission dropdown IDs are unverified. No actionable TARGET list is asserted.','Overall ranks compare observed player exposure. Pairwise comparisons instead standardise over shared innings/phase/IPL strata with match-cluster intervals; venue/opponent/position confounds remain.']}
+    result={'analysis_id':aid,'version':CFG['version'],'generated':datetime.now(timezone.utc).isoformat(),'status':'RESEARCH BASELINE - participant review required; not submission-ready','config':CFG,'provenance':{'code_sha256':codehash,'config_sha256':hashlib.sha256(configraw).hexdigest(),'python':platform.python_version(),'input_zip_sha256':audit.get('input_zip_sha256'),'input_manifest':audit['manifest']},'pressure_policy':('phase_required_rate_fallback' if fallback else 'margin'),'margin_eligible_counts':margin_coverage,'audit':{'excluded_innings':int(b.loc[~b.retained].groupby(KEYS).ngroups),'retained_innings':int(b.loc[b.retained].groupby(KEYS).ngroups),'deliveries':source_deliveries,'matches':source_matches,'scope_deliveries':scope_deliveries,'scope_matches':scope_matches,'out_of_scope_deliveries':source_deliveries-scope_deliveries,'out_of_scope_matches':source_matches-scope_matches,'date_range':audit['date_range'],'retained_matches':int(b.loc[b.retained,'match_id'].nunique()),'retained_deliveries':int(b.retained.sum()),'excluded_matches':len(reasons),'excluded_deliveries':int((~b.retained).sum()),'exclusion_reasons_overlapping':exclusion_counts,'oos_matches':int(oos.match_id.nunique()),'oos_deliveries':len(oos),'warmup_deliveries':int(b.retained.sum()-len(oos)),'duplicate_delivery_keys':audit['duplicate_delivery_keys'],'competitions':int(b.comp_id.nunique()),'missing_xi_order':int(b.xi_order.isna().sum()),'schema':{k:{'rows':v['rows'],'columns':list(v['columns'])} for k,v in audit['tables'].items()}},'validation':validation,'limitations':['No validated combined wicket/run-equivalent model: rankings use contextual run residuals and publish wickets separately. Strict margin coverage failed; the fallback is not a validated superior pressure measure.','Primary model is linear logistic; quadratic candidate evaluated but no superiority claim or automatic selection.','Margin labels are an operational hypothesis; no psychological pressure ground truth. Stress support/extrapolation validation is pending.','First-innings median benchmark is a modelling assumption; first/chase figures are separate. Overall run residual ranking pools their exposure without claiming identical viability scales.','Opponent strength, venue effects, hierarchical season effects and supported pace/spin comparisons are not yet fitted.','Player estimates use fixed exposure shrinkage and match bootstrap, not a fitted hierarchical posterior.','2026 holdout metrics are reported; models and policy were developed in this implementation, not prospectively preregistered. Policy comparisons are retrospective and not confirmatory evidence of superiority.','Auction availability, 2027 rules, purse and submission dropdown IDs are unverified. No actionable TARGET list is asserted.','Ranking scores compare pressure residuals with each player’s non-pressure contextual residual baseline. Pairwise candidate comparisons use common assignment strata and contextual contribution; venue/opponent/position confounds remain.']}
     for role,label in [('batting','batters'),('bowling','bowlers')]:
         ranked=summarize(oos,role);selected=ranked[:10]
         for p in selected:
@@ -253,11 +292,14 @@ def main():
                     c=compare(oos,a['id'],bb['id'],role,f'{role}_0.2',phase)
                     if c:result[label+'_comparisons'].append(c)
     result['roster']=json.loads((ROOT/'config/public_sources.json').read_text())
+    # RR coverage and incumbent comparisons are IPL-only; T20I results do not
+    # establish a current franchise role or roster gap.
+    ipl_oos=oos[oos.is_ipl].copy()
     result['coverage']=[]
     for name in result['roster']['players']:
         row={'name':name,'status':'2026 squad page; 2027 status unknown','batting':[],'bowling':[]}
         for role in ['batting','bowling']:
-            col='striker_name' if role=='batting' else 'bowler_name';matches=oos[oos[col].str.casefold()==name.casefold()]
+            col='striker_name' if role=='batting' else 'bowler_name';matches=ipl_oos[ipl_oos[col].str.casefold()==name.casefold()]
             if len(matches):
                 for phase,g in matches.groupby('phase'):
                     if len(g)>=60 and g.match_id.nunique()>=5:row[role].append({'phase':phase,'balls':len(g),'matches':int(g.match_id.nunique()),'score':round(float(g[role+'_residual'].mean()*100),2)})
@@ -268,17 +310,17 @@ def main():
         for p in result[label]:
             cases=[]
             for incumbent in result['coverage']:
-                g=oos[oos[col].str.casefold()==incumbent['name'].casefold()]
+                g=ipl_oos[ipl_oos[col].str.casefold()==incumbent['name'].casefold()]
                 if g.empty:continue
                 iid=int(g[idcol].mode().iloc[0])
                 if iid==p['id']:continue
-                c=compare(oos,p['id'],iid,role,f'{role}_0.2')
+                c=compare(ipl_oos,p['id'],iid,role,f'{role}_0.2')
                 if c:
                     c.update({'incumbent':incumbent['name'],'role':role})
                     result['incumbent_comparisons'].append(c);cases.append(c)
             cases.sort(key=lambda c:-(c['a_events']+c['b_events']))
             alternative=cases[0] if cases else None
-            p['rr_case']={'capability_demonstrated':', '.join(p['roles']) or 'insufficient role evidence','current_verified_rr_coverage':alternative['incumbent'] if alternative else 'Shared supported incumbent assignment unavailable','measured_gap_or_uncertainty':('Unresolved: '+alternative['verdict']+' under common assignments; difference '+str(alternative['difference'])+' runs / 100, interval '+str(alternative['interval'])) if alternative else 'No supported quality-gap conclusion','primary_alternative':alternative['incumbent'] if alternative else 'Insufficient overlap for an alternative','biggest_risk':p['objection'],'actionability':'CONDITIONAL WATCH; official 2026 squad page accessed 2026-11-12; 2027 availability unknown'}
+            p['rr_case']={'capability_demonstrated':', '.join(p['roles']) or 'insufficient role evidence','current_verified_rr_coverage':alternative['incumbent'] if alternative else 'Shared supported incumbent assignment unavailable','measured_gap_or_uncertainty':('Unresolved: '+alternative['verdict']+' under common assignments; difference '+str(alternative['difference'])+' runs / 100, interval '+str(alternative['interval'])) if alternative else 'No supported quality-gap conclusion','primary_alternative':alternative['incumbent'] if alternative else 'Insufficient overlap for an alternative','biggest_risk':p['objection'],'actionability':'Statistical evidence only; 2027 registration, retention, availability, price and squad need are unverified'}
     private_replay(oos,result,ROOT)
     out=ROOT/'results/public' ;out.mkdir(parents=True,exist_ok=True)
     (out/'analysis.json').write_text(json.dumps(result,indent=2,allow_nan=False),encoding='utf-8')

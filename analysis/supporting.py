@@ -81,17 +81,26 @@ def compare(d,a,b,role,key,phase=None):
 def selection_validation(d,role,key):
     col='striker_id' if role=='batting' else 'bowler_id';reports=[]
     for year in [2024,2025,2026]:
-        prior=d[d.year<year];future=d[(d.year==year)&d[key]]
-        rows=[]
+        prior=d[d.year<year];future_all=d[d.year==year];future=future_all[future_all[key]];rows=[]
         for pid,g in prior.groupby(col):
-            pg=g[g[key]]
-            if len(pg)<30 or pg.match_id.nunique()<5:continue
+            pg=g[g[key]];usual_rows=g[~g[key]]
+            if len(pg)<30 or pg.match_id.nunique()<5 or len(usual_rows)<60 or usual_rows.match_id.nunique()<5:continue
+            usual=float(usual_rows[role+'_residual'].mean())
+            lift=(pg[role+'_residual'].sum()-len(pg)*usual)/(len(pg)+60)
+            match_lifts=[]
+            for _,mg in pg.groupby('match_id'):
+                match_lifts.extend((mg[role+'_residual']-usual).tolist())
+            conservative=float(np.mean(match_lifts)-1.96*np.std(match_lifts,ddof=1)/np.sqrt(max(1,pg.match_id.nunique()))) if len(match_lifts)>1 else float(lift)
             simple=g[g.baseline_pressure]
             ordinary=(g.runs.mean() if role=='batting' else -g.bowler_runs.sum()/max(1,g.legal.sum()))
             average=float(g.runs.sum()/max(1,((g.dismissed_player_id==pid)&g.is_wicket).sum()))
-            rows.append({'ordinary_average':average,'id':pid,'contextual':pg[role+'_residual'].sum()/(len(pg)+60),'conservative':pg[role+'_residual'].mean()-1.96*pg.groupby('match_id')[role+'_residual'].mean().std()/np.sqrt(pg.match_id.nunique()),'ordinary':ordinary,'phase_rate_baseline':simple[role+'_residual'].sum()/(len(simple)+60)})
+            rows.append({'ordinary_average':average,'id':pid,'contextual':lift,'conservative':conservative,'ordinary':ordinary,'phase_rate_baseline':simple[role+'_residual'].sum()/(len(simple)+60)})
         if not rows:continue
         for policy in ['contextual','conservative','ordinary','phase_rate_baseline']+(['ordinary_average'] if role=='batting' else []):
             selected=sorted(rows,key=lambda x:(-x[policy],x['id']))[:10];ids=[p['id'] for p in selected];test=future[future[col].isin(ids)]
-            reports.append({'year':year,'policy':policy,'selected':len(ids),'observed_later':int(test[col].nunique()),'future_events':len(test),'future_matches':int(test.match_id.nunique()),'future_contribution':round(float(100*test[role+'_residual'].mean()),3) if len(test) else None})
+            future_lifts=[]
+            for pid in ids:
+                fg=future_all[future_all[col]==pid];fp=fg[fg[key]];fu=fg[~fg[key]]
+                if len(fp) and len(fu):future_lifts.append(float((fp[role+'_residual'].mean()-fu[role+'_residual'].mean())*100))
+            reports.append({'year':year,'policy':policy,'selected':len(ids),'observed_later':int(test[col].nunique()),'future_events':len(test),'future_matches':int(test.match_id.nunique()),'future_contribution':round(float(np.mean(future_lifts)),3) if future_lifts else None})
     return reports

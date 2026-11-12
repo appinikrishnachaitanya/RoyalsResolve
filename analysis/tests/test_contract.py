@@ -62,20 +62,38 @@ class Contract(unittest.TestCase):
         self.assertEqual(b.iloc[-1].target,3)
     def test_real_export_reconciliation(self):
         d=json.loads((ROOT/'results/public/analysis.json').read_text());a=d['audit']
-        self.assertEqual(a['retained_deliveries']+a['excluded_deliveries'],a['deliveries'])
-        self.assertEqual(a['retained_matches']+a['excluded_matches'],a['matches'])
-        for label in ['batters','bowlers']:
+        self.assertEqual(a['retained_deliveries']+a['excluded_deliveries'],a['scope_deliveries'])
+        self.assertEqual(a['retained_matches']+a['excluded_matches'],a['scope_matches'])
+        self.assertEqual(a['scope_deliveries']+a['out_of_scope_deliveries'],a['deliveries'])
+        self.assertEqual(a['scope_matches']+a['out_of_scope_matches'],a['matches'])
+        evaluated=pd.read_parquet(ROOT/'artifacts/private/evaluated.parquet')
+        for label,role in [('batters','batting'),('bowlers','bowling')]:
             picks=d[label];self.assertEqual(len(picks),10);self.assertEqual(len({p['id'] for p in picks}),10)
+            self.assertEqual(len({p['name'].casefold().strip() for p in picks}),10)
             self.assertEqual([p['rank'] for p in picks],list(range(1,11)))
             self.assertEqual([p['score'] for p in picks],sorted([p['score'] for p in picks],reverse=True))
             for p in picks:
                 self.assertGreaterEqual(p['matches'],5);self.assertGreaterEqual(p['balls'],30)
-                self.assertAlmostEqual(100*p['residual_sum']/(p['balls']+60),p['score'],places=3)
+                self.assertGreaterEqual(p['nonpressure_balls'],60);self.assertGreaterEqual(p['usual_matches'],5)
+                self.assertAlmostEqual(100*p['residual_sum']/(p['balls']+60),p['pressure_score'],places=3)
+                self.assertAlmostEqual(100*p['uplift_sum']/(p['balls']+60),p['score'],places=3)
+                self.assertEqual(p['balls'],p['ipl_balls']+p['t20i_balls'])
+                player_col='striker_id' if role=='batting' else 'bowler_id';key=f'{role}_0.2'
+                player_rows=evaluated[evaluated[player_col]==p['id']];pressure_rows=player_rows[player_rows[key]]
+                self.assertEqual(len(pressure_rows),p['balls'])
+                format_uplift=0.0
+                for is_ipl in pressure_rows.is_ipl.unique():
+                    pressure_format=pressure_rows[pressure_rows.is_ipl==is_ipl]
+                    usual_format=player_rows[(~player_rows[key])&(player_rows.is_ipl==is_ipl)]
+                    self.assertGreaterEqual(len(usual_format),30);self.assertGreaterEqual(usual_format.match_id.nunique(),3)
+                    format_uplift += pressure_format[role+'_residual'].sum()-len(pressure_format)*usual_format[role+'_residual'].mean()
+                self.assertAlmostEqual(format_uplift,p['uplift_sum'],places=3)
                 observed=p['runs']-p['expected_runs'] if label=='batters' else p['expected_runs']-p['runs']
                 self.assertAlmostEqual(observed,p['residual_sum'],places=3)
                 self.assertEqual(p['rr_case'].keys(),dict.fromkeys(['capability_demonstrated','current_verified_rr_coverage','measured_gap_or_uncertainty','primary_alternative','biggest_risk','actionability']).keys())
     def test_chronology_and_no_pack_in_public(self):
         d=pd.read_parquet(ROOT/'artifacts/private/evaluated.parquet')
+        self.assertTrue((d.is_ipl | d.is_t20i).all())
         self.assertTrue((d.year>=2023).all());self.assertFalse(d.duplicated(['match_id','innings','innings_ball_num']).any())
         for mid,g in d.groupby('match_id'):self.assertEqual(g.year.nunique(),1)
         public=ROOT/'results/public';self.assertEqual({p.name for p in public.iterdir()},{'analysis.json','methodology.pdf'})
