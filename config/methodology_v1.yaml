@@ -1,0 +1,38 @@
+version: 1.0.0
+seed: 2718
+tau: 0.20
+tau_sensitivity: [0.15, 0.20, 0.25]
+live_bounds: [0.20, 0.80]
+tolerance_cutoff: 1
+stress_horizon: 6
+recent_legal_window: 6
+min_pressure_matches: 5
+min_pressure_balls: 30
+min_role_matches: 5
+min_role_balls: 60
+pooling_balls: 60
+bootstrap_replicates: 400
+holdout_start: '2026-01-01'
+development_years: [2023, 2024, 2025]
+rank_policy: pooled_contextual_runs_per_100_deliveries
+tie_rules: [pressure_matches_desc, player_id_asc]
+reference_exposure: observed_player_pressure_deliveries
+primary_extras_policy: quarantine_ambiguous_match
+first_innings_benchmark: earlier_complete_first_innings_median
+final_ranking_scope: rolling_out_of_time_predictions_2023_2026
+publication: selected_player_aggregates_only
+fallback_pressure: 'chase: remaining<=60 and required_rate>=8; first innings: remaining<=30 and wickets_lost>=3'
+fallback_trigger: fewer_than_ten_eligible_players_in_either_role
+entry_legal_balls: 6
+collapse_wicket_window_legal_balls: 12
+collapse_wickets: 2
+support_min_matches: 5
+comparison_min_matches: 5
+comparison_min_events: 30
+comparison_strata: [innings, phase, is_ipl]
+raw_baseline_min_events: 120
+raw_baseline_min_matches: 5
+matchup_min_events: 30
+matchup_min_matches: 5
+live_bounds_sensitivity: [[0.15, 0.85], [0.25, 0.75]]
+tolerance_cutoff_sensitivity: [0, 2]

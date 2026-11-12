@@ -1,0 +1,50 @@
+{
+  "cutoff": "2026-11-12T14:07:17+05:30",
+  "sources": [
+    {
+      "url": "https://www.rajasthanroyals.com/rr-players",
+      "publisher": "Rajasthan Royals",
+      "publication_date": null,
+      "accessed": "2026-11-12",
+      "claim": "Official page labelled Rajasthan Royals Squad 2026. Listed players provide latest verified season roster context only; this is not a 2027 retention list.",
+      "verification_status": "verified page; 2027 status unknown"
+    },
+    {
+      "url": "https://unstop.com/hackathons/crp-superr-selector-season-2-help-shape-rajasthan-royals-ipl-2027-auction-strategy-rajasthan-royals-1792758",
+      "publisher": "Unstop / Rajasthan Royals competition listing",
+      "publication_date": null,
+      "accessed": "2026-11-12",
+      "claim": "Public listing describes Round 1 pressure-performance analysis. Submission details are taken from the PDF inside the supplied pack; no numeric judging rubric or account dropdowns verified.",
+      "verification_status": "search-index listing checked; direct page has no readable text"
+    }
+  ],
+  "players": [
+    "Dhruv Jurel",
+    "Donovan Ferreira",
+    "Lhuan-dre Pretorius",
+    "Ravi Singh",
+    "Aman Perala",
+    "Shimron Hetmyer",
+    "Shubham Dubey",
+    "Vaibhav Sooryavanshi",
+    "Yashasvi Jaiswal",
+    "Dasun Shanaka",
+    "Emanjot Chahal",
+    "Ravindra Jadeja",
+    "Riyan Parag",
+    "Yudhvir Singh",
+    "Adam Milne",
+    "Brijesh Sharma",
+    "Jofra Archer",
+    "Kuldeep Sen",
+    "Kwena Maphaka",
+    "Nandre Burger",
+    "Ravi Bishnoi",
+    "Sandeep Sharma",
+    "Sushant Mishra",
+    "Tushar Deshpande",
+    "Vignesh Puthur",
+    "Yash Punja"
+  ],
+  "decision_memo": "No firm actionable shortlist: 2027 registration and retention are unverified. Coverage supports further role-matched scouting, not a claim of a roster quality gap. Primary / alternative / fallback remain conditional until shared-context uncertainty and availability are established. No bid prices or purse are assumed. Participant review is required."
+}

@@ -218,3 +218,15 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+data/incoming/*
+!data/incoming/.gitkeep
+artifacts/private/
+node_modules/
+frontend/dist/
+frontend/public/results/
+*.duckdb
+*.parquet
+
+
+*.tsbuildinfo

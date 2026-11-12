@@ -1,0 +1,9 @@
+# Supply all substitutions explicitly. No project or repository is guessed.
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args: ['build', '-t', '${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPOSITORY}/royals-resolve:${SHORT_SHA}', '.']
+images:
+  - '${_REGION}-docker.pkg.dev/${PROJECT_ID}/${_REPOSITORY}/royals-resolve:${SHORT_SHA}'
+options:
+  logging: CLOUD_LOGGING_ONLY
+serviceAccount: 'projects/${PROJECT_ID}/serviceAccounts/${_BUILD_SERVICE_ACCOUNT}'
