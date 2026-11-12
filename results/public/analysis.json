@@ -1,7 +1,7 @@
 {
-  "analysis_id": "b4f0c8fbe6ff7350",
+  "analysis_id": "ead05c8029403622",
   "version": "1.0.0",
-  "generated": "2026-11-12T10:30:28.185334+00:00",
+  "generated": "2026-11-12T10:41:48.442274+00:00",
   "status": "RESEARCH BASELINE - participant review required; not submission-ready",
   "config": {
     "version": "1.0.0",
@@ -74,7 +74,7 @@
     ]
   },
   "provenance": {
-    "code_sha256": "7e89d2fca88548ee63250f2e5d946abce8a4a480b2885eeda34ff56605eb7fb3",
+    "code_sha256": "c257a43282b3b16f5ffb9619a6806bb5674fa45e06bbbbc3dcf1d850615e4e5d",
     "config_sha256": "cea5d0f6f9b555d9c185cf160bcf1ffc856d780b42a7279b8b98db23fea1ddb9",
     "python": "3.10.4",
     "input_zip_sha256": "82da62e94840e614ef136f0bb24168fe72b567c3eff71bf6b58488ac9b2b7f7d",
@@ -138,9 +138,9 @@
       "ambiguous extras semantics / penalty timing": 486,
       "incomplete or inconsistent regulation innings": 24,
       "nonterminal chase": 17,
-      "missing regulation innings": 22,
-      "revised length or target timing unknown": 34,
       "abandoned / tied / eliminator": 46,
+      "revised length or target timing unknown": 34,
+      "missing regulation innings": 22,
       "untyped extras": 2,
       "winner reconciliation failed": 9,
       "super over": 6,
