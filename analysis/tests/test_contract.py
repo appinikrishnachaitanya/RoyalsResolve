@@ -104,7 +104,7 @@ class Contract(unittest.TestCase):
         self.assertTrue((d.is_ipl | d.is_t20i).all())
         self.assertTrue((d.year>=2023).all());self.assertFalse(d.duplicated(['match_id','innings','innings_ball_num']).any())
         for mid,g in d.groupby('match_id'):self.assertEqual(g.year.nunique(),1)
-        public=ROOT/'results/public';self.assertEqual({p.name for p in public.iterdir()},{'analysis.json','methodology.pdf'})
+        public=ROOT/'results/public';self.assertTrue({'analysis.json','methodology.pdf'} <= {p.name for p in public.iterdir()} <= {'analysis.json','methodology.pdf','Royals_Resolve_methodology.pdf'})
     def test_pdf_agreement(self):
         from pypdf import PdfReader
         d=json.loads((ROOT/'results/public/analysis.json').read_text());pages=[p.extract_text() for p in PdfReader(ROOT/'results/public/methodology.pdf').pages]

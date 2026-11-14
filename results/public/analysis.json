@@ -603,7 +603,7 @@
     "Player estimates use fixed exposure shrinkage and match bootstrap, not a fitted hierarchical posterior.",
     "2026 holdout metrics are reported; models and policy were developed in this implementation, not prospectively preregistered. Policy comparisons are retrospective and not confirmatory evidence of superiority.",
     "Auction availability, 2027 rules, purse and submission dropdown IDs are unverified. No actionable TARGET list is asserted.",
-    "Ranking scores compare pressure residuals with each player\u00c3\u00a2\u00e2\u201a\u00ac\u00e2\u201e\u00a2s non-pressure contextual residual baseline. Pairwise candidate comparisons use common assignment strata and contextual contribution; venue/opponent/position confounds remain."
+    "Ranking scores compare pressure residuals with each player’s non-pressure contextual residual baseline. Pairwise candidate comparisons use common assignment strata and contextual contribution; venue/opponent/position confounds remain."
   ],
   "batters": [
     {
