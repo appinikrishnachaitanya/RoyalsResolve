@@ -141,3 +141,5 @@ Batting samples and model fitting exclude wides; bowling retains charged wide ev
 ## Final Round 1 submission
 
 Use the [submission checklist and exact ordered player lists](docs/submission-checklist.md). Upload `results/public/methodology.pdf` and fill both Unstop top-ten dropdown lists. Independent human review is optional further validation, not a requirement of the supplied brief. Deploy the latest commit before sharing the dashboard link.
+
+The [final method decision](docs/final-method-decision.md) records common-cohort testing of lift, absolute output and a proposed blend, plus the pressure-label edge-case audit. No replacement established consistent superiority; the published baseline remains provisional.
