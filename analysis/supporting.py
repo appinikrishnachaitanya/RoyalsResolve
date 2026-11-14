@@ -22,11 +22,17 @@ def prepare(d):
     d['after_boundary']=(d.groupby(overkeys).boundary.cumsum()-d.boundary)>0
     return d
 
+def role_rows(d,role):
+    """Batter exposure excludes wides; bowlers retain charged wide events."""
+    return d.loc[d.extra.ne("wide")] if role=="batting" else d
+
 def metric(g,role):
+    g=role_rows(g,role)
     legal=g[g.legal];runs=legal.runs.sum();bound=legal[legal.boundary==1].runs.sum()
     return {'events':len(g),'legal_balls':len(legal),'matches':int(g.match_id.nunique()),'innings':int(g.groupby(['match_id','innings']).ngroups),'bat_runs':int(g.runs.sum()),'runs_per_100_legal':round(float(100*runs/max(1,len(legal))),2),'dot_percent':round(float(100*legal['dot'].mean()),2) if len(legal) else None,'dismissals':int(((g.dismissed_player_id==g.striker_id)&g.is_wicket).sum()),'contextual_runs_per_100':round(float(100*g[role+'_residual'].mean()),2),'nonboundary_runs_per_100_legal':round(float(100*(runs-bound)/max(1,len(legal))),2),'nonboundary_scoring_percent':round(float(100*((legal.runs>0)&(legal.boundary==0)).sum()/max(1,len(legal))),2),'boundary_share_bat_runs_percent':round(float(100*bound/max(1,runs)),2)}
 
 def dossier(d,pid,role,key):
+    d=role_rows(d,role)
     col='striker_id' if role=='batting' else 'bowler_id';g=d[d[col]==pid];pressure=g[g[key]]
     match=pressure.groupby('match_id')[role+'_residual'].mean()*100
     rng=np.random.default_rng(2718)
@@ -53,6 +59,7 @@ def dossier(d,pid,role,key):
     return result
 
 def compare(d,a,b,role,key,phase=None):
+    d=role_rows(d,role)
     """Common innings/phase/IPL strata, equal stratum weights and match bootstrap."""
     col='striker_id' if role=='batting' else 'bowler_id';x=d[(d[col]==a)&d[key]];y=d[(d[col]==b)&d[key]]
     if phase:
@@ -79,6 +86,7 @@ def compare(d,a,b,role,key,phase=None):
     return {'a':int(a),'b':int(b),'phase':phase or 'Shared assignments','difference':round(float(delta),3),'interval':[round(float(lo),3),round(float(hi),3)],'a_events':len(gx),'b_events':len(gy),'a_matches':int(gx.match_id.nunique()),'b_matches':int(gy.match_id.nunique()),'a_excluded_nonoverlap':len(x)-len(gx),'b_excluded_nonoverlap':len(y)-len(gy),'strata':len(common),'verdict':'A stronger case' if lo>0 else 'B stronger case' if hi<0 else 'Inconclusive','reference':'equal weight across shared innings / phase / IPL strata; pressure-only'}
 
 def selection_validation(d,role,key):
+    d=role_rows(d,role)
     col='striker_id' if role=='batting' else 'bowler_id';reports=[]
     for year in [2024,2025,2026]:
         prior=d[d.year<year];future_all=d[d.year==year];future=future_all[future_all[key]];rows=[]

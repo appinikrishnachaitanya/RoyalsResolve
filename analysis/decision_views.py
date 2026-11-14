@@ -1,9 +1,11 @@
+from supporting import role_rows
 """Small publication-safe decision aggregates and a strictly private replay."""
 from pathlib import Path
 from html import escape
 import numpy as np
 
 def raw_stars(d,role):
+    d=role_rows(d,role)
     col='striker_id' if role=='batting' else 'bowler_id';name='striker_name' if role=='batting' else 'bowler_name';rows=[]
     for pid,g in d.groupby(col):
         if len(g)<120 or g.match_id.nunique()<5:continue
@@ -16,6 +18,7 @@ def raw_stars(d,role):
     return rows[:3]
 
 def matchups(d,pid,role):
+    d=role_rows(d,role)
     col='striker_id' if role=='batting' else 'bowler_id';g=d[(d[col]==pid)&d[f'{role}_0.2']];out=[]
     for dimension in ['pace_or_spin','batting_type']:
         for value,sg in g.groupby(dimension):

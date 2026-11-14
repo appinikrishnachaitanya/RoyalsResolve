@@ -8,7 +8,7 @@ from datetime import datetime, timezone
 import numpy as np
 import pandas as pd
 import yaml
-from supporting import prepare, dossier, compare, selection_validation
+from supporting import prepare, dossier, compare, selection_validation, role_rows
 from decision_views import raw_stars, matchups, private_replay
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler, PolynomialFeatures
@@ -142,7 +142,8 @@ def fit_oos(b,finals):
         for role in ['batting','bowling']:
             target='runs' if role=='batting' else 'bowler_runs'
             reg=make_pipeline(StandardScaler(),Ridge(alpha=60))
-            reg.fit(context_x(train),train[target])
+            role_train=role_rows(train,role)
+            reg.fit(context_x(role_train),role_train[target])
             test[role+'_expected']=np.clip(reg.predict(context_x(test)),0,6)
             test[role+'_residual']=(test[target]-test[role+'_expected'])*(1 if role=='batting' else -1)
         boundary_model=make_pipeline(StandardScaler(),LogisticRegression(max_iter=500))
@@ -160,6 +161,8 @@ def fit_oos(b,finals):
     return pd.concat(out,ignore_index=True),validation
 
 def summarize(d,role,mask=None,minimum=True):
+    d=role_rows(d,role)
+    if mask is not None:mask=mask.reindex(d.index,fill_value=False)
     player='striker_id' if role=='batting' else 'bowler_id';name='striker_name' if role=='batting' else 'bowler_name'
     key=f'{role}_{CFG["tau"]}';q=d[d[key] if mask is None else mask]
     result=[];rng=np.random.default_rng(CFG['seed'])
@@ -271,7 +274,7 @@ def main():
     configraw=(ROOT/'config/methodology_v1.yaml').read_bytes()
     codehash=hashlib.sha256(b''.join(p.read_bytes() for p in sorted((ROOT/'analysis').glob('*.py')))).hexdigest()
     aid=hashlib.sha256(configraw+json.dumps(audit['manifest'],sort_keys=True).encode()+codehash.encode()).hexdigest()[:16]
-    result={'analysis_id':aid,'version':CFG['version'],'generated':datetime.now(timezone.utc).isoformat(),'status':'RESEARCH BASELINE - participant review required; not submission-ready','config':CFG,'provenance':{'code_sha256':codehash,'config_sha256':hashlib.sha256(configraw).hexdigest(),'python':platform.python_version(),'input_zip_sha256':audit.get('input_zip_sha256'),'input_manifest':audit['manifest']},'pressure_policy':('phase_required_rate_fallback' if fallback else 'margin'),'margin_eligible_counts':margin_coverage,'audit':{'excluded_innings':int(b.loc[~b.retained].groupby(KEYS).ngroups),'retained_innings':int(b.loc[b.retained].groupby(KEYS).ngroups),'deliveries':source_deliveries,'matches':source_matches,'scope_deliveries':scope_deliveries,'scope_matches':scope_matches,'out_of_scope_deliveries':source_deliveries-scope_deliveries,'out_of_scope_matches':source_matches-scope_matches,'date_range':audit['date_range'],'retained_matches':int(b.loc[b.retained,'match_id'].nunique()),'retained_deliveries':int(b.retained.sum()),'excluded_matches':len(reasons),'excluded_deliveries':int((~b.retained).sum()),'exclusion_reasons_overlapping':exclusion_counts,'oos_matches':int(oos.match_id.nunique()),'oos_deliveries':len(oos),'warmup_deliveries':int(b.retained.sum()-len(oos)),'duplicate_delivery_keys':audit['duplicate_delivery_keys'],'competitions':int(b.comp_id.nunique()),'missing_xi_order':int(b.xi_order.isna().sum()),'schema':{k:{'rows':v['rows'],'columns':list(v['columns'])} for k,v in audit['tables'].items()}},'validation':validation,'limitations':['No validated combined wicket/run-equivalent model: rankings use contextual run residuals and publish wickets separately. Strict margin coverage failed; the fallback is not a validated superior pressure measure.','Primary model is linear logistic; quadratic candidate evaluated but no superiority claim or automatic selection.','Margin labels are an operational hypothesis; no psychological pressure ground truth. Stress support/extrapolation validation is pending.','First-innings median benchmark is a modelling assumption; first/chase figures are separate. Overall run residual ranking pools their exposure without claiming identical viability scales.','Opponent strength, venue effects, hierarchical season effects and supported pace/spin comparisons are not yet fitted.','Player estimates use fixed exposure shrinkage and match bootstrap, not a fitted hierarchical posterior.','2026 holdout metrics are reported; models and policy were developed in this implementation, not prospectively preregistered. Policy comparisons are retrospective and not confirmatory evidence of superiority.','Auction availability, 2027 rules, purse and submission dropdown IDs are unverified. No actionable TARGET list is asserted.','Ranking scores compare pressure residuals with each player’s non-pressure contextual residual baseline. Pairwise candidate comparisons use common assignment strata and contextual contribution; venue/opponent/position confounds remain.']}
+    result={'analysis_id':aid,'version':CFG['version'],'generated':datetime.now(timezone.utc).isoformat(),'status':'RESEARCH BASELINE - participant review required; not submission-ready','config':CFG,'provenance':{'code_sha256':codehash,'config_sha256':hashlib.sha256(configraw).hexdigest(),'python':platform.python_version(),'input_zip_sha256':audit.get('input_zip_sha256'),'input_manifest':audit['manifest']},'pressure_policy':('phase_required_rate_fallback' if fallback else 'margin'),'margin_eligible_counts':margin_coverage,'audit':{'excluded_innings':int(b.loc[~b.retained].groupby(KEYS).ngroups),'retained_innings':int(b.loc[b.retained].groupby(KEYS).ngroups),'deliveries':source_deliveries,'matches':source_matches,'scope_deliveries':scope_deliveries,'scope_matches':scope_matches,'out_of_scope_deliveries':source_deliveries-scope_deliveries,'out_of_scope_matches':source_matches-scope_matches,'date_range':audit['date_range'],'retained_matches':int(b.loc[b.retained,'match_id'].nunique()),'retained_deliveries':int(b.retained.sum()),'excluded_matches':len(reasons),'excluded_deliveries':int((~b.retained).sum()),'exclusion_reasons_overlapping':exclusion_counts,'oos_matches':int(oos.match_id.nunique()),'oos_deliveries':len(oos),'warmup_deliveries':int(b.retained.sum()-len(oos)),'duplicate_delivery_keys':audit['duplicate_delivery_keys'],'competitions':int(b.comp_id.nunique()),'missing_xi_order':int(b.xi_order.isna().sum()),'schema':{k:{'rows':v['rows'],'columns':list(v['columns'])} for k,v in audit['tables'].items()}},'validation':validation,'limitations':['No validated combined wicket/run-equivalent model: rankings use contextual run residuals and publish wickets separately. Strict margin coverage failed; the fallback is not a validated superior pressure measure.','Primary model is linear logistic; quadratic candidate evaluated but no superiority claim or automatic selection.','Margin labels are an operational hypothesis; no psychological pressure ground truth. Stress support/extrapolation validation is pending.','First-innings median benchmark is a modelling assumption; first/chase figures are separate. Overall run residual ranking pools their exposure without claiming identical viability scales.','Opponent strength, venue effects, hierarchical season effects and supported pace/spin comparisons are not yet fitted.','Player estimates use fixed exposure shrinkage and match bootstrap, not a fitted hierarchical posterior.','2026 holdout metrics are reported; models and policy were developed in this implementation, not prospectively preregistered. Policy comparisons are retrospective and not confirmatory evidence of superiority.','Auction availability, 2027 rules, purse and submission dropdown IDs are unverified. No actionable TARGET list is asserted.','Ranking scores compare pressure residuals with each playerâ€™s non-pressure contextual residual baseline. Pairwise candidate comparisons use common assignment strata and contextual contribution; venue/opponent/position confounds remain.']}
     for role,label in [('batting','batters'),('bowling','bowlers')]:
         ranked=summarize(oos,role);selected=ranked[:10]
         for p in selected:
@@ -299,7 +302,7 @@ def main():
     for name in result['roster']['players']:
         row={'name':name,'status':'2026 squad page; 2027 status unknown','batting':[],'bowling':[]}
         for role in ['batting','bowling']:
-            col='striker_name' if role=='batting' else 'bowler_name';matches=ipl_oos[ipl_oos[col].str.casefold()==name.casefold()]
+            col='striker_name' if role=='batting' else 'bowler_name';matches=role_rows(ipl_oos[ipl_oos[col].str.casefold()==name.casefold()],role)
             if len(matches):
                 for phase,g in matches.groupby('phase'):
                     if len(g)>=60 and g.match_id.nunique()>=5:row[role].append({'phase':phase,'balls':len(g),'matches':int(g.match_id.nunique()),'score':round(float(g[role+'_residual'].mean()*100),2)})

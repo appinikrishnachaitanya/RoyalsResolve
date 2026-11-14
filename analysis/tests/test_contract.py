@@ -14,6 +14,12 @@ class Reference:
         return np.column_stack([1-p,p])
 
 class Contract(unittest.TestCase):
+    def test_batter_exposure_excludes_wides(self):
+        from supporting import role_rows
+        d=pd.DataFrame({"extra":["None","wide","legbyes"],"runs":[4,0,0]})
+        self.assertEqual(role_rows(d,"batting").index.tolist(),[0,2])
+        self.assertEqual(role_rows(d,"bowling").index.tolist(),[0,1,2])
+
     def state(self):
         return pd.DataFrame({'match_id':[1],'innings':[2],'score':[10],'lost':[2],'remaining':[4],'need':[8],'used':[116]})
     def test_pre_delivery(self):
@@ -79,7 +85,9 @@ class Contract(unittest.TestCase):
                 self.assertAlmostEqual(100*p['uplift_sum']/(p['balls']+60),p['score'],places=3)
                 self.assertEqual(p['balls'],p['ipl_balls']+p['t20i_balls'])
                 player_col='striker_id' if role=='batting' else 'bowler_id';key=f'{role}_0.2'
-                player_rows=evaluated[evaluated[player_col]==p['id']];pressure_rows=player_rows[player_rows[key]]
+                player_rows=evaluated[evaluated[player_col]==p['id']]
+                if role=='batting':player_rows=player_rows[player_rows.extra.ne('wide')]
+                pressure_rows=player_rows[player_rows[key]]
                 self.assertEqual(len(pressure_rows),p['balls'])
                 format_uplift=0.0
                 for is_ipl in pressure_rows.is_ipl.unique():

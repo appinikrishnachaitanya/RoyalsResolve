@@ -36,3 +36,8 @@ First/chase contributions are shown separately. The provisional overall list com
 The official RR page is labelled Squad 2026; accessed 2026-11-12. It establishes a latest verified season roster, not 2027 retention, auction registration, injuries, purse or overseas eligibility. No supported quality gap or price is manufactured. Conditional cases include capability, verified coverage, uncertainty, alternative, risk and dated actionability. Names not matched to supplied data are not assessed, never zero quality. Current public rules, availability and prices must be verified before actionable purchasing advice.
 The bundled Round 1 brief requires two ordered top-ten lists selected through Unstop dropdowns and a methodology upload. It does not publish a detailed numeric judging rubric. No Unstop account/dropdown access is available here, so name/ID compatibility remains for participant verification. No submission is sent. Participant review must own the final recommendations.
 Methods use established logistic regression, ridge regression, shrinkage and cluster bootstrap. References: scikit-learn official LogisticRegression and Ridge documentation; Efron and Tibshirani (1993), An Introduction to the Bootstrap; partial-pooling motivation from Gelman et al., Bayesian Data Analysis. This implementation's fixed pseudo-exposure shrinkage is explicitly simpler than a hierarchical Bayesian fit.
+
+
+### Batter exposure and wides
+
+Batting model fitting, pressure samples, ordinary baselines, rankings, comparisons and supporting metrics exclude wides. Bowling retains wides as charged delivery events. The score retains the provisional 60-event shrinkage; see `score-validation.md` for rolling validation and limitations.

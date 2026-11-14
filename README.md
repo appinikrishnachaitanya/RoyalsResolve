@@ -6,7 +6,7 @@
 
 **An independent SupeRR Selector research entry for Rajasthan Royals' IPL 2027 auction**
 
-[Run locally](#run-the-dashboard-locally) · [Rebuild the analysis](#rebuild-the-analysis) · [Methodology](docs/methodology.md) · [Deployment](docs/deployment.md)
+[Run locally](#run-the-dashboard-locally) Â· [Rebuild the analysis](#rebuild-the-analysis) Â· [Methodology](docs/methodology.md) Â· [Deployment](docs/deployment.md)
 
 </div>
 
@@ -126,3 +126,7 @@ The static check expects the local server to be running. The analysis check conf
 The project includes a Dockerfile and Cloud Build configuration for manual Cloud Run deployment. Docker execution and cloud deployment were not verified in this environment. Follow [the deployment guide](docs/deployment.md); set your own Google Cloud project, region, Artifact Registry repository, and service accounts. No live deployment URL is claimed.
 
 Interactive desktop and mobile browser checks also remain unverified because the local browser tool could not access the preview. The static production build, report output, and local HTTP routes were checked.
+
+### Score validation
+
+Batting samples and model fitting exclude wides; bowling retains charged wide events. The fixed 60-event shrinkage remains provisional. See [validation findings](docs/score-validation.md) for rolling backtests, match uncertainty, cohort coverage and reproducible commands.
