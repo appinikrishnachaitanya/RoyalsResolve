@@ -41,3 +41,7 @@ Methods use established logistic regression, ridge regression, shrinkage and clu
 ### Batter exposure and wides
 
 Batting model fitting, pressure samples, ordinary baselines, rankings, comparisons and supporting metrics exclude wides. Bowling retains wides as charged delivery events. The score retains the provisional 60-event shrinkage; see `score-validation.md` for rolling validation and limitations.
+
+
+### Robustness and interpretation
+Rankings order improvement over own usual output. The separate pressure-only contextual score measures run output against model expectations, with the same 60-event shrinkage. Broader pressure rules use chase remaining <=72 / required rate >=7, or first innings remaining <=36 / wickets lost >=2. Narrower rules use <=48 / >=9 and <=24 / >=4 respectively. These vary the operational fallback, retaining fitted models. Every pressure match is removed separately, including its ordinary deliveries, and the baseline is recalculated. The lowest resulting score is reported. Peer rank compares that score against unchanged published peers; it is not a full-cohort match-removal reranking. Unsupported removals are omitted and the checked count is saved.
