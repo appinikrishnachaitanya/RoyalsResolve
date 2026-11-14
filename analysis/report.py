@@ -118,18 +118,18 @@ def main():
         para('Usual baseline: the player’s average contextual residual on non-pressure deliveries in the same format (IPL or T20I), weighted to match the formats in their pressure sample. Example: pressure residuals total +18 runs over 60 deliveries, while usual output is +0.10 residual runs per delivery. Adjusted total = 18 - (60 x 0.10) = 12; score = 100 x 12 / (60 + 60) = +10 runs per 100 pressure deliveries. The fixed 60-event zero prior shrinks small pressure samples toward zero; it is not 60 observed balls.', 'BodyRR'),
         para('Eligibility and uncertainty', 'SubRR'),
         para('Eligibility is role-specific: at least 30 pressure deliveries across 5 matches; 60 non-pressure deliveries across 5 matches overall; and 30 non-pressure deliveries in 3 matches for every format represented in the pressure sample. Ranks sort by score descending, then pressure matches descending, then player ID. The 95% interval uses 400 match-cluster bootstrap replicates and re-estimates the usual baseline in each replicate. It reflects match-to-match uncertainty conditional on the fitted run model; it does not include model-fitting uncertainty.', 'BodyRR'),
-        para('The score uses runs only. Wickets are reported separately and receive no invented run value. No value is added across the six pressure dimensions.', 'SmallRR'),
+        para('The ranking uses runs only. Pressure wickets (bowling) and striker dismissals (batting) appear as context in the player tables; they are not assigned run values or added to the score. The 60-event adjustment is fixed zero-centred shrinkage, not a fitted empirical Bayes prior.', 'SmallRR'),
         PageBreak(),
     ]
 
     for key, title in [('batters', 'Top 10 batters under pressure'), ('bowlers', 'Top 10 bowlers under pressure')]:
         players = data[key]
         story += [para(title, 'SectionRR'), para('Ordered by pressure lift versus the player’s own usual contextual level. Higher is better; intervals crossing zero indicate uncertainty about the direction of the lift.', 'BodyRR')]
-        rows = [['Rank / player', 'Observed role', 'Lift / 100', 'P matches', 'IPL pressure', 'T20I pressure', '95% range']]
+        rows = [['Rank / player / role', 'Lift vs usual / 100', 'Pressure output / 100', 'Pressure matches', 'IPL balls', 'T20I balls', 'Wickets' if key == 'bowlers' else 'Dismissals', '95% score range']]
         for p in players:
-            rows.append([f"{p['rank']}. {p['name']}", ', '.join(p['roles']) or 'Not established', fmt(p['score']), str(p['matches']), str(p['ipl_balls']), str(p['t20i_balls']), f"{fmt(p['interval'][0])} to {fmt(p['interval'][1])}"])
-        story += [table(rows, [105, 95, 55, 55, 55, 55, 85], compact=True), Spacer(1, 9)]
-        story += [para('Eligibility is based on pressure evidence in the named role and a supported non-pressure baseline. IPL and T20I event counts show where the pressure evidence came from; a zero in one format does not mean zero ability. It means no qualifying pressure deliveries in that format.', 'SmallRR')]
+            rows.append([f"{p['rank']}. {p['name']}\n" + (', '.join(p['roles']) or 'Insufficient role sample'), fmt(p['score']), fmt(p['pressure_score']), str(p['matches']), str(p['ipl_balls']), str(p['t20i_balls']), str(p['dismissals']), f"{fmt(p['interval'][0])} to {fmt(p['interval'][1])}"])
+        story += [table(rows, [105, 55, 65, 42, 42, 42, 44, 110], compact=True), Spacer(1, 9)]
+        story += [para('Pressure output / 100 is the shrunk contextual contribution against model expectation, without subtracting the usual baseline. Lift / 100 additionally compares against usual performance. Both use the same 60-event adjustment. A positive lift interval does not establish superiority over another player.', 'SmallRR'), para('Eligibility is based on pressure evidence in the named role and a supported non-pressure baseline. IPL and T20I event counts show where the pressure evidence came from; a zero in one format does not mean zero ability. It means no qualifying pressure deliveries in that format.', 'SmallRR')]
         if key == 'batters':
             story.append(PageBreak())
         else:
@@ -145,10 +145,10 @@ def main():
         para('Data-quality exclusions', 'SubRR'),
         table([['Reason', 'Matches affected']] + [[reason, str(count)] for reason, count in exclusions], [390, 115], compact=True),
         Spacer(1, 4),
-        para('Exclusion reason counts can overlap. Ambiguous extras are the largest source of excluded IPL/T20I matches and may affect which matches are represented.', 'SmallRR'),
+        para(f"Of {audit['scope_matches']} in-scope matches, {audit['excluded_matches']} ({100*audit['excluded_matches']/audit['scope_matches']:.1f}%) were excluded and {audit['retained_matches']} retained. The retained set includes {audit['retained_matches']-audit['oos_matches']} warm-up matches and {audit['oos_matches']} out-of-time evaluation matches. Reason counts overlap. Matches with ambiguous extras types or penalty timing are quarantined because legal-ball use, charged runs or state timing cannot be reconciled safely from the supplied fields. This conservative policy causes selection bias; it does not prove every excluded match is unusable with further investigation.", 'SmallRR'),
         para('What these lists do and do not establish', 'SubRR'),
         para(f"The rankings describe contextual run contribution relative to each player’s usual level in supplied IPL/T20I data. They are not overall talent grades, win-probability predictions, or proof of mental toughness. Venue, opponent, exact batting position, opponent quality and hierarchical season effects are not fully controlled. IPL/T20I cross-format transfer is not established. T20I-only players remain eligible under the brief when they meet these statistical sample rules; they are not presented as auction-available players. {shaheen_note}", 'BodyRR'),
-        para('The supplied pack does not verify IPL 2027 auction registration, player availability, retention, price, purse or Rajasthan Royals’ final squad gaps. The report therefore presents evidence for the requested player rankings, not a claim that every ranked player can be purchased or should be selected. RR incumbent comparisons use IPL deliveries only and do not establish a 2027 roster need. The Unstop dropdown options were not available for a direct name-to-option check; confirm the final selections match the displayed names.', 'BodyRR'),
+        para('The supplied pack does not verify IPL 2027 auction registration, player availability, retention, price, purse or Rajasthan Royals’ final squad gaps. The report therefore presents evidence for the requested player rankings, not a claim that every ranked player can be purchased or should be selected. Optional RR incumbent comparisons are available in the dashboard, use IPL deliveries only, and do not establish a 2027 roster need. The Unstop dropdown options were not available for a direct name-to-option check; confirm the final selections match the displayed names.', 'BodyRR'),
         para('Reproduce from the supplied data with analysis/audit.py, analysis/pipeline.py and analysis/report.py. Raw source deliveries remain local; only eligible-player aggregates are included in this report.', 'SmallRR'),
     ]
 
