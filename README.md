@@ -137,3 +137,7 @@ Batting samples and model fitting exclude wides; bowling retains charged wide ev
 - Better or worse under pressure: estimated extra runs scored or saved per 100 pressure deliveries versus the player’s usual performance.
 - Matches & balls analysed: the sample supporting the estimate.
 - Estimated score range: 95% match-bootstrap interval. An interval including zero means improvement is uncertain; it is not a probability of winning.
+
+## Final Round 1 submission
+
+Use the [submission checklist and exact ordered player lists](docs/submission-checklist.md). Upload `results/public/methodology.pdf` and fill both Unstop top-ten dropdown lists. Independent human review is optional further validation, not a requirement of the supplied brief. Deploy the latest commit before sharing the dashboard link.
