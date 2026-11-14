@@ -232,3 +232,5 @@ footer code { font-size: 10px; }
   dialog { padding: 21px; }
   table { min-width: 620px; }
 }
+
+.player-scorecard .player-summary{padding:16px;background:#f8f5fa;border-left:4px solid #d52b81;border-radius:8px;margin:16px 0}.player-scorecard .player-summary h3{margin:0 0 8px}.player-scorecard .metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.player-scorecard .metric-grid strong{font-size:1.55rem;display:block}.player-scorecard .evidence-facts{display:grid;gap:8px}.player-scorecard .evidence-facts p{margin:0;padding:12px;background:#f5f6f8;border-radius:8px}.player-scorecard details{margin:16px 0}.player-scorecard summary{cursor:pointer;font-weight:600;padding:12px}@media(max-width:520px){.player-scorecard .metric-grid{grid-template-columns:1fr}}

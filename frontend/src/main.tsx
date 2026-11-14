@@ -11,20 +11,37 @@ const signed = (value: number) => `${value > 0 ? '+' : ''}${fmt(value)}`;
 function Drawer({ p, close, bowling }: { p: Player; close: () => void; bowling: boolean }) {
   const ref = useRef<HTMLDialogElement>(null);
   useEffect(() => { const dialog = ref.current; dialog?.showModal(); return () => dialog?.close(); }, []);
-  return <dialog ref={ref} onCancel={close} aria-labelledby="player-title">
+  const clear = p.interval[0] > 0 || p.interval[1] < 0;
+  const variation = p.supporting?.downside;
+  return <dialog ref={ref} onCancel={close} aria-labelledby="player-title" className="player-scorecard">
     <button className="close" onClick={close} aria-label="Close player details">x</button>
-    <small>RANK {p.rank} / PLAYER EVIDENCE</small><h2 id="player-title">{p.name}</h2>
-    <p>{p.roles.join(' / ') || 'Role evidence is insufficient'} | IPL role sample: {p.ipl_role_events} deliveries in {p.ipl_role_matches} matches</p>
-    <div className="metric-grid"><div><strong>{signed(p.score)}</strong>pressure lift vs usual / 100 deliveries</div><div><strong>{p.matches}</strong>independent matches</div><div><strong>{p.episodes}</strong>pressure episodes</div></div>
-    <h3>How this score is calculated</h3>
-    <p>{fmt(p.balls, 0)} eligible pressure deliveries ({p.ipl_balls} IPL; {p.t20i_balls} T20I). {bowling ? `Expected bowler-charged runs ${fmt(p.expected_runs, 2)} minus observed charged runs ${fmt(p.runs, 0)}` : `Observed batter runs ${fmt(p.runs, 0)} minus expected batter runs ${fmt(p.expected_runs, 2)}`} = <b>{signed(p.residual_sum)} pressure runs relative to expectation</b>. Usual non-pressure level: {signed(p.usual)} per 100. Score = 100 x [pressure residual sum - ({p.balls} x usual residual per 100 / 100)] / ({p.balls} + 60) = <b>{signed(p.score)} runs per 100 vs usual</b>. The separate pressure-only contextual score is {signed(p.pressure_score)} per 100.</p>
-    <p>95% match-bootstrap interval: [{p.interval.map((x) => fmt(x)).join(', ')}]. Non-pressure baseline: {signed(p.usual)} residual runs per 100 deliveries. The unpooled pressure-minus-usual difference is {signed(p.difference)} per 100 before sample shrinkage.</p>
-    <h3>Role and phase evidence</h3><div className="table-wrap"><table><thead><tr><th>Phase</th><th>Events / matches</th><th>Runs / 100</th></tr></thead><tbody>{p.phases.map((x) => <tr key={x.role}><td>{x.role}</td><td>{x.balls} / {x.matches}</td><td>{signed(x.contribution)}</td></tr>)}</tbody></table></div>
-    <p>First innings: {p.first_innings_balls} events, {p.first_innings_score === null ? 'not available' : `${signed(p.first_innings_score)} ${bowling ? 'runs saved' : 'runs above expectation'} per 100`}. Chase: {p.chase_balls} events, {p.chase_score === null ? 'not available' : `${signed(p.chase_score)} ${bowling ? 'runs saved' : 'runs above expectation'} per 100`}.</p>
-    <RRCase p={p} /><Supporting p={p} />
-    <h3>Additional observed statistics</h3><p>{p.balls} pressure events; {p.legal_balls} legal balls ({p.overs} overs). {bowling ? 'Economy (charged runs per 6 legal balls)' : 'Strike rate (batter runs per 100 non-wide events)'}: {fmt(p.rate)}. {bowling ? 'Wickets credited to bowler' : 'Striker dismissals'}: {p.dismissals}. Expected striker dismissals: {fmt(p.expected_dismissals)}. Dot rate: {fmt(p.dot_rate)}%. Boundary rate: {fmt(p.boundary_rate)}%. Extras: {p.extras} runs.</p>
-    <h3>Limitations for this player</h3><p>{p.objection}</p><h3>Season breakdown</h3>{p.seasons.map((s) => <p key={s.year}>{s.year}: {s.balls} pressure events, {signed(s.score)} pressure lift per 100 vs usual.</p>)}
-    <p className="notice">Statistical ranking only. Auction availability, 2027 registration, price and eligibility have not been verified. IPL pressure sample: {p.ipl_balls} deliveries.</p>
+    <small>{bowling ? 'BOWLING' : 'BATTING'} / RANK {p.rank}</small><h2 id="player-title">{p.name}</h2>
+    <p>{p.roles.join(' / ') || 'Role not established'} · {p.ipl_2026_teams?.join(' / ') || 'No team in supplied IPL 2026 mapping'}</p>
+    <div className="player-summary"><h3>{p.score > 0 ? 'Better than usual under pressure' : 'Below usual performance under pressure'}</h3>
+      <p>Estimated {fmt(Math.abs(p.score))} {p.score >= 0 ? 'extra' : 'fewer'} runs {bowling ? 'saved' : 'scored'} per 100 pressure deliveries, compared with this player's usual performance. Small samples are adjusted toward zero.</p>
+      <span className="notice">{clear ? 'The estimated range stays on one side of zero.' : 'The estimated range includes zero: the direction of improvement is uncertain.'} This is historical evidence, not a forecast.</span>
+    </div>
+    <div className="metric-grid"><div><strong>{signed(p.score)}</strong>Better or worse than usual / 100</div><div><strong>{p.matches}</strong>Pressure matches</div><div><strong>{p.balls}</strong>Pressure deliveries</div><div><strong>{signed(p.interval[0])} to {signed(p.interval[1])}</strong>Estimated score range (95%)</div></div>
+    <h3>What happened in those deliveries?</h3>
+    <div className="table-wrap"><table><thead><tr><th>Measure</th><th>Result</th></tr></thead><tbody>
+      <tr><td>{bowling ? 'Runs conceded' : 'Runs scored'}</td><td>{fmt(p.runs, 0)}</td></tr>
+      <tr><td>Model expected</td><td>{fmt(p.expected_runs)}</td></tr>
+      <tr><td>{bowling ? 'Runs saved against expectation' : 'Extra runs against expectation'}</td><td>{signed(p.residual_sum)} across {p.balls} deliveries</td></tr>
+      <tr><td>{bowling ? 'Economy' : 'Strike rate'}</td><td>{fmt(p.rate)}</td></tr>
+      <tr><td>{bowling ? 'Wickets taken' : 'Times dismissed'}</td><td>{p.dismissals}</td></tr>
+      <tr><td>Where the pressure sample comes from</td><td>{p.ipl_balls} IPL / {p.t20i_balls} T20I deliveries</td></tr>
+    </tbody></table></div>
+    <h3>How consistent was the evidence?</h3><div className="evidence-facts">
+      {variation && <p><b>{variation.unfavourable_matches} of {variation.matches} pressure matches</b> had below-expectation contextual output. This differs from the ranking's comparison with usual performance.</p>}
+      <p>Removing any one pressure match gives a lowest score of <b>{signed(p.leave_one_out_worst)}</b> per 100. Baselines are recalculated; other players are held fixed for the peer comparison.</p>
+      <p>{p.first_innings_balls ? `${p.first_innings_balls} first-innings pressure deliveries` : 'No qualifying first-innings pressure deliveries'}; {p.chase_balls} chase pressure deliveries. Evidence may cover only one innings setting.</p>
+    </div>
+    <h3>Season results</h3><div className="table-wrap"><table><thead><tr><th>Season</th><th>Pressure deliveries</th><th>Better or worse than usual / 100</th></tr></thead><tbody>{p.seasons.map(x => <tr key={x.year}><td>{x.year}</td><td>{x.balls}</td><td>{signed(x.score)}</td></tr>)}</tbody></table></div>
+    <p className="role">Each season uses its own exposure adjustment against the saved ordinary baseline. These rows do not sum to the overall score.</p>
+    <details className="formula-details"><summary>See the calculation</summary><p>Actual {bowling ? 'charged' : 'batter'} runs: {fmt(p.runs)}. Expected: {fmt(p.expected_runs)}. Pressure contribution: {signed(p.residual_sum)}. Usual contribution: {signed(p.usual)} runs per 100 ordinary deliveries.</p><p>Score = 100 × [{signed(p.residual_sum)} − ({p.balls} × {fmt(p.usual)} / 100)] / ({p.balls} + 60) = {signed(p.score)}.</p><p>Pressure-only output against the model: {signed(p.pressure_score)} per 100 after sample adjustment. Improvement over usual before adjustment: {signed(p.difference)} per 100. The 95% range comes from resampling whole matches; it is not a confidence percentage or win probability.</p></details>
+    <details className="formula-details"><summary>Playing roles and additional match evidence</summary><div className="table-wrap"><table><thead><tr><th>Phase</th><th>Deliveries / matches</th><th>Output vs expectation / 100</th></tr></thead><tbody>{p.phases.map(x => <tr key={x.role}><td>{x.role}</td><td>{x.balls} / {x.matches}</td><td>{signed(x.contribution)}</td></tr>)}</tbody></table></div><p>Role evidence includes ordinary and pressure play.</p><Supporting p={p} /></details>
+    <details className="formula-details"><summary>Comparison with an RR player</summary><p>This compares observed assignments with a supplied RR squad reference. It does not establish a 2027 squad gap, retention decision or purchase recommendation.</p><RRCase p={p} /></details>
+    <p className="notice">{p.objection} Auction availability and 2027 squad needs are unverified.</p>
   </dialog>;
 }
 
