@@ -130,3 +130,10 @@ Interactive desktop and mobile browser checks also remain unverified because the
 ### Score validation
 
 Batting samples and model fitting exclude wides; bowling retains charged wide events. The fixed 60-event shrinkage remains provisional. See [validation findings](docs/score-validation.md) for rolling backtests, match uncertainty, cohort coverage and reproducible commands.
+
+### Reading the player table
+
+- IPL 2026 team: supplied competition-team-player mapping; missing records are labelled explicitly.
+- Better or worse under pressure: estimated extra runs scored or saved per 100 pressure deliveries versus the player’s usual performance.
+- Matches & balls analysed: the sample supporting the estimate.
+- Estimated score range: 95% match-bootstrap interval. An interval including zero means improvement is uncertain; it is not a probability of winning.

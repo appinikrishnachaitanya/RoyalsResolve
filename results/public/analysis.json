@@ -1,7 +1,7 @@
 {
-  "analysis_id": "c48dc86f17afc5a2",
+  "analysis_id": "e7cf53e76ec17e17",
   "version": "1.0.0",
-  "generated": "2026-11-14T14:13:04.510937+00:00",
+  "generated": "2026-11-14T14:27:45.722598+00:00",
   "status": "RESEARCH BASELINE - participant review required; not submission-ready",
   "config": {
     "version": "1.0.0",
@@ -80,7 +80,7 @@
     ]
   },
   "provenance": {
-    "code_sha256": "7a14a99ae8fead1bdcc31681c7aacb73ac3d2c3e4a03a7d0d804a3f362af03ab",
+    "code_sha256": "7e2c2c92ee793c394ebb285c07f4ced26a75f51bc6b0cfacca4bc1603b5a45aa",
     "config_sha256": "c64cb03894b35eeb5db7b6451c0e819ef130f3f1c7d5ece17ff8f06f0145c873",
     "python": "3.10.4",
     "input_zip_sha256": "82da62e94840e614ef136f0bb24168fe72b567c3eff71bf6b58488ac9b2b7f7d",
@@ -148,9 +148,9 @@
       "ambiguous extras semantics / penalty timing": 475,
       "incomplete or inconsistent regulation innings": 24,
       "nonterminal chase": 17,
-      "missing regulation innings": 22,
       "abandoned / tied / eliminator": 30,
       "revised length or target timing unknown": 34,
+      "missing regulation innings": 22,
       "untyped extras": 2,
       "winner reconciliation failed": 7,
       "super over": 4,
@@ -751,6 +751,7 @@
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 77 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 1,
       "leave_one_out_peer_rank": 8,
+      "ipl_2026_teams": [],
       "scenarios": {
         "Worst single-match removal": 24.6569,
         "IPL only": null,
@@ -1052,6 +1053,9 @@
       "rr_contribution": "Observed role evidence: Opener, Middle order. IPL role exposure in the evaluated window: 438 deliveries across 22 matches. Pressure samples include 50 IPL and 8 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 2,
       "leave_one_out_peer_rank": 16,
+      "ipl_2026_teams": [
+        "Chennai Super Kings"
+      ],
       "scenarios": {
         "Worst single-match removal": 15.8663,
         "IPL only": {
@@ -1310,6 +1314,9 @@
       "rr_contribution": "Observed role evidence: Death overs. IPL role exposure in the evaluated window: 249 deliveries across 15 matches. Pressure samples include 167 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 3,
       "leave_one_out_peer_rank": 6,
+      "ipl_2026_teams": [
+        "Punjab Kings"
+      ],
       "scenarios": {
         "Worst single-match removal": 25.7697,
         "IPL only": {
@@ -1562,6 +1569,9 @@
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 250 deliveries across 16 matches. Pressure samples include 142 IPL and 38 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 4,
       "leave_one_out_peer_rank": 9,
+      "ipl_2026_teams": [
+        "Kolkata Knight Riders"
+      ],
       "scenarios": {
         "Worst single-match removal": 23.8367,
         "IPL only": {
@@ -1871,6 +1881,9 @@
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 350 deliveries across 24 matches. Pressure samples include 64 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 5,
       "leave_one_out_peer_rank": 36,
+      "ipl_2026_teams": [
+        "Lucknow Super Giants"
+      ],
       "scenarios": {
         "Worst single-match removal": 1.1337,
         "IPL only": {
@@ -2175,6 +2188,9 @@
       "rr_contribution": "Observed role evidence: Death overs. IPL role exposure in the evaluated window: 207 deliveries across 19 matches. Pressure samples include 129 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 6,
       "leave_one_out_peer_rank": 10,
+      "ipl_2026_teams": [
+        "Lucknow Super Giants"
+      ],
       "scenarios": {
         "Worst single-match removal": 21.1661,
         "IPL only": {
@@ -2525,6 +2541,9 @@
       "rr_contribution": "Observed role evidence: Opener, Death overs. IPL role exposure in the evaluated window: 787 deliveries across 31 matches. Pressure samples include 58 IPL and 19 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 7,
       "leave_one_out_peer_rank": 25,
+      "ipl_2026_teams": [
+        "Gujarat Titans"
+      ],
       "scenarios": {
         "Worst single-match removal": 9.3452,
         "IPL only": {
@@ -2774,6 +2793,9 @@
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 171 deliveries across 11 matches. Pressure samples include 70 IPL and 48 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 8,
       "leave_one_out_peer_rank": 16,
+      "ipl_2026_teams": [
+        "Sunrisers Hyderabad"
+      ],
       "scenarios": {
         "Worst single-match removal": 15.4531,
         "IPL only": {
@@ -3060,6 +3082,9 @@
       "rr_contribution": "Observed role evidence: Death overs. IPL role exposure in the evaluated window: 163 deliveries across 22 matches. Pressure samples include 102 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 9,
       "leave_one_out_peer_rank": 16,
+      "ipl_2026_teams": [
+        "Gujarat Titans"
+      ],
       "scenarios": {
         "Worst single-match removal": 16.1989,
         "IPL only": {
@@ -3365,6 +3390,9 @@
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 197 deliveries across 19 matches. Pressure samples include 79 IPL and 19 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 10,
       "leave_one_out_peer_rank": 19,
+      "ipl_2026_teams": [
+        "Royal Challengers Bengaluru"
+      ],
       "scenarios": {
         "Worst single-match removal": 14.2563,
         "IPL only": {
@@ -3694,6 +3722,7 @@
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 77 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 1,
       "leave_one_out_peer_rank": 8,
+      "ipl_2026_teams": [],
       "scenarios": {
         "Worst single-match removal": 24.6569,
         "IPL only": null,
@@ -3995,6 +4024,9 @@
       "rr_contribution": "Observed role evidence: Opener, Middle order. IPL role exposure in the evaluated window: 438 deliveries across 22 matches. Pressure samples include 50 IPL and 8 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 2,
       "leave_one_out_peer_rank": 16,
+      "ipl_2026_teams": [
+        "Chennai Super Kings"
+      ],
       "scenarios": {
         "Worst single-match removal": 15.8663,
         "IPL only": {
@@ -4253,6 +4285,9 @@
       "rr_contribution": "Observed role evidence: Death overs. IPL role exposure in the evaluated window: 249 deliveries across 15 matches. Pressure samples include 167 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 3,
       "leave_one_out_peer_rank": 6,
+      "ipl_2026_teams": [
+        "Punjab Kings"
+      ],
       "scenarios": {
         "Worst single-match removal": 25.7697,
         "IPL only": {
@@ -4505,6 +4540,9 @@
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 250 deliveries across 16 matches. Pressure samples include 142 IPL and 38 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 4,
       "leave_one_out_peer_rank": 9,
+      "ipl_2026_teams": [
+        "Kolkata Knight Riders"
+      ],
       "scenarios": {
         "Worst single-match removal": 23.8367,
         "IPL only": {
@@ -4814,6 +4852,9 @@
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 350 deliveries across 24 matches. Pressure samples include 64 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 5,
       "leave_one_out_peer_rank": 36,
+      "ipl_2026_teams": [
+        "Lucknow Super Giants"
+      ],
       "scenarios": {
         "Worst single-match removal": 1.1337,
         "IPL only": {
@@ -5118,6 +5159,9 @@
       "rr_contribution": "Observed role evidence: Death overs. IPL role exposure in the evaluated window: 207 deliveries across 19 matches. Pressure samples include 129 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 6,
       "leave_one_out_peer_rank": 10,
+      "ipl_2026_teams": [
+        "Lucknow Super Giants"
+      ],
       "scenarios": {
         "Worst single-match removal": 21.1661,
         "IPL only": {
@@ -5468,6 +5512,9 @@
       "rr_contribution": "Observed role evidence: Opener, Death overs. IPL role exposure in the evaluated window: 787 deliveries across 31 matches. Pressure samples include 58 IPL and 19 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 7,
       "leave_one_out_peer_rank": 25,
+      "ipl_2026_teams": [
+        "Gujarat Titans"
+      ],
       "scenarios": {
         "Worst single-match removal": 9.3452,
         "IPL only": {
@@ -5717,6 +5764,9 @@
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 171 deliveries across 11 matches. Pressure samples include 70 IPL and 48 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 8,
       "leave_one_out_peer_rank": 16,
+      "ipl_2026_teams": [
+        "Sunrisers Hyderabad"
+      ],
       "scenarios": {
         "Worst single-match removal": 15.4531,
         "IPL only": {
@@ -6003,6 +6053,9 @@
       "rr_contribution": "Observed role evidence: Death overs. IPL role exposure in the evaluated window: 163 deliveries across 22 matches. Pressure samples include 102 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 9,
       "leave_one_out_peer_rank": 16,
+      "ipl_2026_teams": [
+        "Gujarat Titans"
+      ],
       "scenarios": {
         "Worst single-match removal": 16.1989,
         "IPL only": {
@@ -6308,6 +6361,9 @@
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 197 deliveries across 19 matches. Pressure samples include 79 IPL and 19 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 10,
       "leave_one_out_peer_rank": 19,
+      "ipl_2026_teams": [
+        "Royal Challengers Bengaluru"
+      ],
       "scenarios": {
         "Worst single-match removal": 14.2563,
         "IPL only": {
@@ -6657,7 +6713,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 375 deliveries across 20 matches. Pressure samples include 147 IPL and 57 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 11,
-      "leave_one_out_peer_rank": 28
+      "leave_one_out_peer_rank": 28,
+      "ipl_2026_teams": [
+        "Mumbai Indians"
+      ]
     },
     {
       "nonpressure_balls": 153,
@@ -6818,7 +6877,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 200 deliveries across 16 matches. Pressure samples include 100 IPL and 11 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 12,
-      "leave_one_out_peer_rank": 34
+      "leave_one_out_peer_rank": 34,
+      "ipl_2026_teams": [
+        "Delhi Capitals"
+      ]
     },
     {
       "nonpressure_balls": 604,
@@ -6987,7 +7049,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 451 deliveries across 21 matches. Pressure samples include 96 IPL and 11 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 13,
-      "leave_one_out_peer_rank": 23
+      "leave_one_out_peer_rank": 23,
+      "ipl_2026_teams": [
+        "Mumbai Indians"
+      ]
     },
     {
       "nonpressure_balls": 255,
@@ -7124,7 +7189,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order. IPL role exposure in the evaluated window: 178 deliveries across 7 matches. Pressure samples include 18 IPL and 12 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 14,
-      "leave_one_out_peer_rank": 25
+      "leave_one_out_peer_rank": 25,
+      "ipl_2026_teams": [
+        "Lucknow Super Giants"
+      ]
     },
     {
       "nonpressure_balls": 123,
@@ -7230,7 +7298,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order. IPL role exposure in the evaluated window: 103 deliveries across 6 matches. Pressure samples include 28 IPL and 6 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 15,
-      "leave_one_out_peer_rank": 38
+      "leave_one_out_peer_rank": 38,
+      "ipl_2026_teams": [
+        "Chennai Super Kings"
+      ]
     },
     {
       "nonpressure_balls": 78,
@@ -7357,7 +7428,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: role not established. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 38 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 16,
-      "leave_one_out_peer_rank": 31
+      "leave_one_out_peer_rank": 31,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 110,
@@ -7494,7 +7566,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death overs. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 102 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 17,
-      "leave_one_out_peer_rank": 25
+      "leave_one_out_peer_rank": 25,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 811,
@@ -7664,7 +7737,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Opener, Middle order, Death overs. IPL role exposure in the evaluated window: 565 deliveries across 28 matches. Pressure samples include 48 IPL and 3 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 18,
-      "leave_one_out_peer_rank": 25
+      "leave_one_out_peer_rank": 25,
+      "ipl_2026_teams": [
+        "Gujarat Titans"
+      ]
     },
     {
       "nonpressure_balls": 200,
@@ -7825,7 +7901,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 355 deliveries across 25 matches. Pressure samples include 169 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 19,
-      "leave_one_out_peer_rank": 26
+      "leave_one_out_peer_rank": 26,
+      "ipl_2026_teams": [
+        "Rajasthan Royals"
+      ]
     },
     {
       "nonpressure_balls": 142,
@@ -7985,7 +8064,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death overs. IPL role exposure in the evaluated window: 353 deliveries across 20 matches. Pressure samples include 211 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 20,
-      "leave_one_out_peer_rank": 25
+      "leave_one_out_peer_rank": 25,
+      "ipl_2026_teams": [
+        "Rajasthan Royals"
+      ]
     },
     {
       "nonpressure_balls": 83,
@@ -8099,7 +8181,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death overs. IPL role exposure in the evaluated window: 46 deliveries across 6 matches. Pressure samples include 11 IPL and 66 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 21,
-      "leave_one_out_peer_rank": 25
+      "leave_one_out_peer_rank": 25,
+      "ipl_2026_teams": [
+        "Royal Challengers Bengaluru"
+      ]
     },
     {
       "nonpressure_balls": 96,
@@ -8226,7 +8311,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: role not established. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 46 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 22,
-      "leave_one_out_peer_rank": 31
+      "leave_one_out_peer_rank": 31,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 237,
@@ -8364,7 +8450,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 55 deliveries across 4 matches. Pressure samples include 23 IPL and 95 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 23,
-      "leave_one_out_peer_rank": 32
+      "leave_one_out_peer_rank": 32,
+      "ipl_2026_teams": [
+        "Kolkata Knight Riders"
+      ]
     },
     {
       "nonpressure_balls": 113,
@@ -8501,7 +8590,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death overs. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 117 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 24,
-      "leave_one_out_peer_rank": 30
+      "leave_one_out_peer_rank": 30,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 226,
@@ -8662,7 +8752,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 369 deliveries across 21 matches. Pressure samples include 143 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 25,
-      "leave_one_out_peer_rank": 31
+      "leave_one_out_peer_rank": 31,
+      "ipl_2026_teams": [
+        "Lucknow Super Giants"
+      ]
     },
     {
       "nonpressure_balls": 302,
@@ -8791,7 +8884,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order. IPL role exposure in the evaluated window: 359 deliveries across 22 matches. Pressure samples include 57 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 26,
-      "leave_one_out_peer_rank": 38
+      "leave_one_out_peer_rank": 38,
+      "ipl_2026_teams": [
+        "Royal Challengers Bengaluru"
+      ]
     },
     {
       "nonpressure_balls": 271,
@@ -8929,7 +9025,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 396 deliveries across 19 matches. Pressure samples include 128 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 27,
-      "leave_one_out_peer_rank": 41
+      "leave_one_out_peer_rank": 41,
+      "ipl_2026_teams": [
+        "Sunrisers Hyderabad"
+      ]
     },
     {
       "nonpressure_balls": 285,
@@ -9098,7 +9197,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 273 deliveries across 15 matches. Pressure samples include 36 IPL and 24 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 28,
-      "leave_one_out_peer_rank": 38
+      "leave_one_out_peer_rank": 38,
+      "ipl_2026_teams": [
+        "Punjab Kings"
+      ]
     },
     {
       "nonpressure_balls": 221,
@@ -9189,7 +9291,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 57 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 29,
-      "leave_one_out_peer_rank": 49
+      "leave_one_out_peer_rank": 49,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 126,
@@ -9318,7 +9421,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 82 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 30,
-      "leave_one_out_peer_rank": 38
+      "leave_one_out_peer_rank": 38,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 167,
@@ -9455,7 +9559,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order. IPL role exposure in the evaluated window: 8 deliveries across 1 matches. Pressure samples include 0 IPL and 78 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 31,
-      "leave_one_out_peer_rank": 36
+      "leave_one_out_peer_rank": 36,
+      "ipl_2026_teams": [
+        "Gujarat Titans"
+      ]
     },
     {
       "nonpressure_balls": 214,
@@ -9592,7 +9699,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order. IPL role exposure in the evaluated window: 203 deliveries across 16 matches. Pressure samples include 28 IPL and 19 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 32,
-      "leave_one_out_peer_rank": 41
+      "leave_one_out_peer_rank": 41,
+      "ipl_2026_teams": [
+        "Punjab Kings"
+      ]
     },
     {
       "nonpressure_balls": 826,
@@ -9738,7 +9848,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Opener, Death overs. IPL role exposure in the evaluated window: 897 deliveries across 28 matches. Pressure samples include 87 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 33,
-      "leave_one_out_peer_rank": 39
+      "leave_one_out_peer_rank": 39,
+      "ipl_2026_teams": [
+        "Royal Challengers Bengaluru"
+      ]
     },
     {
       "nonpressure_balls": 247,
@@ -9875,7 +9988,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 54 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 34,
-      "leave_one_out_peer_rank": 44
+      "leave_one_out_peer_rank": 44,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 231,
@@ -10013,7 +10127,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 241 deliveries across 12 matches. Pressure samples include 92 IPL and 64 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 35,
-      "leave_one_out_peer_rank": 44
+      "leave_one_out_peer_rank": 44,
+      "ipl_2026_teams": [
+        "Rajasthan Royals"
+      ]
     },
     {
       "nonpressure_balls": 78,
@@ -10127,7 +10244,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death overs. IPL role exposure in the evaluated window: 91 deliveries across 10 matches. Pressure samples include 50 IPL and 37 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 36,
-      "leave_one_out_peer_rank": 46
+      "leave_one_out_peer_rank": 46,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 741,
@@ -10265,7 +10383,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Opener, Middle order. IPL role exposure in the evaluated window: 851 deliveries across 27 matches. Pressure samples include 110 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 37,
-      "leave_one_out_peer_rank": 44
+      "leave_one_out_peer_rank": 44,
+      "ipl_2026_teams": [
+        "Gujarat Titans"
+      ]
     },
     {
       "nonpressure_balls": 120,
@@ -10371,7 +10492,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order. IPL role exposure in the evaluated window: 167 deliveries across 16 matches. Pressure samples include 47 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 38,
-      "leave_one_out_peer_rank": 50
+      "leave_one_out_peer_rank": 50,
+      "ipl_2026_teams": [
+        "Royal Challengers Bengaluru"
+      ]
     },
     {
       "nonpressure_balls": 88,
@@ -10500,7 +10624,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order. IPL role exposure in the evaluated window: 127 deliveries across 16 matches. Pressure samples include 39 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 39,
-      "leave_one_out_peer_rank": 49
+      "leave_one_out_peer_rank": 49,
+      "ipl_2026_teams": [
+        "Gujarat Titans"
+      ]
     },
     {
       "nonpressure_balls": 123,
@@ -10606,7 +10733,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order. IPL role exposure in the evaluated window: 197 deliveries across 13 matches. Pressure samples include 74 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 40,
-      "leave_one_out_peer_rank": 49
+      "leave_one_out_peer_rank": 49,
+      "ipl_2026_teams": [
+        "Punjab Kings"
+      ]
     },
     {
       "nonpressure_balls": 164,
@@ -10767,7 +10897,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 192 deliveries across 16 matches. Pressure samples include 102 IPL and 72 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 41,
-      "leave_one_out_peer_rank": 46
+      "leave_one_out_peer_rank": 46,
+      "ipl_2026_teams": [
+        "Delhi Capitals"
+      ]
     },
     {
       "nonpressure_balls": 76,
@@ -10894,7 +11027,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: role not established. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 36 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 42,
-      "leave_one_out_peer_rank": 49
+      "leave_one_out_peer_rank": 49,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 179,
@@ -11000,7 +11134,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 66 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 43,
-      "leave_one_out_peer_rank": 49
+      "leave_one_out_peer_rank": 49,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 124,
@@ -11115,7 +11250,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 190 deliveries across 12 matches. Pressure samples include 66 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 44,
-      "leave_one_out_peer_rank": 49
+      "leave_one_out_peer_rank": 49,
+      "ipl_2026_teams": [
+        "Mumbai Indians"
+      ]
     },
     {
       "nonpressure_balls": 310,
@@ -11276,7 +11414,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 361 deliveries across 19 matches. Pressure samples include 139 IPL and 72 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 45,
-      "leave_one_out_peer_rank": 53
+      "leave_one_out_peer_rank": 53,
+      "ipl_2026_teams": [
+        "Chennai Super Kings"
+      ]
     },
     {
       "nonpressure_balls": 133,
@@ -11391,7 +11532,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 144 deliveries across 11 matches. Pressure samples include 103 IPL and 41 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 46,
-      "leave_one_out_peer_rank": 49
+      "leave_one_out_peer_rank": 49,
+      "ipl_2026_teams": [
+        "Mumbai Indians"
+      ]
     },
     {
       "nonpressure_balls": 351,
@@ -11551,7 +11695,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order. IPL role exposure in the evaluated window: 284 deliveries across 20 matches. Pressure samples include 39 IPL and 19 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 47,
-      "leave_one_out_peer_rank": 50
+      "leave_one_out_peer_rank": 50,
+      "ipl_2026_teams": [
+        "Kolkata Knight Riders"
+      ]
     },
     {
       "nonpressure_balls": 319,
@@ -11712,7 +11859,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 303 deliveries across 19 matches. Pressure samples include 132 IPL and 103 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 48,
-      "leave_one_out_peer_rank": 51
+      "leave_one_out_peer_rank": 51,
+      "ipl_2026_teams": [
+        "Mumbai Indians"
+      ]
     },
     {
       "nonpressure_balls": 231,
@@ -11873,7 +12023,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 305 deliveries across 14 matches. Pressure samples include 74 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 49,
-      "leave_one_out_peer_rank": 55
+      "leave_one_out_peer_rank": 55,
+      "ipl_2026_teams": [
+        "Royal Challengers Bengaluru"
+      ]
     },
     {
       "nonpressure_balls": 118,
@@ -12002,7 +12155,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 43 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 50,
-      "leave_one_out_peer_rank": 54
+      "leave_one_out_peer_rank": 54,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 238,
@@ -12131,7 +12285,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 37 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 51,
-      "leave_one_out_peer_rank": 55
+      "leave_one_out_peer_rank": 55,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 147,
@@ -12292,7 +12447,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 252 deliveries across 20 matches. Pressure samples include 167 IPL and 19 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 52,
-      "leave_one_out_peer_rank": 55
+      "leave_one_out_peer_rank": 55,
+      "ipl_2026_teams": [
+        "Rajasthan Royals"
+      ]
     },
     {
       "nonpressure_balls": 240,
@@ -12461,7 +12619,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle order, Death overs. IPL role exposure in the evaluated window: 118 deliveries across 6 matches. Pressure samples include 37 IPL and 73 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 53,
-      "leave_one_out_peer_rank": 55
+      "leave_one_out_peer_rank": 55,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 123,
@@ -12565,7 +12724,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: role not established. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 43 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 54,
-      "leave_one_out_peer_rank": 54
+      "leave_one_out_peer_rank": 54,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 386,
@@ -12702,7 +12862,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Opener. IPL role exposure in the evaluated window: 433 deliveries across 19 matches. Pressure samples include 47 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 55,
-      "leave_one_out_peer_rank": 55
+      "leave_one_out_peer_rank": 55,
+      "ipl_2026_teams": [
+        "Delhi Capitals"
+      ]
     }
   ],
   "batters_eligible_count": 55,
@@ -13638,6 +13801,9 @@
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 285 deliveries across 14 matches. Pressure samples include 89 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 1,
       "leave_one_out_peer_rank": 2,
+      "ipl_2026_teams": [
+        "Mumbai Indians"
+      ],
       "scenarios": {
         "Worst single-match removal": 32.1034,
         "IPL only": {
@@ -13870,6 +14036,9 @@
       "rr_contribution": "Observed role evidence: Death, Middle overs. IPL role exposure in the evaluated window: 92 deliveries across 6 matches. Pressure samples include 38 IPL and 44 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 2,
       "leave_one_out_peer_rank": 12,
+      "ipl_2026_teams": [
+        "Chennai Super Kings"
+      ],
       "scenarios": {
         "Worst single-match removal": 20.0312,
         "IPL only": null,
@@ -14087,6 +14256,7 @@
       "rr_contribution": "Observed role evidence: Death, Middle overs. IPL role exposure in the evaluated window: 144 deliveries across 9 matches. Pressure samples include 64 IPL and 13 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 3,
       "leave_one_out_peer_rank": 9,
+      "ipl_2026_teams": [],
       "scenarios": {
         "Worst single-match removal": 21.4009,
         "IPL only": {
@@ -14294,6 +14464,9 @@
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 307 deliveries across 15 matches. Pressure samples include 76 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 4,
       "leave_one_out_peer_rank": 8,
+      "ipl_2026_teams": [
+        "Royal Challengers Bengaluru"
+      ],
       "scenarios": {
         "Worst single-match removal": 23.3831,
         "IPL only": {
@@ -14535,6 +14708,9 @@
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 357 deliveries across 15 matches. Pressure samples include 81 IPL and 30 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 5,
       "leave_one_out_peer_rank": 9,
+      "ipl_2026_teams": [
+        "Rajasthan Royals"
+      ],
       "scenarios": {
         "Worst single-match removal": 21.7046,
         "IPL only": {
@@ -14780,6 +14956,9 @@
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 69 deliveries across 3 matches. Pressure samples include 21 IPL and 65 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 6,
       "leave_one_out_peer_rank": 14,
+      "ipl_2026_teams": [
+        "Delhi Capitals"
+      ],
       "scenarios": {
         "Worst single-match removal": 17.6097,
         "IPL only": null,
@@ -14988,6 +15167,7 @@
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 133 deliveries across 8 matches. Pressure samples include 73 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 7,
       "leave_one_out_peer_rank": 25,
+      "ipl_2026_teams": [],
       "scenarios": {
         "Worst single-match removal": 12.8999,
         "IPL only": {
@@ -15135,6 +15315,9 @@
       "rr_contribution": "Observed role evidence: role not established. IPL role exposure in the evaluated window: 132 deliveries across 6 matches. Pressure samples include 45 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 8,
       "leave_one_out_peer_rank": 19,
+      "ipl_2026_teams": [
+        "Rajasthan Royals"
+      ],
       "scenarios": {
         "Worst single-match removal": 14.8372,
         "IPL only": {
@@ -15381,6 +15564,9 @@
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 469 deliveries across 20 matches. Pressure samples include 106 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 9,
       "leave_one_out_peer_rank": 15,
+      "ipl_2026_teams": [
+        "Gujarat Titans"
+      ],
       "scenarios": {
         "Worst single-match removal": 16.7819,
         "IPL only": {
@@ -15617,6 +15803,9 @@
       "rr_contribution": "Observed role evidence: Death, Powerplay. IPL role exposure in the evaluated window: 321 deliveries across 15 matches. Pressure samples include 99 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 10,
       "leave_one_out_peer_rank": 16,
+      "ipl_2026_teams": [
+        "Kolkata Knight Riders"
+      ],
       "scenarios": {
         "Worst single-match removal": 16.2282,
         "IPL only": {
@@ -15864,6 +16053,9 @@
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 285 deliveries across 14 matches. Pressure samples include 89 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 1,
       "leave_one_out_peer_rank": 2,
+      "ipl_2026_teams": [
+        "Mumbai Indians"
+      ],
       "scenarios": {
         "Worst single-match removal": 32.1034,
         "IPL only": {
@@ -16096,6 +16288,9 @@
       "rr_contribution": "Observed role evidence: Death, Middle overs. IPL role exposure in the evaluated window: 92 deliveries across 6 matches. Pressure samples include 38 IPL and 44 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 2,
       "leave_one_out_peer_rank": 12,
+      "ipl_2026_teams": [
+        "Chennai Super Kings"
+      ],
       "scenarios": {
         "Worst single-match removal": 20.0312,
         "IPL only": null,
@@ -16313,6 +16508,7 @@
       "rr_contribution": "Observed role evidence: Death, Middle overs. IPL role exposure in the evaluated window: 144 deliveries across 9 matches. Pressure samples include 64 IPL and 13 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 3,
       "leave_one_out_peer_rank": 9,
+      "ipl_2026_teams": [],
       "scenarios": {
         "Worst single-match removal": 21.4009,
         "IPL only": {
@@ -16520,6 +16716,9 @@
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 307 deliveries across 15 matches. Pressure samples include 76 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 4,
       "leave_one_out_peer_rank": 8,
+      "ipl_2026_teams": [
+        "Royal Challengers Bengaluru"
+      ],
       "scenarios": {
         "Worst single-match removal": 23.3831,
         "IPL only": {
@@ -16761,6 +16960,9 @@
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 357 deliveries across 15 matches. Pressure samples include 81 IPL and 30 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 5,
       "leave_one_out_peer_rank": 9,
+      "ipl_2026_teams": [
+        "Rajasthan Royals"
+      ],
       "scenarios": {
         "Worst single-match removal": 21.7046,
         "IPL only": {
@@ -17006,6 +17208,9 @@
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 69 deliveries across 3 matches. Pressure samples include 21 IPL and 65 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 6,
       "leave_one_out_peer_rank": 14,
+      "ipl_2026_teams": [
+        "Delhi Capitals"
+      ],
       "scenarios": {
         "Worst single-match removal": 17.6097,
         "IPL only": null,
@@ -17214,6 +17419,7 @@
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 133 deliveries across 8 matches. Pressure samples include 73 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 7,
       "leave_one_out_peer_rank": 25,
+      "ipl_2026_teams": [],
       "scenarios": {
         "Worst single-match removal": 12.8999,
         "IPL only": {
@@ -17361,6 +17567,9 @@
       "rr_contribution": "Observed role evidence: role not established. IPL role exposure in the evaluated window: 132 deliveries across 6 matches. Pressure samples include 45 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 8,
       "leave_one_out_peer_rank": 19,
+      "ipl_2026_teams": [
+        "Rajasthan Royals"
+      ],
       "scenarios": {
         "Worst single-match removal": 14.8372,
         "IPL only": {
@@ -17607,6 +17816,9 @@
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 469 deliveries across 20 matches. Pressure samples include 106 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 9,
       "leave_one_out_peer_rank": 15,
+      "ipl_2026_teams": [
+        "Gujarat Titans"
+      ],
       "scenarios": {
         "Worst single-match removal": 16.7819,
         "IPL only": {
@@ -17843,6 +18055,9 @@
       "rr_contribution": "Observed role evidence: Death, Powerplay. IPL role exposure in the evaluated window: 321 deliveries across 15 matches. Pressure samples include 99 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 10,
       "leave_one_out_peer_rank": 16,
+      "ipl_2026_teams": [
+        "Kolkata Knight Riders"
+      ],
       "scenarios": {
         "Worst single-match removal": 16.2282,
         "IPL only": {
@@ -18023,7 +18238,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 212 deliveries across 12 matches. Pressure samples include 63 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 11,
-      "leave_one_out_peer_rank": 18
+      "leave_one_out_peer_rank": 18,
+      "ipl_2026_teams": [
+        "Gujarat Titans"
+      ]
     },
     {
       "nonpressure_balls": 113,
@@ -18152,7 +18370,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 43 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 12,
-      "leave_one_out_peer_rank": 25
+      "leave_one_out_peer_rank": 25,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 180,
@@ -18313,7 +18532,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs. IPL role exposure in the evaluated window: 269 deliveries across 11 matches. Pressure samples include 202 IPL and 91 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 13,
-      "leave_one_out_peer_rank": 19
+      "leave_one_out_peer_rank": 19,
+      "ipl_2026_teams": [
+        "Kolkata Knight Riders"
+      ]
     },
     {
       "nonpressure_balls": 181,
@@ -18437,7 +18659,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 110 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 14,
-      "leave_one_out_peer_rank": 49
+      "leave_one_out_peer_rank": 49,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 311,
@@ -18589,7 +18812,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 401 deliveries across 18 matches. Pressure samples include 90 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 15,
-      "leave_one_out_peer_rank": 19
+      "leave_one_out_peer_rank": 19,
+      "ipl_2026_teams": [
+        "Kolkata Knight Riders"
+      ]
     },
     {
       "nonpressure_balls": 140,
@@ -18695,7 +18921,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 182 deliveries across 9 matches. Pressure samples include 42 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 16,
-      "leave_one_out_peer_rank": 34
+      "leave_one_out_peer_rank": 34,
+      "ipl_2026_teams": [
+        "Chennai Super Kings"
+      ]
     },
     {
       "nonpressure_balls": 125,
@@ -18810,7 +19039,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs. IPL role exposure in the evaluated window: 180 deliveries across 9 matches. Pressure samples include 55 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 17,
-      "leave_one_out_peer_rank": 27
+      "leave_one_out_peer_rank": 27,
+      "ipl_2026_teams": [
+        "Royal Challengers Bengaluru"
+      ]
     },
     {
       "nonpressure_balls": 109,
@@ -18916,7 +19148,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 51 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 18,
-      "leave_one_out_peer_rank": 42
+      "leave_one_out_peer_rank": 42,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 102,
@@ -19031,7 +19264,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 85 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 19,
-      "leave_one_out_peer_rank": 53
+      "leave_one_out_peer_rank": 53,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 232,
@@ -19201,7 +19435,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 252 deliveries across 13 matches. Pressure samples include 81 IPL and 23 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 20,
-      "leave_one_out_peer_rank": 46
+      "leave_one_out_peer_rank": 46,
+      "ipl_2026_teams": [
+        "Delhi Capitals"
+      ]
     },
     {
       "nonpressure_balls": 138,
@@ -19307,7 +19544,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 146 deliveries across 10 matches. Pressure samples include 45 IPL and 18 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 21,
-      "leave_one_out_peer_rank": 49
+      "leave_one_out_peer_rank": 49,
+      "ipl_2026_teams": [
+        "Sunrisers Hyderabad"
+      ]
     },
     {
       "nonpressure_balls": 655,
@@ -19477,7 +19717,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 542 deliveries across 23 matches. Pressure samples include 185 IPL and 148 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 22,
-      "leave_one_out_peer_rank": 35
+      "leave_one_out_peer_rank": 35,
+      "ipl_2026_teams": [
+        "Punjab Kings"
+      ]
     },
     {
       "nonpressure_balls": 91,
@@ -19572,7 +19815,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: role not established. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 31 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 23,
-      "leave_one_out_peer_rank": 68
+      "leave_one_out_peer_rank": 68,
+      "ipl_2026_teams": [
+        "Punjab Kings"
+      ]
     },
     {
       "nonpressure_balls": 91,
@@ -19655,7 +19901,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 143 deliveries across 6 matches. Pressure samples include 52 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 24,
-      "leave_one_out_peer_rank": 50
+      "leave_one_out_peer_rank": 50,
+      "ipl_2026_teams": [
+        "Sunrisers Hyderabad"
+      ]
     },
     {
       "nonpressure_balls": 304,
@@ -19779,7 +20028,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 127 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 25,
-      "leave_one_out_peer_rank": 45
+      "leave_one_out_peer_rank": 45,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 91,
@@ -19894,7 +20144,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 70 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 26,
-      "leave_one_out_peer_rank": 49
+      "leave_one_out_peer_rank": 49,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 345,
@@ -20041,7 +20292,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 322 deliveries across 14 matches. Pressure samples include 84 IPL and 36 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 27,
-      "leave_one_out_peer_rank": 45
+      "leave_one_out_peer_rank": 45,
+      "ipl_2026_teams": [
+        "Punjab Kings"
+      ]
     },
     {
       "nonpressure_balls": 257,
@@ -20156,7 +20410,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs, Powerplay. IPL role exposure in the evaluated window: 307 deliveries across 19 matches. Pressure samples include 86 IPL and 14 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 28,
-      "leave_one_out_peer_rank": 62
+      "leave_one_out_peer_rank": 62,
+      "ipl_2026_teams": [
+        "Kolkata Knight Riders"
+      ]
     },
     {
       "nonpressure_balls": 194,
@@ -20326,7 +20583,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 134 deliveries across 6 matches. Pressure samples include 37 IPL and 38 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 29,
-      "leave_one_out_peer_rank": 43
+      "leave_one_out_peer_rank": 43,
+      "ipl_2026_teams": [
+        "Delhi Capitals"
+      ]
     },
     {
       "nonpressure_balls": 176,
@@ -20496,7 +20756,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 131 deliveries across 6 matches. Pressure samples include 41 IPL and 45 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 30,
-      "leave_one_out_peer_rank": 56
+      "leave_one_out_peer_rank": 56,
+      "ipl_2026_teams": [
+        "Sunrisers Hyderabad"
+      ]
     },
     {
       "nonpressure_balls": 370,
@@ -20657,7 +20920,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 85 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 31,
-      "leave_one_out_peer_rank": 48
+      "leave_one_out_peer_rank": 48,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 396,
@@ -20818,7 +21082,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs. IPL role exposure in the evaluated window: 365 deliveries across 16 matches. Pressure samples include 104 IPL and 19 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 32,
-      "leave_one_out_peer_rank": 48
+      "leave_one_out_peer_rank": 48,
+      "ipl_2026_teams": [
+        "Delhi Capitals"
+      ]
     },
     {
       "nonpressure_balls": 116,
@@ -20947,7 +21214,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Powerplay. IPL role exposure in the evaluated window: 153 deliveries across 7 matches. Pressure samples include 37 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 33,
-      "leave_one_out_peer_rank": 67
+      "leave_one_out_peer_rank": 67,
+      "ipl_2026_teams": [
+        "Lucknow Super Giants"
+      ]
     },
     {
       "nonpressure_balls": 176,
@@ -21085,7 +21355,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Powerplay. IPL role exposure in the evaluated window: 90 deliveries across 5 matches. Pressure samples include 17 IPL and 50 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 34,
-      "leave_one_out_peer_rank": 49
+      "leave_one_out_peer_rank": 49,
+      "ipl_2026_teams": [
+        "Punjab Kings"
+      ]
     },
     {
       "nonpressure_balls": 187,
@@ -21191,7 +21464,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Powerplay. IPL role exposure in the evaluated window: 217 deliveries across 10 matches. Pressure samples include 30 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 35,
-      "leave_one_out_peer_rank": 66
+      "leave_one_out_peer_rank": 66,
+      "ipl_2026_teams": [
+        "Rajasthan Royals"
+      ]
     },
     {
       "nonpressure_balls": 150,
@@ -21361,7 +21637,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 103 deliveries across 5 matches. Pressure samples include 26 IPL and 54 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 36,
-      "leave_one_out_peer_rank": 68
+      "leave_one_out_peer_rank": 68,
+      "ipl_2026_teams": [
+        "Punjab Kings"
+      ]
     },
     {
       "nonpressure_balls": 107,
@@ -21476,7 +21755,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs. IPL role exposure in the evaluated window: 176 deliveries across 7 matches. Pressure samples include 69 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 37,
-      "leave_one_out_peer_rank": 61
+      "leave_one_out_peer_rank": 61,
+      "ipl_2026_teams": [
+        "Kolkata Knight Riders"
+      ]
     },
     {
       "nonpressure_balls": 252,
@@ -21605,7 +21887,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 345 deliveries across 15 matches. Pressure samples include 93 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 38,
-      "leave_one_out_peer_rank": 56
+      "leave_one_out_peer_rank": 56,
+      "ipl_2026_teams": [
+        "Royal Challengers Bengaluru"
+      ]
     },
     {
       "nonpressure_balls": 254,
@@ -21743,7 +22028,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs, Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 76 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 39,
-      "leave_one_out_peer_rank": 57
+      "leave_one_out_peer_rank": 57,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 548,
@@ -21904,7 +22190,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs, Powerplay. IPL role exposure in the evaluated window: 358 deliveries across 18 matches. Pressure samples include 30 IPL and 75 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 40,
-      "leave_one_out_peer_rank": 58
+      "leave_one_out_peer_rank": 58,
+      "ipl_2026_teams": [
+        "Delhi Capitals"
+      ]
     },
     {
       "nonpressure_balls": 201,
@@ -22028,7 +22317,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 179 deliveries across 8 matches. Pressure samples include 63 IPL and 61 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 41,
-      "leave_one_out_peer_rank": 51
+      "leave_one_out_peer_rank": 51,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 81,
@@ -22111,7 +22401,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 51 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 42,
-      "leave_one_out_peer_rank": 72
+      "leave_one_out_peer_rank": 72,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 182,
@@ -22263,7 +22554,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 24 deliveries across 2 matches. Pressure samples include 0 IPL and 74 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 43,
-      "leave_one_out_peer_rank": 61
+      "leave_one_out_peer_rank": 61,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 280,
@@ -22415,7 +22707,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 56 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 44,
-      "leave_one_out_peer_rank": 65
+      "leave_one_out_peer_rank": 65,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 190,
@@ -22553,7 +22846,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs, Powerplay. IPL role exposure in the evaluated window: 88 deliveries across 4 matches. Pressure samples include 25 IPL and 47 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 45,
-      "leave_one_out_peer_rank": 71
+      "leave_one_out_peer_rank": 71,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 144,
@@ -22659,7 +22953,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 45 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 46,
-      "leave_one_out_peer_rank": 61
+      "leave_one_out_peer_rank": 61,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 89,
@@ -22797,7 +23092,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs. IPL role exposure in the evaluated window: 238 deliveries across 12 matches. Pressure samples include 149 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 47,
-      "leave_one_out_peer_rank": 56
+      "leave_one_out_peer_rank": 56,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 292,
@@ -22967,7 +23263,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 398 deliveries across 18 matches. Pressure samples include 147 IPL and 25 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 48,
-      "leave_one_out_peer_rank": 62
+      "leave_one_out_peer_rank": 62,
+      "ipl_2026_teams": [
+        "Lucknow Super Giants"
+      ]
     },
     {
       "nonpressure_balls": 373,
@@ -23137,7 +23436,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 365 deliveries across 15 matches. Pressure samples include 129 IPL and 124 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 49,
-      "leave_one_out_peer_rank": 65
+      "leave_one_out_peer_rank": 65,
+      "ipl_2026_teams": [
+        "Mumbai Indians"
+      ]
     },
     {
       "nonpressure_balls": 177,
@@ -23266,7 +23568,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Powerplay. IPL role exposure in the evaluated window: 221 deliveries across 13 matches. Pressure samples include 44 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 50,
-      "leave_one_out_peer_rank": 70
+      "leave_one_out_peer_rank": 70,
+      "ipl_2026_teams": [
+        "Gujarat Titans"
+      ]
     },
     {
       "nonpressure_balls": 78,
@@ -23384,7 +23689,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: role not established. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 63 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 51,
-      "leave_one_out_peer_rank": 71
+      "leave_one_out_peer_rank": 71,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 495,
@@ -23554,7 +23860,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 261 deliveries across 13 matches. Pressure samples include 40 IPL and 76 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 52,
-      "leave_one_out_peer_rank": 64
+      "leave_one_out_peer_rank": 64,
+      "ipl_2026_teams": [
+        "Mumbai Indians"
+      ]
     },
     {
       "nonpressure_balls": 228,
@@ -23692,7 +24001,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs, Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 98 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 53,
-      "leave_one_out_peer_rank": 65
+      "leave_one_out_peer_rank": 65,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 466,
@@ -23862,7 +24172,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 297 deliveries across 18 matches. Pressure samples include 66 IPL and 73 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 54,
-      "leave_one_out_peer_rank": 66
+      "leave_one_out_peer_rank": 66,
+      "ipl_2026_teams": [
+        "Mumbai Indians"
+      ]
     },
     {
       "nonpressure_balls": 305,
@@ -24023,7 +24336,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Powerplay. IPL role exposure in the evaluated window: 105 deliveries across 5 matches. Pressure samples include 12 IPL and 102 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 55,
-      "leave_one_out_peer_rank": 78
+      "leave_one_out_peer_rank": 78,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 334,
@@ -24193,7 +24507,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 426 deliveries across 20 matches. Pressure samples include 92 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 56,
-      "leave_one_out_peer_rank": 71
+      "leave_one_out_peer_rank": 71,
+      "ipl_2026_teams": [
+        "Mumbai Indians"
+      ]
     },
     {
       "nonpressure_balls": 225,
@@ -24308,7 +24625,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs, Powerplay. IPL role exposure in the evaluated window: 287 deliveries across 12 matches. Pressure samples include 62 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 57,
-      "leave_one_out_peer_rank": 72
+      "leave_one_out_peer_rank": 72,
+      "ipl_2026_teams": [
+        "Lucknow Super Giants"
+      ]
     },
     {
       "nonpressure_balls": 322,
@@ -24455,7 +24775,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 95 deliveries across 4 matches. Pressure samples include 53 IPL and 207 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 58,
-      "leave_one_out_peer_rank": 66
+      "leave_one_out_peer_rank": 66,
+      "ipl_2026_teams": [
+        "Kolkata Knight Riders"
+      ]
     },
     {
       "nonpressure_balls": 165,
@@ -24616,7 +24939,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs. IPL role exposure in the evaluated window: 262 deliveries across 13 matches. Pressure samples include 97 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 59,
-      "leave_one_out_peer_rank": 85
+      "leave_one_out_peer_rank": 85,
+      "ipl_2026_teams": [
+        "Delhi Capitals"
+      ]
     },
     {
       "nonpressure_balls": 230,
@@ -24777,7 +25103,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs, Powerplay. IPL role exposure in the evaluated window: 148 deliveries across 12 matches. Pressure samples include 12 IPL and 28 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 60,
-      "leave_one_out_peer_rank": 72
+      "leave_one_out_peer_rank": 72,
+      "ipl_2026_teams": [
+        "Gujarat Titans"
+      ]
     },
     {
       "nonpressure_balls": 132,
@@ -24883,7 +25212,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 59 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 61,
-      "leave_one_out_peer_rank": 78
+      "leave_one_out_peer_rank": 78,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 179,
@@ -25030,7 +25360,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 94 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 62,
-      "leave_one_out_peer_rank": 85
+      "leave_one_out_peer_rank": 85,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 446,
@@ -25191,7 +25522,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs. IPL role exposure in the evaluated window: 431 deliveries across 19 matches. Pressure samples include 122 IPL and 103 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 63,
-      "leave_one_out_peer_rank": 72
+      "leave_one_out_peer_rank": 72,
+      "ipl_2026_teams": [
+        "Chennai Super Kings"
+      ]
     },
     {
       "nonpressure_balls": 126,
@@ -25297,7 +25631,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 92 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 64,
-      "leave_one_out_peer_rank": 81
+      "leave_one_out_peer_rank": 81,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 63,
@@ -25438,7 +25773,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: role not established. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 41 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 65,
-      "leave_one_out_peer_rank": 70
+      "leave_one_out_peer_rank": 70,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 224,
@@ -25562,7 +25898,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 227 deliveries across 10 matches. Pressure samples include 80 IPL and 43 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 66,
-      "leave_one_out_peer_rank": 77
+      "leave_one_out_peer_rank": 77,
+      "ipl_2026_teams": [
+        "Sunrisers Hyderabad"
+      ]
     },
     {
       "nonpressure_balls": 261,
@@ -25723,7 +26062,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 73 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 67,
-      "leave_one_out_peer_rank": 88
+      "leave_one_out_peer_rank": 88,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 151,
@@ -25852,7 +26192,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 50 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 68,
-      "leave_one_out_peer_rank": 94
+      "leave_one_out_peer_rank": 94,
+      "ipl_2026_teams": [
+        "Chennai Super Kings"
+      ]
     },
     {
       "nonpressure_balls": 248,
@@ -26022,7 +26365,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 233 deliveries across 11 matches. Pressure samples include 57 IPL and 25 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 69,
-      "leave_one_out_peer_rank": 82
+      "leave_one_out_peer_rank": 82,
+      "ipl_2026_teams": [
+        "Kolkata Knight Riders"
+      ]
     },
     {
       "nonpressure_balls": 330,
@@ -26183,7 +26529,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs. IPL role exposure in the evaluated window: 143 deliveries across 10 matches. Pressure samples include 26 IPL and 96 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 70,
-      "leave_one_out_peer_rank": 75
+      "leave_one_out_peer_rank": 75,
+      "ipl_2026_teams": [
+        "Royal Challengers Bengaluru"
+      ]
     },
     {
       "nonpressure_balls": 344,
@@ -26335,7 +26684,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 433 deliveries across 22 matches. Pressure samples include 89 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 71,
-      "leave_one_out_peer_rank": 85
+      "leave_one_out_peer_rank": 85,
+      "ipl_2026_teams": [
+        "Rajasthan Royals"
+      ]
     },
     {
       "nonpressure_balls": 108,
@@ -26418,7 +26770,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 53 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 72,
-      "leave_one_out_peer_rank": 85
+      "leave_one_out_peer_rank": 85,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 229,
@@ -26565,7 +26918,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 298 deliveries across 13 matches. Pressure samples include 69 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 73,
-      "leave_one_out_peer_rank": 90
+      "leave_one_out_peer_rank": 90,
+      "ipl_2026_teams": [
+        "Sunrisers Hyderabad"
+      ]
     },
     {
       "nonpressure_balls": 160,
@@ -26694,7 +27050,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Powerplay. IPL role exposure in the evaluated window: 208 deliveries across 11 matches. Pressure samples include 48 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 74,
-      "leave_one_out_peer_rank": 93
+      "leave_one_out_peer_rank": 93,
+      "ipl_2026_teams": [
+        "Gujarat Titans"
+      ]
     },
     {
       "nonpressure_balls": 263,
@@ -26818,7 +27177,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 135 deliveries across 6 matches. Pressure samples include 50 IPL and 52 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 75,
-      "leave_one_out_peer_rank": 85
+      "leave_one_out_peer_rank": 85,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 336,
@@ -26965,7 +27325,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 228 deliveries across 10 matches. Pressure samples include 83 IPL and 108 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 76,
-      "leave_one_out_peer_rank": 88
+      "leave_one_out_peer_rank": 88,
+      "ipl_2026_teams": [
+        "Gujarat Titans"
+      ]
     },
     {
       "nonpressure_balls": 113,
@@ -27071,7 +27434,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 34 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 77,
-      "leave_one_out_peer_rank": 94
+      "leave_one_out_peer_rank": 94,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 179,
@@ -27195,7 +27559,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 43 deliveries across 3 matches. Pressure samples include 13 IPL and 52 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 78,
-      "leave_one_out_peer_rank": 85
+      "leave_one_out_peer_rank": 85,
+      "ipl_2026_teams": [
+        "Delhi Capitals"
+      ]
     },
     {
       "nonpressure_balls": 413,
@@ -27356,7 +27723,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs. IPL role exposure in the evaluated window: 518 deliveries across 23 matches. Pressure samples include 161 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 79,
-      "leave_one_out_peer_rank": 94
+      "leave_one_out_peer_rank": 94,
+      "ipl_2026_teams": [
+        "Punjab Kings"
+      ]
     },
     {
       "nonpressure_balls": 140,
@@ -27494,7 +27864,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 58 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 80,
-      "leave_one_out_peer_rank": 86
+      "leave_one_out_peer_rank": 86,
+      "ipl_2026_teams": [
+        "Royal Challengers Bengaluru"
+      ]
     },
     {
       "nonpressure_balls": 292,
@@ -27655,7 +28028,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs, Powerplay. IPL role exposure in the evaluated window: 13 deliveries across 1 matches. Pressure samples include 0 IPL and 77 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 81,
-      "leave_one_out_peer_rank": 98
+      "leave_one_out_peer_rank": 98,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 69,
@@ -27773,7 +28147,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: role not established. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 41 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 82,
-      "leave_one_out_peer_rank": 98
+      "leave_one_out_peer_rank": 98,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 276,
@@ -27934,7 +28309,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs. IPL role exposure in the evaluated window: 91 deliveries across 4 matches. Pressure samples include 29 IPL and 58 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 83,
-      "leave_one_out_peer_rank": 94
+      "leave_one_out_peer_rank": 94,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 324,
@@ -28072,7 +28448,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs, Powerplay. IPL role exposure in the evaluated window: 372 deliveries across 16 matches. Pressure samples include 48 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 84,
-      "leave_one_out_peer_rank": 100
+      "leave_one_out_peer_rank": 100,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 539,
@@ -28242,7 +28619,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 386 deliveries across 18 matches. Pressure samples include 58 IPL and 67 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 85,
-      "leave_one_out_peer_rank": 94
+      "leave_one_out_peer_rank": 94,
+      "ipl_2026_teams": [
+        "Kolkata Knight Riders"
+      ]
     },
     {
       "nonpressure_balls": 163,
@@ -28403,7 +28783,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs, Powerplay. IPL role exposure in the evaluated window: 211 deliveries across 12 matches. Pressure samples include 48 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 86,
-      "leave_one_out_peer_rank": 100
+      "leave_one_out_peer_rank": 100,
+      "ipl_2026_teams": [
+        "Sunrisers Hyderabad"
+      ]
     },
     {
       "nonpressure_balls": 608,
@@ -28573,7 +28956,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 340 deliveries across 14 matches. Pressure samples include 77 IPL and 86 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 87,
-      "leave_one_out_peer_rank": 97
+      "leave_one_out_peer_rank": 97,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 117,
@@ -28734,7 +29118,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs. IPL role exposure in the evaluated window: 67 deliveries across 3 matches. Pressure samples include 31 IPL and 77 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 88,
-      "leave_one_out_peer_rank": 105
+      "leave_one_out_peer_rank": 105,
+      "ipl_2026_teams": [
+        "Chennai Super Kings"
+      ]
     },
     {
       "nonpressure_balls": 322,
@@ -28904,7 +29291,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 477 deliveries across 21 matches. Pressure samples include 155 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 89,
-      "leave_one_out_peer_rank": 99
+      "leave_one_out_peer_rank": 99,
+      "ipl_2026_teams": [
+        "Rajasthan Royals"
+      ]
     },
     {
       "nonpressure_balls": 368,
@@ -29065,7 +29455,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Powerplay. IPL role exposure in the evaluated window: 522 deliveries across 23 matches. Pressure samples include 154 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 90,
-      "leave_one_out_peer_rank": 98
+      "leave_one_out_peer_rank": 98,
+      "ipl_2026_teams": [
+        "Royal Challengers Bengaluru"
+      ]
     },
     {
       "nonpressure_balls": 382,
@@ -29226,7 +29619,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs, Powerplay. IPL role exposure in the evaluated window: 472 deliveries across 23 matches. Pressure samples include 90 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 91,
-      "leave_one_out_peer_rank": 100
+      "leave_one_out_peer_rank": 100,
+      "ipl_2026_teams": [
+        "Royal Challengers Bengaluru"
+      ]
     },
     {
       "nonpressure_balls": 425,
@@ -29387,7 +29783,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs, Powerplay. IPL role exposure in the evaluated window: 70 deliveries across 3 matches. Pressure samples include 6 IPL and 38 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 92,
-      "leave_one_out_peer_rank": 95
+      "leave_one_out_peer_rank": 95,
+      "ipl_2026_teams": [
+        "Chennai Super Kings"
+      ]
     },
     {
       "nonpressure_balls": 173,
@@ -29525,7 +29924,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 32 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 93,
-      "leave_one_out_peer_rank": 97
+      "leave_one_out_peer_rank": 97,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 135,
@@ -29654,7 +30054,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 47 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 94,
-      "leave_one_out_peer_rank": 107
+      "leave_one_out_peer_rank": 107,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 271,
@@ -29792,7 +30193,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs, Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 57 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 95,
-      "leave_one_out_peer_rank": 102
+      "leave_one_out_peer_rank": 102,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 321,
@@ -29962,7 +30364,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 130 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 96,
-      "leave_one_out_peer_rank": 106
+      "leave_one_out_peer_rank": 106,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 256,
@@ -30132,7 +30535,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 459 deliveries across 19 matches. Pressure samples include 203 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 97,
-      "leave_one_out_peer_rank": 107
+      "leave_one_out_peer_rank": 107,
+      "ipl_2026_teams": [
+        "Rajasthan Royals"
+      ]
     },
     {
       "nonpressure_balls": 435,
@@ -30270,7 +30676,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs. IPL role exposure in the evaluated window: 206 deliveries across 9 matches. Pressure samples include 63 IPL and 105 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 98,
-      "leave_one_out_peer_rank": 107
+      "leave_one_out_peer_rank": 107,
+      "ipl_2026_teams": [
+        "Lucknow Super Giants"
+      ]
     },
     {
       "nonpressure_balls": 122,
@@ -30353,7 +30762,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 38 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 99,
-      "leave_one_out_peer_rank": 104
+      "leave_one_out_peer_rank": 104,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 272,
@@ -30505,7 +30915,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 18 deliveries across 1 matches. Pressure samples include 0 IPL and 51 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 100,
-      "leave_one_out_peer_rank": 111
+      "leave_one_out_peer_rank": 111,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 157,
@@ -30634,7 +31045,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 33 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 101,
-      "leave_one_out_peer_rank": 104
+      "leave_one_out_peer_rank": 104,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 242,
@@ -30795,7 +31207,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Powerplay. IPL role exposure in the evaluated window: 299 deliveries across 14 matches. Pressure samples include 75 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 102,
-      "leave_one_out_peer_rank": 107
+      "leave_one_out_peer_rank": 107,
+      "ipl_2026_teams": [
+        "Chennai Super Kings"
+      ]
     },
     {
       "nonpressure_balls": 171,
@@ -30947,7 +31362,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 123 deliveries across 10 matches. Pressure samples include 49 IPL and 42 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 103,
-      "leave_one_out_peer_rank": 107
+      "leave_one_out_peer_rank": 107,
+      "ipl_2026_teams": [
+        "Punjab Kings"
+      ]
     },
     {
       "nonpressure_balls": 170,
@@ -31030,7 +31448,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 75 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 104,
-      "leave_one_out_peer_rank": 107
+      "leave_one_out_peer_rank": 107,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 143,
@@ -31182,7 +31601,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 19 deliveries across 2 matches. Pressure samples include 0 IPL and 40 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 105,
-      "leave_one_out_peer_rank": 108
+      "leave_one_out_peer_rank": 108,
+      "ipl_2026_teams": [
+        "Chennai Super Kings"
+      ]
     },
     {
       "nonpressure_balls": 552,
@@ -31352,7 +31774,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 453 deliveries across 21 matches. Pressure samples include 127 IPL and 73 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 106,
-      "leave_one_out_peer_rank": 108
+      "leave_one_out_peer_rank": 108,
+      "ipl_2026_teams": [
+        "Rajasthan Royals"
+      ]
     },
     {
       "nonpressure_balls": 171,
@@ -31481,7 +31906,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Middle overs. IPL role exposure in the evaluated window: 241 deliveries across 11 matches. Pressure samples include 70 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 107,
-      "leave_one_out_peer_rank": 113
+      "leave_one_out_peer_rank": 113,
+      "ipl_2026_teams": [
+        "Punjab Kings"
+      ]
     },
     {
       "nonpressure_balls": 160,
@@ -31619,7 +32047,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 111 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 108,
-      "leave_one_out_peer_rank": 112
+      "leave_one_out_peer_rank": 112,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 384,
@@ -31789,7 +32218,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 195 deliveries across 9 matches. Pressure samples include 55 IPL and 68 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 109,
-      "leave_one_out_peer_rank": 112
+      "leave_one_out_peer_rank": 112,
+      "ipl_2026_teams": [
+        "Punjab Kings"
+      ]
     },
     {
       "nonpressure_balls": 284,
@@ -31936,7 +32368,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 228 deliveries across 12 matches. Pressure samples include 53 IPL and 48 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 110,
-      "leave_one_out_peer_rank": 112
+      "leave_one_out_peer_rank": 112,
+      "ipl_2026_teams": [
+        "Rajasthan Royals"
+      ]
     },
     {
       "nonpressure_balls": 232,
@@ -32074,7 +32509,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs. IPL role exposure in the evaluated window: 366 deliveries across 16 matches. Pressure samples include 134 IPL and 0 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 111,
-      "leave_one_out_peer_rank": 112
+      "leave_one_out_peer_rank": 112,
+      "ipl_2026_teams": [
+        "Sunrisers Hyderabad"
+      ]
     },
     {
       "nonpressure_balls": 213,
@@ -32212,7 +32650,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 128 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 112,
-      "leave_one_out_peer_rank": 112
+      "leave_one_out_peer_rank": 112,
+      "ipl_2026_teams": []
     },
     {
       "nonpressure_balls": 753,
@@ -32382,7 +32821,10 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Death, Middle overs, Powerplay. IPL role exposure in the evaluated window: 672 deliveries across 31 matches. Pressure samples include 176 IPL and 147 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 113,
-      "leave_one_out_peer_rank": 113
+      "leave_one_out_peer_rank": 113,
+      "ipl_2026_teams": [
+        "Gujarat Titans"
+      ]
     },
     {
       "nonpressure_balls": 107,
@@ -32488,7 +32930,8 @@
       "objection": "Run-only pressure-versus-usual score omits wicket value; intervals are conditional on fitted contextual expectations.",
       "rr_contribution": "Observed role evidence: Powerplay. IPL role exposure in the evaluated window: 0 deliveries across 0 matches. Pressure samples include 0 IPL and 43 T20I deliveries. 2027 auction registration and availability are not established.",
       "rank": 114,
-      "leave_one_out_peer_rank": 114
+      "leave_one_out_peer_rank": 114,
+      "ipl_2026_teams": []
     }
   ],
   "bowlers_eligible_count": 114,
