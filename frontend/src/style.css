@@ -233,4 +233,56 @@ footer code { font-size: 10px; }
   table { min-width: 620px; }
 }
 
-.player-scorecard .player-summary{padding:16px;background:#f8f5fa;border-left:4px solid #d52b81;border-radius:8px;margin:16px 0}.player-scorecard .player-summary h3{margin:0 0 8px}.player-scorecard .metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.player-scorecard .metric-grid strong{font-size:1.55rem;display:block}.player-scorecard .evidence-facts{display:grid;gap:8px}.player-scorecard .evidence-facts p{margin:0;padding:12px;background:#f5f6f8;border-radius:8px}.player-scorecard details{margin:16px 0}.player-scorecard summary{cursor:pointer;font-weight:600;padding:12px}@media(max-width:520px){.player-scorecard .metric-grid{grid-template-columns:1fr}}
+/* Player evidence dialog: scoped sizing avoids inherited dashboard layouts. */
+dialog.player-scorecard {
+  position: fixed;
+  width: min(880px, calc(100vw - 32px));
+  max-width: none;
+  max-height: calc(100dvh - 32px);
+  margin: auto;
+  padding: 28px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-gutter: stable;
+  text-align: left;
+}
+.player-scorecard > * { min-width: 0; max-width: 100%; }
+.player-scorecard .close { position: absolute; top: 16px; right: 16px; float: none; }
+.player-scorecard > small, .player-scorecard > h2 { padding-right: 44px; }
+.player-scorecard > h2 { margin: 8px 0 10px; }
+.player-scorecard > h3 { margin: 26px 0 12px; line-height: 1.35; }
+.player-scorecard p { font-size: 13px; line-height: 1.65; overflow-wrap: anywhere; }
+.player-scorecard .player-summary { padding: 18px; background: #f8f5fa; border-left: 4px solid var(--pink); border-radius: 8px; margin: 20px 0; }
+.player-scorecard .player-summary h3 { margin: 0 0 8px; line-height: 1.4; }
+.player-scorecard .player-summary p { margin: 8px 0 0; }
+.player-scorecard .notice { display: block; padding: 12px 14px; margin: 14px 0 0; }
+.player-scorecard .metric-grid { grid-template-columns: repeat(2,minmax(0,1fr)); align-items: stretch; gap: 12px; margin: 18px 0 24px; }
+.player-scorecard .metric-grid > div { display: flex; flex-direction: column; justify-content: flex-start; gap: 8px; min-width: 0; min-height: 108px; padding: 16px; font-size: 12px; line-height: 1.5; }
+.player-scorecard .metric-grid strong { margin: 0; font-size: clamp(20px,3vw,26px); line-height: 1.25; overflow-wrap: anywhere; font-variant-numeric: tabular-nums; }
+.player-scorecard .table-wrap { border: 1px solid var(--line); border-radius: 8px; margin: 12px 0; }
+.player-scorecard table { table-layout: fixed; min-width: 0; }
+.player-scorecard th, .player-scorecard td { padding: 12px 14px; line-height: 1.5; overflow-wrap: anywhere; white-space: normal; }
+.player-scorecard thead th { font-size: 10px; letter-spacing: .2px; }
+.player-scorecard tbody tr:last-child td { border-bottom: 0; }
+.player-scorecard .evidence-facts { display: grid; gap: 10px; }
+.player-scorecard .evidence-facts p { margin: 0; padding: 14px; background: #f5f6f8; border-radius: 8px; }
+.player-scorecard details { margin: 16px 0; padding: 0 16px 12px; }
+.player-scorecard details:not([open]) { padding-bottom: 0; }
+.player-scorecard details > summary { margin: 0 -16px; padding: 14px 16px; line-height: 1.5; cursor: pointer; font-weight: 650; }
+.player-scorecard details > p { margin: 12px 0; }
+.player-scorecard details section { margin: 0; padding: 0; }
+.player-scorecard dl { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+.player-scorecard dl > div { min-width: 0; padding: 12px; border: 1px solid var(--line); border-radius: 6px; }
+.player-scorecard dd { overflow-wrap: anywhere; margin: 8px 0 0; }
+@media(max-width:600px) {
+  dialog.player-scorecard { width: calc(100vw - 16px); max-height: calc(100dvh - 16px); padding: 18px 14px; }
+  .player-scorecard .metric-grid { gap: 8px; }
+  .player-scorecard .metric-grid > div { padding: 12px; min-height: 106px; font-size: 11px; }
+  .player-scorecard .metric-grid strong { font-size: 20px; }
+  .player-scorecard th, .player-scorecard td { padding: 10px 8px; font-size: 11px; }
+  .player-scorecard details { padding-left: 12px; padding-right: 12px; }
+  .player-scorecard details > summary { margin-left: -12px; margin-right: -12px; }
+  .player-scorecard dl { grid-template-columns: 1fr; }
+  .player-scorecard .supporting-evidence .table-wrap table { min-width: 460px; }
+}
+@media(max-width:360px) { .player-scorecard .metric-grid { grid-template-columns: 1fr; } }

@@ -19,7 +19,7 @@ function Drawer({ p, close, bowling }: { p: Player; close: () => void; bowling: 
     <p>{p.roles.join(' / ') || 'Role not established'} · {p.ipl_2026_teams?.join(' / ') || 'No team in supplied IPL 2026 mapping'}</p>
     <div className="player-summary"><h3>{p.score > 0 ? 'Better than usual under pressure' : 'Below usual performance under pressure'}</h3>
       <p>Estimated {fmt(Math.abs(p.score))} {p.score >= 0 ? 'extra' : 'fewer'} runs {bowling ? 'saved' : 'scored'} per 100 pressure deliveries, compared with this player's usual performance. Small samples are adjusted toward zero.</p>
-      <span className="notice">{clear ? 'The estimated range stays on one side of zero.' : 'The estimated range includes zero: the direction of improvement is uncertain.'} This is historical evidence, not a forecast.</span>
+      <p className="notice">{clear ? 'The estimated range stays on one side of zero.' : 'The estimated range includes zero: the direction of improvement is uncertain.'} This is historical evidence, not a forecast.</p>
     </div>
     <div className="metric-grid"><div><strong>{signed(p.score)}</strong>Better or worse than usual / 100</div><div><strong>{p.matches}</strong>Pressure matches</div><div><strong>{p.balls}</strong>Pressure deliveries</div><div><strong>{signed(p.interval[0])} to {signed(p.interval[1])}</strong>Estimated score range (95%)</div></div>
     <h3>What happened in those deliveries?</h3>
