@@ -33,7 +33,7 @@ styles.add(ParagraphStyle(name='CardRR', fontName='Helvetica-Bold', fontSize=10,
 
 def para(text, style='BodyRR'):
     value = str(text)
-    for old, new in [('â€™', "'"), ('â€“', '-'), ('â€”', '-'), ('âˆ’', '-'), ('Â·', '|'), ('â‰¥', '>='), ('â‰¤', '<=')]:
+    for old, new in [("\u2019", "\x27"), ("\u2014", "-"), ("\u2013", "-"), ("\u2212", "-"), ("\u2265", ">="), ("\u2264", "<=")]:
         value = value.replace(old, new)
     return Paragraph(escape(value).replace('\n', '<br/>'), styles[style])
 
@@ -87,7 +87,7 @@ def main():
         para("SUPERR SELECTOR SEASON 2 | ROUND 1", 'EyebrowRR'),
         para('Who delivers when it matters?', 'TitleRR'),
         para('Methodology and evidence for the pressure performer rankings', 'BodyRR'),
-        para("The Round 1 brief requests top-ten batter and bowler rankings using IPL and T20I data. The player pool therefore includes eligible role samples from either competition. Their pressure and usual-play evidence is compared within format, then weighted to the player's pressure mix.", 'BodyRR'),
+        para("The Round 1 brief requests top-ten batter and bowler rankings using IPL and T20I data. The player pool therefore includes eligible role samples from either competition. Their pressure and usual-play evidence is compared within format, then weighted to the player’s pressure mix.", 'BodyRR'),
         Spacer(1, 4),
         Table([[leader('Batter', data['batters'][0]), leader('Bowler', data['bowlers'][0], True)]], colWidths=[249, 249], style=TableStyle([('VALIGN', (0, 0), (-1, -1), 'TOP'), ('LEFTPADDING', (0, 0), (-1, -1), 0), ('RIGHTPADDING', (0, 0), (-1, -1), 10)])),
         para('What a positive score means', 'SubRR'),
@@ -108,14 +108,14 @@ def main():
             ['Chase', '60 or fewer legal balls remain AND the required rate is at least 8 runs per over.'],
             ['First innings', '30 or fewer legal balls remain AND at least 3 wickets have fallen.'],
         ], [115, 390], compact=True),
-        para(f"The proposed margin rule estimates how many consecutive dot-ball or boundary shocks can occur before task success drops below 20%. The fallback captures late chases with high run demand and late first innings with few balls and wickets already lost. It found {data['margin_eligible_counts']['batting']} eligible batters and {data['margin_eligible_counts']['bowling']} eligible bowlers. Because it could not support both top-ten lists, the documented late-innings fallback above was used for both roles. This is a transparent operational definition, not a validated measure of psychological pressure.", 'BodyRR'),
+        para(f"The operational pressure definition above captures late chases with high run demand and late first innings with few balls remaining and wickets already lost. An experimental viability-margin definition was evaluated separately. It found {data['margin_eligible_counts']['batting']} eligible batters and {data['margin_eligible_counts']['bowling']} eligible bowlers. Because it could not support both top-ten lists, the documented late-innings fallback above was used for both roles. This is a transparent operational definition, not a validated measure of psychological pressure.", 'BodyRR'),
         para('Expected runs and player baseline', 'SubRR'),
         para('A Ridge model trained on earlier IPL/T20I seasons predicts runs for each delivery from the pre-delivery state: score, wickets lost, balls remaining, required rate, innings, phase and IPL-versus-T20I indicator. Each test season uses earlier seasons only. Batting fitting and all batter exposure samples exclude wides. Bowling retains charged wide events. Batting residual = batter runs - expected batter runs. Bowling residual = expected bowler-charged runs - actual charged runs. Positive residual is better for both roles.'),
         para('Ranked pressure-lift formula', 'SubRR'),
         Table([[para('SCORE = 100 x [pressure residual sum - pressure deliveries x usual residual per delivery] / (pressure deliveries + 60)', 'CardRR')]], colWidths=[505], style=TableStyle([('BACKGROUND', (0, 0), (-1, -1), PALE_PINK), ('BOX', (0, 0), (-1, -1), .7, LINE), ('LEFTPADDING', (0, 0), (-1, -1), 11), ('RIGHTPADDING', (0, 0), (-1, -1), 11), ('TOPPADDING', (0, 0), (-1, -1), 10), ('BOTTOMPADDING', (0, 0), (-1, -1), 10)])),
         Spacer(1, 5),
         para('Rankings order improvement over own usual performance. The pressure-only contextual score is separate. Robustness removes each pressure match in turn, recalculates the ordinary baseline, and reports the lowest score. Peer ranks hold other players fixed. Broader fallback: chase <=72 balls / required rate >=7, or first innings <=36 balls / wickets lost >=2. Narrower: <=48 / >=9, or <=24 / >=4.'),
-        para('Usual baseline: the playerâ€™s average contextual residual on non-pressure deliveries in the same format (IPL or T20I), weighted to match the formats in their pressure sample. Example: pressure residuals total +18 runs over 60 deliveries, while usual output is +0.10 residual runs per delivery. Adjusted total = 18 - (60 x 0.10) = 12; score = 100 x 12 / (60 + 60) = +10 runs per 100 pressure deliveries. The fixed 60-event zero prior shrinks small pressure samples toward zero; it is not 60 observed balls.', 'BodyRR'),
+        para('Usual baseline: the player’s average contextual residual on non-pressure deliveries in the same format (IPL or T20I), weighted to match the formats in their pressure sample. Example: pressure residuals total +18 runs over 60 deliveries, while usual output is +0.10 residual runs per delivery. Adjusted total = 18 - (60 x 0.10) = 12; score = 100 x 12 / (60 + 60) = +10 runs per 100 pressure deliveries. The fixed 60-event zero prior shrinks small pressure samples toward zero; it is not 60 observed balls.', 'BodyRR'),
         para('Eligibility and uncertainty', 'SubRR'),
         para('Eligibility is role-specific: at least 30 pressure deliveries across 5 matches; 60 non-pressure deliveries across 5 matches overall; and 30 non-pressure deliveries in 3 matches for every format represented in the pressure sample. Ranks sort by score descending, then pressure matches descending, then player ID. The 95% interval uses 400 match-cluster bootstrap replicates and re-estimates the usual baseline in each replicate. It reflects match-to-match uncertainty conditional on the fitted run model; it does not include model-fitting uncertainty.', 'BodyRR'),
         para('The score uses runs only. Wickets are reported separately and receive no invented run value. No value is added across the six pressure dimensions.', 'SmallRR'),
@@ -124,7 +124,7 @@ def main():
 
     for key, title in [('batters', 'Top 10 batters under pressure'), ('bowlers', 'Top 10 bowlers under pressure')]:
         players = data[key]
-        story += [para(title, 'SectionRR'), para('Ordered by pressure lift versus the playerâ€™s own usual contextual level. Higher is better; intervals crossing zero indicate uncertainty about the direction of the lift.', 'BodyRR')]
+        story += [para(title, 'SectionRR'), para('Ordered by pressure lift versus the player’s own usual contextual level. Higher is better; intervals crossing zero indicate uncertainty about the direction of the lift.', 'BodyRR')]
         rows = [['Rank / player', 'Observed role', 'Lift / 100', 'P matches', 'IPL pressure', 'T20I pressure', '95% range']]
         for p in players:
             rows.append([f"{p['rank']}. {p['name']}", ', '.join(p['roles']) or 'Not established', fmt(p['score']), str(p['matches']), str(p['ipl_balls']), str(p['t20i_balls']), f"{fmt(p['interval'][0])} to {fmt(p['interval'][1])}"])
@@ -147,8 +147,8 @@ def main():
         Spacer(1, 4),
         para('Exclusion reason counts can overlap. Ambiguous extras are the largest source of excluded IPL/T20I matches and may affect which matches are represented.', 'SmallRR'),
         para('What these lists do and do not establish', 'SubRR'),
-        para(f"The rankings describe contextual run contribution relative to each playerâ€™s usual level in supplied IPL/T20I data. They are not overall talent grades, win-probability predictions, or proof of mental toughness. Venue, opponent, exact batting position, opponent quality and hierarchical season effects are not fully controlled. IPL/T20I cross-format transfer is not established. T20I-only players remain eligible under the brief when they meet these statistical sample rules; they are not presented as auction-available players. {shaheen_note}", 'BodyRR'),
-        para('The supplied pack does not verify IPL 2027 auction registration, player availability, retention, price, purse or Rajasthan Royalsâ€™ final squad gaps. The report therefore presents evidence for the requested player rankings, not a claim that every ranked player can be purchased or should be selected. RR incumbent comparisons use IPL deliveries only and do not establish a 2027 roster need. The Unstop dropdown options were not available for a direct name-to-option check; confirm the final selections match the displayed names.', 'BodyRR'),
+        para(f"The rankings describe contextual run contribution relative to each player’s usual level in supplied IPL/T20I data. They are not overall talent grades, win-probability predictions, or proof of mental toughness. Venue, opponent, exact batting position, opponent quality and hierarchical season effects are not fully controlled. IPL/T20I cross-format transfer is not established. T20I-only players remain eligible under the brief when they meet these statistical sample rules; they are not presented as auction-available players. {shaheen_note}", 'BodyRR'),
+        para('The supplied pack does not verify IPL 2027 auction registration, player availability, retention, price, purse or Rajasthan Royals’ final squad gaps. The report therefore presents evidence for the requested player rankings, not a claim that every ranked player can be purchased or should be selected. RR incumbent comparisons use IPL deliveries only and do not establish a 2027 roster need. The Unstop dropdown options were not available for a direct name-to-option check; confirm the final selections match the displayed names.', 'BodyRR'),
         para('Reproduce from the supplied data with analysis/audit.py, analysis/pipeline.py and analysis/report.py. Raw source deliveries remain local; only eligible-player aggregates are included in this report.', 'SmallRR'),
     ]
 
