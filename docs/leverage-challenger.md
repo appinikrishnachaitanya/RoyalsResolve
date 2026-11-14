@@ -20,3 +20,23 @@ The hypothetical 50-from-6 chase has near-zero predicted probability and leverag
 Decision: do not promote this model into production rankings. Beating a constant win prior on Brier score does not validate pressure constructs, calibration or player ordering. First-innings/chase normalization, resource terminal transitions, monotonicity, state-conditional outcome probabilities, calibration fitted only on historical data and independent player backtests require further work. The current operational rule also has limitations; retaining it is not proof of superiority.
 
 Reproduce with `.venv\Scripts\python.exe analysis\leverage_challenger.py`. Detailed diagnostics are written to `artifacts/private/leverage_challenger.json`; private source events are not published. This research script does not overwrite the dashboard JSON or methodology PDF.
+
+
+## Version 2: separate innings and chronological calibration
+
+Implemented `analysis/leverage_challenger_v2.py`. For each holdout year, the oldest 75% of historical matches fit separate innings models and the latest 25% calibrate them with Platt scaling. Fit, calibration and test matches are disjoint. The fitted model is not retrained on calibration matches. First-innings terminal states predict the actual batting team's match result, without using the eventual chase target. Leverage references are calculated separately for each innings using historical data; these represent relative intensity within innings, not equal absolute match stakes.
+
+| Holdout | First-innings Brier | Chase Brier | First-innings LI >=2 events | Chase LI >=2 events |
+|---|---:|---:|---:|---:|
+| 2023 | .235 | .157 | 0 | 714 |
+| 2024 | .241 | .136 | 12 | 387 |
+| 2025 | .227 | .117 | 11 | 554 |
+| 2026 | .252 | .101 | 7 | 171 |
+
+This version fails the promotion gate. First-innings estimates remain weak and high-leverage coverage is sparse. Lowering the cutoff to 1.5 yields six measurable batters and seven bowlers in the 2026 player follow-up, with rank correlations of -.20 and -.21 respectively. Cohorts and outcome definitions differ from the operational rule, so these are diagnostic results rather than a matched-player superiority test. At cutoff 2, almost no training-eligible players have a supported future label. Positive aggregate match prediction skill has not established useful pressure labels or player ordering.
+
+Private diagnostics contain real held-out match-state examples. These expose an operational-rule weakness: very high required rates in effectively decided chases still satisfy the current definition. For example, a recorded 2026 chase state needing 50 from one remaining ball is labelled by the operational rule while model leverage is negligible. These examples are construct checks, not independently adjudicated psychological-pressure labels. No claim is made that pressure must cause performance degradation.
+
+Decision: retain the published operational rankings with their stated limitations; do not advertise either version as an approved pressure index. Further progress requires a coherent innings resource/outcome model, historical-only calibration with more independent matches, monotonicity validation, and prespecified pressure-label evaluation. This experiment does not modify the public JSON, ranking formula, or PDF.
+
+Run `.venv\Scripts\python.exe analysis\leverage_challenger_v2.py`. Private output: `artifacts/private/leverage_challenger_v2.json`. Four added contracts cover chase completion, exhausted chases, first-innings terminal treatment, and probability-weighted absolute leverage. All 16 repository tests pass.
