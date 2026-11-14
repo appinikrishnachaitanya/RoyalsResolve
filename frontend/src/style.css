@@ -286,3 +286,22 @@ dialog.player-scorecard {
   .player-scorecard .supporting-evidence .table-wrap table { min-width: 460px; }
 }
 @media(max-width:360px) { .player-scorecard .metric-grid { grid-template-columns: 1fr; } }
+
+/* Six-column player table: preserve readable column widths and numeric baselines. */
+.ranking-side-by-side { grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr); }
+.ranking-table table { min-width: 1000px; table-layout: fixed; }
+.ranking-table .rank-player-col { width: 22%; }
+.ranking-table .rank-team-col { width: 16%; }
+.ranking-table .rank-score-col { width: 14%; }
+.ranking-table .rank-output-col { width: 15%; }
+.ranking-table .rank-sample-col { width: 17%; }
+.ranking-table .rank-range-col { width: 16%; }
+.ranking-table th, .ranking-table td { padding: 12px; vertical-align: top; overflow-wrap: normal; word-break: normal; line-height: 1.5; }
+.ranking-table thead th { font-size: 10px; letter-spacing: .15px; text-transform: none; }
+.ranking-table thead th:nth-child(3), .ranking-table thead th:nth-child(4), .ranking-table thead th:nth-child(6) { text-align: right; }
+.ranking-table .contribution, .ranking-table .pressure-output, .ranking-table .interval { text-align: right; font-size: 14px; font-weight: 650; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.ranking-table .role { display: block; margin-top: 6px; font-size: 11px; line-height: 1.45; font-weight: 400; white-space: normal; overflow-wrap: break-word; }
+.ranking-table .player { display: inline; font-size: 12px; line-height: 1.5; white-space: normal; }
+.ranking-table .interval { font-size: 12px; }
+.ranking-table { border: 1px solid var(--line); border-radius: 8px; }
+@media(max-width:1400px) { .ranking-side-by-side { grid-template-columns: minmax(0,1fr); } }
