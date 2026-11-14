@@ -152,6 +152,37 @@ def main():
         para('Reproduce from the supplied data with analysis/audit.py, analysis/pipeline.py and analysis/report.py. Raw source deliveries remain local; only eligible-player aggregates are included in this report.', 'SmallRR'),
     ]
 
+    story += [
+        PageBreak(),
+        para('Appendix: a guide to the terms', 'SectionRR'),
+        para('Read the three score measures together', 'SubRR'),
+        table([
+            ['Term', 'Plain-language meaning'],
+            ['Expected runs', 'Runs the historical model estimates for a delivery in that match situation. This is an estimate, not a guaranteed result or venue par score.'],
+            ['Contextual residual', 'Actual minus expected batter runs. For bowling, expected minus actual charged runs. Positive means better run output or run prevention than the model expected.'],
+            ['Usual baseline / 100', 'The player’s average contextual contribution outside the selected pressure situations, multiplied by 100. Calculated separately for IPL and T20I, then weighted to the player’s pressure mix.'],
+            ['Pressure output / 100', 'Contribution against model expectation on pressure deliveries, adjusted for sample size: 100 x pressure residual sum / (pressure deliveries + 60). This is not the raw scoring rate.'],
+            ['Lift vs usual / 100', 'Pressure contribution after subtracting the player’s ordinary contextual baseline and applying the same sample adjustment. This is the ranking score. A consistently excellent player can have little lift if their pressure and ordinary levels are similar.'],
+            ['Per 100 deliveries', 'A common scale for comparison, not a claim that the player faced exactly 100 balls. For bowling, wides remain charged delivery events; batting exposure excludes wides.'],
+            ['Shrinkage / +60 adjustment', 'A fixed adjustment that pulls estimates from small samples toward zero. At 30 pressure deliveries, one third of the raw lift remains. It is not 60 observed balls, a learned optimum or a fitted empirical Bayes prior.'],
+        ], [130, 375], compact=True),
+        Spacer(1, 8),
+        para('Evidence, reliability and scope', 'SubRR'),
+        table([
+            ['Term', 'How to interpret it'],
+            ['Pressure match / sample', 'A match containing qualifying pressure deliveries for that player. Multiple balls in one match are related observations; 30 balls from five matches are not 30 independent experiments.'],
+            ['95% score range', 'An interval from repeatedly resampling whole matches and recalculating the score and ordinary baseline. A range containing zero leaves the direction of improvement uncertain. It is not a 95% chance of winning or a confidence score.'],
+            ['Match-cluster bootstrap', 'Resample complete player-match clusters rather than isolated deliveries. Published intervals condition on fitted expectations and the selected pressure rules; they do not include every source of uncertainty.'],
+            ['Single-match removal', 'Remove each pressure match in turn, including its ordinary deliveries, and recalculate. Report the lowest resulting score. Any peer rank holds other player scores fixed.'],
+            ['Out-of-time evaluation', 'Fit a model on earlier seasons and evaluate it on a later season. The 2022 warm-up trains the first evaluation year. Previously inspected later seasons are not a pristine prospective test.'],
+            ['Role sample', 'Observed batting position or bowling phase exposure. Insufficient role sample means the tagging threshold was not met; it does not mean the player has no role or ability.'],
+            ['Wickets / dismissals', 'Wickets credited to a bowler or recorded striker dismissals for a batter in pressure situations. Shown as context; they receive no direct run value in the ranking score.'],
+            ['Brier score / log loss', 'Errors for probability predictions; lower is better. These assess the experimental match-state model, not whether the player order predicts future success.'],
+        ], [130, 375], compact=True),
+        Spacer(1, 6),
+        para('Pressure here is an operational match-situation definition. It is not a direct measurement of emotion, a validated universal leverage index, or proof of future IPL auction suitability.', 'SmallRR'),
+    ]
+
     def footer(canvas, doc):
         canvas.saveState(); canvas.setStrokeColor(LINE); canvas.line(45, 35, A4[0]-45, 35)
         canvas.setFillColor(MUTED); canvas.setFont('Helvetica', 7.2)
