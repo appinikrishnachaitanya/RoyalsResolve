@@ -1,7 +1,7 @@
 {
-  "analysis_id": "e7cf53e76ec17e17",
+  "analysis_id": "85b2c412bb006226",
   "version": "1.0.0",
-  "generated": "2026-11-14T14:27:45.722598+00:00",
+  "generated": "2026-11-16T05:55:25.837211+00:00",
   "status": "RESEARCH BASELINE - participant review required; not submission-ready",
   "config": {
     "version": "1.0.0",
@@ -80,45 +80,40 @@
     ]
   },
   "provenance": {
-    "code_sha256": "7e2c2c92ee793c394ebb285c07f4ced26a75f51bc6b0cfacca4bc1603b5a45aa",
+    "code_sha256": "39920a423c5fa87edf64d6703c7d2c7ae249151ab21fb128b3bdfaa17cf69bb5",
     "config_sha256": "c64cb03894b35eeb5db7b6451c0e819ef130f3f1c7d5ece17ff8f06f0145c873",
     "python": "3.10.4",
-    "input_zip_sha256": "82da62e94840e614ef136f0bb24168fe72b567c3eff71bf6b58488ac9b2b7f7d",
+    "input_zip_sha256": null,
     "input_manifest": [
       {
-        "name": "Data Pack/competitions.csv",
-        "bytes": 7624,
-        "sha256": "507ceb7189f972d4e4f299ddcfc97f3c3247af1913f6291106f161fa8353fd9b"
-      },
-      {
-        "name": "Data Pack/teams.csv",
-        "bytes": 6922,
-        "sha256": "a65e5922a9b3bf49247b24fc9471782e700efb31f8dcc5042923238b87c50a5d"
-      },
-      {
-        "name": "Data Pack/matches.csv",
-        "bytes": 123864,
-        "sha256": "bb100ab84b8b9a15160c1f2315cf675210131a30e779ec5079fd5403dcf56eef"
-      },
-      {
-        "name": "Data Pack/ball_by_ball.csv",
+        "name": "ball_by_ball.csv",
         "bytes": 41071837,
         "sha256": "01e2b4379edfbab6a6e456d304cb3c70f554cb312ef93d9588f3f32a82cb396e"
       },
       {
-        "name": "Data Pack/competition_team_player_mapping.csv",
+        "name": "competitions.csv",
+        "bytes": 7624,
+        "sha256": "507ceb7189f972d4e4f299ddcfc97f3c3247af1913f6291106f161fa8353fd9b"
+      },
+      {
+        "name": "competition_team_player_mapping.csv",
         "bytes": 462969,
         "sha256": "1ded4e42a933618572d6e2c3a521c3257eb1844fab4456d567d77cbb2d3bbb12"
       },
       {
-        "name": "Data Pack/playing_eleven.csv",
+        "name": "matches.csv",
+        "bytes": 123864,
+        "sha256": "bb100ab84b8b9a15160c1f2315cf675210131a30e779ec5079fd5403dcf56eef"
+      },
+      {
+        "name": "playing_eleven.csv",
         "bytes": 966287,
         "sha256": "7517c73722a28d5d61c808ccf0cbed315a8780586d02e946eb9a7f5daf011c27"
       },
       {
-        "name": "Data Pack/Round 1 Problem Statement _ SupeRR Selector Season 2.docx.pdf",
-        "bytes": 254082,
-        "sha256": "8f7965c616d4a64b779e770a6b2c17dde6a2d6ccbf7de12a58b04db792162489"
+        "name": "teams.csv",
+        "bytes": 6922,
+        "sha256": "a65e5922a9b3bf49247b24fc9471782e700efb31f8dcc5042923238b87c50a5d"
       }
     ]
   },
@@ -149,8 +144,8 @@
       "incomplete or inconsistent regulation innings": 24,
       "nonterminal chase": 17,
       "abandoned / tied / eliminator": 30,
-      "revised length or target timing unknown": 34,
       "missing regulation innings": 22,
+      "revised length or target timing unknown": 34,
       "untyped extras": 2,
       "winner reconciliation failed": 7,
       "super over": 4,
@@ -163,50 +158,6 @@
     "competitions": 136,
     "missing_xi_order": 791,
     "schema": {
-      "competitions": {
-        "rows": 141,
-        "columns": [
-          "comp_id",
-          "comp_name",
-          "match_format",
-          "season"
-        ]
-      },
-      "teams": {
-        "rows": 353,
-        "columns": [
-          "comp_id",
-          "team_id",
-          "team_name"
-        ]
-      },
-      "matches": {
-        "rows": 883,
-        "columns": [
-          "match_id",
-          "comp_id",
-          "match_number",
-          "match_date",
-          "stage",
-          "venue_id",
-          "venue_country",
-          "home_team_id",
-          "home_team",
-          "away_team_id",
-          "away_team",
-          "home_team_captain_id",
-          "away_team_captain_id",
-          "toss_win_team_id",
-          "toss_opted",
-          "man_of_the_match",
-          "first_inn_revised_overs",
-          "second_inn_revised_overs",
-          "revised_target",
-          "knock_out",
-          "win_team_id",
-          "result"
-        ]
-      },
       "ball_by_ball": {
         "rows": 200999,
         "columns": [
@@ -245,6 +196,15 @@
           "delivery_ist_time"
         ]
       },
+      "competitions": {
+        "rows": 141,
+        "columns": [
+          "comp_id",
+          "comp_name",
+          "match_format",
+          "season"
+        ]
+      },
       "competition_team_player_mapping": {
         "rows": 6413,
         "columns": [
@@ -254,6 +214,33 @@
           "team_name",
           "player_id",
           "player_name"
+        ]
+      },
+      "matches": {
+        "rows": 883,
+        "columns": [
+          "match_id",
+          "comp_id",
+          "match_number",
+          "match_date",
+          "stage",
+          "venue_id",
+          "venue_country",
+          "home_team_id",
+          "home_team",
+          "away_team_id",
+          "away_team",
+          "home_team_captain_id",
+          "away_team_captain_id",
+          "toss_win_team_id",
+          "toss_opted",
+          "man_of_the_match",
+          "first_inn_revised_overs",
+          "second_inn_revised_overs",
+          "revised_target",
+          "knock_out",
+          "win_team_id",
+          "result"
         ]
       },
       "playing_eleven": {
@@ -268,6 +255,14 @@
           "is_wk",
           "is_impact",
           "is_impact_off"
+        ]
+      },
+      "teams": {
+        "rows": 353,
+        "columns": [
+          "comp_id",
+          "team_id",
+          "team_name"
         ]
       }
     }
@@ -603,7 +598,7 @@
     "Player estimates use fixed exposure shrinkage and match bootstrap, not a fitted hierarchical posterior.",
     "2026 holdout metrics are reported; models and policy were developed in this implementation, not prospectively preregistered. Policy comparisons are retrospective and not confirmatory evidence of superiority.",
     "Auction availability, 2027 rules, purse and submission dropdown IDs are unverified. No actionable TARGET list is asserted.",
-    "Ranking scores compare pressure residuals with each player’s non-pressure contextual residual baseline. Pairwise candidate comparisons use common assignment strata and contextual contribution; venue/opponent/position confounds remain."
+    "Ranking scores compare pressure residuals with each player\u2019s non-pressure contextual residual baseline. Pairwise candidate comparisons use common assignment strata and contextual contribution; venue/opponent/position confounds remain."
   ],
   "batters": [
     {
