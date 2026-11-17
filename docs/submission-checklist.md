@@ -2,7 +2,7 @@
 
 The supplied Season 2 brief requires two ordered top-ten dropdown lists and a methodology document. Independent human pressure labels and prospective forecasting superiority are not required deliverables. They remain useful future validation. The submitted method is a transparent operational definition with documented limitations.
 
-Analysis ID: `e7cf53e76ec17e17`.
+Analysis ID: `85b2c412bb006226` (16 November rerun using the organizer-linked ball-by-ball CSV and the five supplied supporting tables; scores and ordered lists unchanged).
 
 ## Batters
 
