@@ -62,7 +62,7 @@ def leader(role, player, bowling=False):
         [para(role.upper() + ' / RANK 1', 'EyebrowRR')],
         [para(player['name'], 'CardRR')],
         [para(fmt(player['score']) + ' per 100', 'BigRR')],
-        [para('pressure lift vs own usual level', 'SmallRR')],
+        [para('improvement over own usual level', 'SmallRR')],
         [para(f"{player['matches']} pressure matches | {player['balls']} deliveries", 'SmallRR')],
         [para(f"IPL {player['ipl_balls']} | T20I {player['t20i_balls']}", 'SmallRR')],
         [para(f"95% range {fmt(player['interval'][0])} to {fmt(player['interval'][1])}", 'SmallRR')],
@@ -81,17 +81,15 @@ def leader(role, player, bowling=False):
 def main():
     data = json.loads((ROOT / 'results/public/analysis.json').read_text(encoding='utf-8'))
     audit = data['audit']
-    shaheen = next((p for p in data['bowlers_all'] if p['name'] == 'Shaheen Afridi'), None)
-    shaheen_note = (f"Shaheen Afridi has {shaheen['t20i_balls']} T20I pressure deliveries and {shaheen['ipl_balls']} IPL pressure deliveries; the revised combined list places him at rank {shaheen['rank']}, outside the top ten. This is challenge evidence, not IPL auction eligibility." if shaheen else 'Shaheen Afridi is not in the top ten under the stated score ordering; a T20I-only sample does not make an auction claim.')
     story = [
         para("SUPERR SELECTOR SEASON 2 | ROUND 1", 'EyebrowRR'),
-        para('Who delivers when it matters?', 'TitleRR'),
-        para('Methodology and evidence for the pressure performer rankings', 'BodyRR'),
-        para("The Round 1 brief requests top-ten batter and bowler rankings using IPL and T20I data. The player pool therefore includes eligible role samples from either competition. Their pressure and usual-play evidence is compared within format, then weighted to the player’s pressure mix.", 'BodyRR'),
+        para('Who improves under pressure?', 'TitleRR'),
+        para('How we selected and ranked the top ten batters and bowlers', 'BodyRR'),
+        para("Our question is simple: when the match becomes demanding, does a player perform better or worse than their usual level? We used the supplied IPL and T20I data to answer that question separately for batting and bowling. The lists rank improvement, so a player who is excellent all the time may not finish first.", 'BodyRR'),
         Spacer(1, 4),
         Table([[leader('Batter', data['batters'][0]), leader('Bowler', data['bowlers'][0], True)]], colWidths=[249, 249], style=TableStyle([('VALIGN', (0, 0), (-1, -1), 'TOP'), ('LEFTPADDING', (0, 0), (-1, -1), 0), ('RIGHTPADDING', (0, 0), (-1, -1), 10)])),
         para('What a positive score means', 'SubRR'),
-        para('The player produced more context-adjusted runs under pressure than in their ordinary deliveries. For bowlers, runs saved are oriented positive. Rank 1 is the highest estimated pressure lift in that role; batting and bowling scores are not compared with one another.'),
+        para('A positive score means the player improved on their usual performance after we allowed for the match situation. For batters, more runs is better. For bowlers, fewer runs conceded is better. The two lists are separate; a batting score should not be compared with a bowling score.'),
         para('Data used', 'SubRR'),
         table([
             ['Source pack', 'Ranking scope', 'After data-quality checks'],
@@ -101,68 +99,69 @@ def main():
         para(f"The rankings use out-of-time deliveries from 2023-2026; {audit['warmup_deliveries']:,} retained 2022 warm-up deliveries train the first evaluation year. The pack also contained {audit['out_of_scope_deliveries']:,} deliveries from other T20 competitions; these were excluded because the brief names IPL and T20I. A T20I-only player may qualify for the challenge ranking if the pressure and usual-play sample rules are met. That is not proof of IPL experience, 2027 auction registration or availability.", 'SmallRR'),
         para(f"Analysis {data['analysis_id']} | Data dates {audit['date_range'][0]} to {audit['date_range'][1]} | {audit['competitions']} IPL/T20I competitions in scope", 'SmallRR'),
         PageBreak(),
-        para('How pressure and the score are defined', 'SectionRR'),
-        para('Pressure situations', 'SubRR'),
+        para('How we measure pressure performance', 'SectionRR'),
+        para('Which deliveries count as pressure?', 'SubRR'),
         table([
             ['Situation', 'Included when'],
             ['Chase', '60 or fewer legal balls remain AND the required rate is at least 8 runs per over.'],
             ['First innings', '30 or fewer legal balls remain AND at least 3 wickets have fallen.'],
         ], [115, 390], compact=True),
-        para(f"The operational pressure definition above captures late chases with high run demand and late first innings with few balls remaining and wickets already lost. An experimental viability-margin definition was evaluated separately. It found {data['margin_eligible_counts']['batting']} eligible batters and {data['margin_eligible_counts']['bowling']} eligible bowlers. Because it could not support both top-ten lists, the documented late-innings fallback above was used for both roles. This is a transparent operational definition, not a validated measure of psychological pressure.", 'BodyRR'),
-        para('Expected runs and player baseline', 'SubRR'),
-        para('A Ridge model trained on earlier IPL/T20I seasons predicts runs for each delivery from the pre-delivery state: score, wickets lost, balls remaining, required rate, innings, phase and IPL-versus-T20I indicator. Each test season uses earlier seasons only. Batting fitting and all batter exposure samples exclude wides. Bowling retains charged wide events. Batting residual = batter runs - expected batter runs. Bowling residual = expected bowler-charged runs - actual charged runs. Positive residual is better for both roles.'),
-        para('Ranked pressure-lift formula', 'SubRR'),
+        para("These rules select late chases with sustained run demand and late first innings after wickets have fallen. They give us a clear, reproducible sample, but miss early collapses and can include almost-decided chases. We also tested a rule based on the room left for mistakes while the game was still contested. It produced too few eligible batters for a top ten, so it does not determine these rankings."),
+        para('First, allow for the match situation', 'SubRR'),
+        para('Scoring eight runs in an over means different things in different situations. We estimate the runs expected on each delivery using earlier seasons only. The model uses the score, wickets lost, balls used, scoring rate, chase required rate, innings, phase and IPL/T20I format. We use standardised features and Ridge regression (alpha = 60). For batting, we subtract expected runs from actual runs. For bowling, we reverse that subtraction so runs saved are positive. Wides are excluded from batting samples; charged wide events remain in bowling samples.'),
+        para('Then compare with the player’s usual level', 'SubRR'),
         Table([[para('SCORE = 100 x [pressure residual sum - pressure deliveries x usual residual per delivery] / (pressure deliveries + 60)', 'CardRR')]], colWidths=[505], style=TableStyle([('BACKGROUND', (0, 0), (-1, -1), PALE_PINK), ('BOX', (0, 0), (-1, -1), .7, LINE), ('LEFTPADDING', (0, 0), (-1, -1), 11), ('RIGHTPADDING', (0, 0), (-1, -1), 11), ('TOPPADDING', (0, 0), (-1, -1), 10), ('BOTTOMPADDING', (0, 0), (-1, -1), 10)])),
         Spacer(1, 5),
-        para('Rankings order improvement over own usual performance. The pressure-only contextual score is separate. Robustness removes each pressure match in turn, recalculates the ordinary baseline, and reports the lowest score. Peer ranks hold other players fixed. Broader fallback: chase <=72 balls / required rate >=7, or first innings <=36 balls / wickets lost >=2. Narrower: <=48 / >=9, or <=24 / >=4.'),
-        para('Usual baseline: the player’s average contextual residual on non-pressure deliveries in the same format (IPL or T20I), weighted to match the formats in their pressure sample. Example: pressure residuals total +18 runs over 60 deliveries, while usual output is +0.10 residual runs per delivery. Adjusted total = 18 - (60 x 0.10) = 12; score = 100 x 12 / (60 + 60) = +10 runs per 100 pressure deliveries. The fixed 60-event zero prior shrinks small pressure samples toward zero; it is not 60 observed balls.', 'BodyRR'),
-        para('Eligibility and uncertainty', 'SubRR'),
-        para('Eligibility is role-specific: at least 30 pressure deliveries across 5 matches; 60 non-pressure deliveries across 5 matches overall; and 30 non-pressure deliveries in 3 matches for every format represented in the pressure sample. Ranks sort by score descending, then pressure matches descending, then player ID. The 95% interval uses 400 match-cluster bootstrap replicates and re-estimates the usual baseline in each replicate. It reflects match-to-match uncertainty conditional on the fitted run model; it does not include model-fitting uncertainty.', 'BodyRR'),
-        para('The ranking uses runs only. Pressure wickets (bowling) and striker dismissals (batting) appear as context in the player tables; they are not assigned run values or added to the score. The 60-event adjustment is fixed zero-centred shrinkage, not a fitted empirical Bayes prior.', 'SmallRR'),
+        para('For each player, we calculate their average runs above expectation outside pressure, separately in IPL and T20I. We use the same format mix as their pressure sample. Subtracting that usual level gives improvement under pressure. The separate pressure-performance column compares only with model expectation, without subtracting the usual level.'),
+        para('Example: a batter makes 18 runs more than expected across 60 pressure deliveries. Their usual level is 0.10 runs above expectation per delivery. We subtract 60 x 0.10 = 6 runs, leaving 12. The score is 100 x 12 / (60 + 60) = +10 per 100 deliveries. Adding 60 to the denominator reduces extreme estimates from small samples. It is a fixed modelling choice, not extra observed deliveries or a proven optimum.', 'BodyRR'),
+        para('How much evidence is enough?', 'SubRR'),
+        para('A player needs at least 30 pressure deliveries in five matches, plus 60 ordinary deliveries in five matches. Each format in their pressure sample also needs 30 ordinary deliveries in three matches. We rank the highest score first; ties use pressure-match count, then player ID. To estimate the 95% range, we resample whole matches 400 times and recalculate the usual level each time. A range crossing zero leaves the direction of improvement uncertain. The range assumes the fitted run model is fixed.', 'BodyRR'),
+        para('The ranking uses runs only. Wickets taken and striker dismissals (shown as Outs) are reported separately, with no invented run value. The fixed +60 adjustment reduces small-sample estimates; it was not learned as an optimal value from these data.', 'SmallRR'),
         PageBreak(),
     ]
 
     for key, title in [('batters', 'Top 10 batters under pressure'), ('bowlers', 'Top 10 bowlers under pressure')]:
         players = data[key]
-        story += [para(title, 'SectionRR'), para('Ordered by pressure lift versus the player’s own usual contextual level. Higher is better; intervals crossing zero indicate uncertainty about the direction of the lift.', 'BodyRR')]
-        rows = [['Rank / player / role', 'Lift vs usual / 100', 'Pressure output / 100', 'Pressure matches', 'IPL balls', 'T20I balls', 'Wickets' if key == 'bowlers' else 'Dismissals', '95% score range']]
+        story += [para(title, 'SectionRR'), para('Ranked by improvement over each player’s usual level. Read the score alongside the match count and range: the order is an estimate, and nearby ranks need not be meaningfully different.', 'BodyRR')]
+        rows = [['Rank / player / observed role', 'Improvement / 100', 'Pressure performance / 100', 'Pressure matches', 'IPL balls', 'T20I balls', 'Wickets' if key == 'bowlers' else 'Outs', '95% score range']]
         for p in players:
             rows.append([f"{p['rank']}. {p['name']}\n" + (', '.join(p['roles']) or 'Insufficient role sample'), fmt(p['score']), fmt(p['pressure_score']), str(p['matches']), str(p['ipl_balls']), str(p['t20i_balls']), str(p['dismissals']), f"{fmt(p['interval'][0])} to {fmt(p['interval'][1])}"])
         story += [table(rows, [105, 55, 65, 42, 42, 42, 44, 110], compact=True), Spacer(1, 9)]
-        story += [para('Pressure output / 100 is the shrunk contextual contribution against model expectation, without subtracting the usual baseline. Lift / 100 additionally compares against usual performance. Both use the same 60-event adjustment. A positive lift interval does not establish superiority over another player.', 'SmallRR'), para('Eligibility is based on pressure evidence in the named role and a supported non-pressure baseline. IPL and T20I event counts show where the pressure evidence came from; a zero in one format does not mean zero ability. It means no qualifying pressure deliveries in that format.', 'SmallRR')]
+        story += [para('Pressure performance measures runs above model expectation (runs saved for bowlers). Improvement also subtracts the player’s usual level. Both include the same small-sample adjustment and are shown per 100 deliveries. The range refers to improvement; if it includes zero, the direction is uncertain.', 'SmallRR'), para('IPL and T20I counts show the source of pressure evidence. Zero means no qualifying pressure deliveries in that format, not zero ability. A positive range does not prove that one player is better than another.', 'SmallRR')]
         if key == 'batters':
+            story.append(para('Towhid Hridoy leads the point estimates, based on 77 T20I pressure deliveries in six matches and no IPL pressure deliveries. His range includes zero, so the evidence does not establish a clear positive improvement. Seven of these ten batting ranges include zero. Treat the exact order with care.', 'BodyRR'))
             story.append(PageBreak())
         else:
+            story.append(para('Two of these ten bowling ranges include zero. Brijesh Sharma meets the bowling-ranking minimum with 45 pressure deliveries in five matches. His role label is unassigned because phase tags require a separate 60-delivery, five-match sample; this does not mean he is ineligible for the ranking.', 'BodyRR'))
             story.append(PageBreak())
 
     exclusions = sorted(audit['exclusion_reasons_overlapping'].items(), key=lambda x: (-x[1], x[0]))
-    last = data['validation'][-1]
-    lin = last['models']['logistic']; quad = last['models']['quadratic_logistic']
     story += [
-        para('Checks, interpretation and limits', 'SectionRR'),
-        para('Consistency and validation', 'SubRR'),
-        para(f"Player uncertainty resamples whole matches, not individual balls. The rolling task-model check uses {last['test_matches']} later matches in {last['year']}; the linear model Brier score is {lin['brier']:.3f} and log loss is {lin['log_loss']:.3f}. This checks the match-state task model, not whether player pressure-lift rankings predict future performance. The 2026 data was inspected during this analysis, so it is not a prospectively sealed test.", 'BodyRR'),
+        para('What we checked and where to be careful', 'SectionRR'),
+        para('Does the result hold up?', 'SubRR'),
+        para("We resample whole matches 400 times and recalculate each player's score and usual level. We also remove each pressure match in turn and test wider and narrower pressure rules. These checks show how dependent a finding is on particular matches or definitions; they do not establish that the score predicts future success. Earlier-to-later-season player checks were mixed. Reliable prediction of future pressure performance has not been established, and the later seasons were already inspected during development."),
+        para("The wider rule uses chase balls remaining <=72 and required rate >=7, or first-innings balls remaining <=36 and wickets lost >=2. The narrower rule uses <=48 and >=9, or <=24 and >=4. These are sensitivity checks, not alternative published rankings.", 'SmallRR'),
         para('Data-quality exclusions', 'SubRR'),
         table([['Reason', 'Matches affected']] + [[reason, str(count)] for reason, count in exclusions], [390, 115], compact=True),
         Spacer(1, 4),
         para(f"Of {audit['scope_matches']} in-scope matches, {audit['excluded_matches']} ({100*audit['excluded_matches']/audit['scope_matches']:.1f}%) were excluded and {audit['retained_matches']} retained. The retained set includes {audit['retained_matches']-audit['oos_matches']} warm-up matches and {audit['oos_matches']} out-of-time evaluation matches. Reason counts overlap. Matches with ambiguous extras types or penalty timing are quarantined because legal-ball use, charged runs or state timing cannot be reconciled safely from the supplied fields. This conservative policy causes selection bias; it does not prove every excluded match is unusable with further investigation.", 'SmallRR'),
-        para('What these lists do and do not establish', 'SubRR'),
-        para(f"The rankings describe contextual run contribution relative to each player’s usual level in supplied IPL/T20I data. They are not overall talent grades, win-probability predictions, or proof of mental toughness. Venue, opponent, exact batting position, opponent quality and hierarchical season effects are not fully controlled. IPL/T20I cross-format transfer is not established. T20I-only players remain eligible under the brief when they meet these statistical sample rules; they are not presented as auction-available players. {shaheen_note}", 'BodyRR'),
+        para('Using the findings for RR', 'SubRR'),
+        para("Use these lists to identify players worth a closer scouting look, then check their pressure performance, role and sample before making a decision. Improvement alone is not overall quality: a consistently strong player can improve little. Venue, opposition strength and exact batting position are not fully controlled. Wickets have no direct score value, so bowling results measure run prevention rather than complete bowling value. Separate IPL/T20I baselines help comparisons, but do not prove that T20I form will transfer to the IPL."),
         para('The supplied pack does not verify IPL 2027 auction registration, player availability, retention, price, purse or Rajasthan Royals’ final squad gaps. The report therefore presents evidence for the requested player rankings, not a claim that every ranked player can be purchased or should be selected. The Unstop dropdown options were not available for a direct name-to-option check; confirm the final selections match the displayed names.', 'BodyRR'),
         para('Reproduce from the supplied data with analysis/audit.py, analysis/pipeline.py and analysis/report.py. Raw source deliveries remain local; only eligible-player aggregates are included in this report.', 'SmallRR'),
     ]
 
     story += [
         PageBreak(),
-        para('Appendix: a guide to the terms', 'SectionRR'),
-        para('Read the three score measures together', 'SubRR'),
+        para('Appendix: the terms in this report', 'SectionRR'),
+        para('Understanding the scores', 'SubRR'),
         table([
             ['Term', 'Plain-language meaning'],
             ['Expected runs', 'Runs the historical model estimates for a delivery in that match situation. This is an estimate, not a guaranteed result or venue par score.'],
             ['Contextual residual', 'Actual minus expected batter runs. For bowling, expected minus actual charged runs. Positive means better run output or run prevention than the model expected.'],
             ['Usual baseline / 100', 'The player’s average contextual contribution outside the selected pressure situations, multiplied by 100. Calculated separately for IPL and T20I, then weighted to the player’s pressure mix.'],
-            ['Pressure output / 100', 'Contribution against model expectation on pressure deliveries, adjusted for sample size: 100 x pressure residual sum / (pressure deliveries + 60). This is not the raw scoring rate.'],
-            ['Lift vs usual / 100', 'Pressure contribution after subtracting the player’s ordinary contextual baseline and applying the same sample adjustment. This is the ranking score. A consistently excellent player can have little lift if their pressure and ordinary levels are similar.'],
+            ['Pressure performance / 100', 'Contribution against model expectation on pressure deliveries, adjusted for sample size: 100 x pressure residual sum / (pressure deliveries + 60). This is not the raw scoring rate.'],
+            ['Improvement / 100', 'Pressure contribution after subtracting the player’s ordinary contextual baseline and applying the same sample adjustment. This is the ranking score. A consistently excellent player can have little lift if their pressure and ordinary levels are similar.'],
             ['Per 100 deliveries', 'A common scale for comparison, not a claim that the player faced exactly 100 balls. For bowling, wides remain charged delivery events; batting exposure excludes wides.'],
             ['Shrinkage / +60 adjustment', 'A fixed adjustment that pulls estimates from small samples toward zero. At 30 pressure deliveries, one third of the raw lift remains. It is not 60 observed balls, a learned optimum or a fitted empirical Bayes prior.'],
         ], [130, 375], compact=True),
@@ -177,7 +176,6 @@ def main():
             ['Out-of-time evaluation', 'Fit a model on earlier seasons and evaluate it on a later season. The 2022 warm-up trains the first evaluation year. Previously inspected later seasons are not a pristine prospective test.'],
             ['Role sample', 'Observed batting position or bowling phase exposure. Insufficient role sample means the tagging threshold was not met; it does not mean the player has no role or ability.'],
             ['Wickets / dismissals', 'Wickets credited to a bowler or recorded striker dismissals for a batter in pressure situations. Shown as context; they receive no direct run value in the ranking score.'],
-            ['Brier score / log loss', 'Errors for probability predictions; lower is better. These assess the experimental match-state model, not whether the player order predicts future success.'],
         ], [130, 375], compact=True),
         Spacer(1, 6),
         para('Pressure here is an operational match-situation definition. It is not a direct measurement of emotion, a validated universal leverage index, or proof of future IPL auction suitability.', 'SmallRR'),
@@ -192,6 +190,7 @@ def main():
 
     output = ROOT / 'results/public/methodology.pdf'
     SimpleDocTemplate(str(output), pagesize=A4, rightMargin=45, leftMargin=45, topMargin=40, bottomMargin=46, title='SupeRR Selector Round 1 - Methodology and Evidence', author="Royals' Resolve").build(story, onFirstPage=footer, onLaterPages=footer)
+    shutil.copy2(output, ROOT / 'results/public/Royals_Resolve_methodology.pdf')
     front = ROOT / 'frontend/public/results'; front.mkdir(parents=True, exist_ok=True)
     for name in ['analysis.json', 'methodology.pdf']:
         shutil.copy2(ROOT / 'results/public' / name, front / name)
