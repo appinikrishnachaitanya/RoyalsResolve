@@ -1,0 +1,2361 @@
+{
+  "as_of": "2026-11-17",
+  "rr": {
+    "retained_players": [
+      "Riyan Parag",
+      "Yashasvi Jaiswal",
+      "Vaibhav Sooryavanshi",
+      "Ravindra Jadeja",
+      "Dhruv Jurel",
+      "Jofra Archer",
+      "Aman Rao Perala",
+      "Brijesh Sharma",
+      "Nandre Burger",
+      "Dasun Shanaka",
+      "Donovan Ferreira",
+      "Lhuan-dre Pretorius",
+      "Ravi Bishnoi",
+      "Sandeep Sharma",
+      "Shubham Dubey",
+      "Sushant Mishra",
+      "Yash Punja",
+      "Mohammed Shami",
+      "Manimaran Siddharth"
+    ],
+    "released_players": [
+      "Tushar Deshpande",
+      "Adam Milne",
+      "Kuldeep Sen",
+      "Yudhvir Singh",
+      "Kwena Maphaka",
+      "Vignesh Puthur",
+      "Shimron Hetmyer",
+      "Ravi Singh",
+      "Emanjot Singh Chahal"
+    ],
+    "squad_size": 19,
+    "purse_crore": 27.05,
+    "maximum_vacancies": 6,
+    "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released"
+  },
+  "players": [
+    {
+      "name": "Riyan Parag",
+      "status": "retained_rr",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Yashasvi Jaiswal",
+      "status": "retained_rr",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Vaibhav Sooryavanshi",
+      "status": "retained_rr",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Ravindra Jadeja",
+      "status": "retained_rr",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Dhruv Jurel",
+      "status": "retained_rr",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Jofra Archer",
+      "status": "retained_rr",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Aman Rao Perala",
+      "status": "retained_rr",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Brijesh Sharma",
+      "status": "retained_rr",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Nandre Burger",
+      "status": "retained_rr",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Dasun Shanaka",
+      "status": "retained_rr",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Donovan Ferreira",
+      "status": "retained_rr",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Lhuan-dre Pretorius",
+      "status": "retained_rr",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Ravi Bishnoi",
+      "status": "retained_rr",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Sandeep Sharma",
+      "status": "retained_rr",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Shubham Dubey",
+      "status": "retained_rr",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Sushant Mishra",
+      "status": "retained_rr",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Yash Punja",
+      "status": "retained_rr",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Mohammed Shami",
+      "status": "retained_rr",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Manimaran Siddharth",
+      "status": "retained_rr",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Tushar Deshpande",
+      "status": "released_registration_unverified",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Adam Milne",
+      "status": "released_registration_unverified",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Kuldeep Sen",
+      "status": "released_registration_unverified",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Yudhvir Singh",
+      "status": "released_registration_unverified",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Kwena Maphaka",
+      "status": "released_registration_unverified",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Vignesh Puthur",
+      "status": "released_registration_unverified",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Shimron Hetmyer",
+      "status": "released_registration_unverified",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Ravi Singh",
+      "status": "released_registration_unverified",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Emanjot Singh Chahal",
+      "status": "released_registration_unverified",
+      "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Jasprit Bumrah",
+      "status": "retained_elsewhere",
+      "source": "https://www.mumbaiindians.com/news/mumbai-indians-confirm-squad-composition-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Suryakumar Yadav",
+      "status": "retained_elsewhere",
+      "source": "https://www.mumbaiindians.com/news/mumbai-indians-confirm-squad-composition-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Arshdeep Singh",
+      "status": "retained_elsewhere",
+      "source": "https://www.mumbaiindians.com/news/mumbai-indians-confirm-squad-composition-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Shardul Thakur",
+      "status": "retained_elsewhere",
+      "source": "https://www.mumbaiindians.com/news/mumbai-indians-confirm-squad-composition-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Sunil Narine",
+      "status": "retained_elsewhere",
+      "source": "https://www.kkr.in/news/kolkata-knight-riders-announce-retained-players-ahead-of-tata-ipl-2027-auction",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Rinku Singh",
+      "status": "retained_elsewhere",
+      "source": "https://www.kkr.in/news/kolkata-knight-riders-announce-retained-players-ahead-of-tata-ipl-2027-auction",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Rovman Powell",
+      "status": "retained_elsewhere",
+      "source": "https://www.kkr.in/news/kolkata-knight-riders-announce-retained-players-ahead-of-tata-ipl-2027-auction",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Varun Chakravarthy",
+      "status": "retained_elsewhere",
+      "source": "https://www.kkr.in/news/kolkata-knight-riders-announce-retained-players-ahead-of-tata-ipl-2027-auction",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Shashank Singh",
+      "status": "retained_elsewhere",
+      "source": "https://www.punjabkingsipl.in/news/ipl-2027-meet-our-retained-shers",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Shreyas Iyer",
+      "status": "retained_elsewhere",
+      "source": "https://www.punjabkingsipl.in/news/ipl-2027-meet-our-retained-shers",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Prabhsimran Singh",
+      "status": "retained_elsewhere",
+      "source": "https://www.punjabkingsipl.in/news/ipl-2027-meet-our-retained-shers",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Xavier Bartlett",
+      "status": "retained_elsewhere",
+      "source": "https://www.punjabkingsipl.in/news/ipl-2027-meet-our-retained-shers",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Trent Boult",
+      "status": "released_registration_unverified",
+      "source": "https://www.mumbaiindians.com/news/mumbai-indians-confirm-squad-composition-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Deepak Chahar",
+      "status": "released_registration_unverified",
+      "source": "https://www.mumbaiindians.com/news/mumbai-indians-confirm-squad-composition-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Allah Ghazanfar",
+      "status": "released_registration_unverified",
+      "source": "https://www.mumbaiindians.com/news/mumbai-indians-confirm-squad-composition-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Mahipal Lomror",
+      "status": "released_registration_unverified",
+      "source": "https://www.mumbaiindians.com/news/mumbai-indians-confirm-squad-composition-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Lockie Ferguson",
+      "status": "released_registration_unverified",
+      "source": "https://www.punjabkingsipl.in/news/ipl-2027-meet-our-retained-shers",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Nehal Wadhera",
+      "status": "released_registration_unverified",
+      "source": "https://www.punjabkingsipl.in/news/ipl-2027-meet-our-retained-shers",
+      "evidence": "official franchise announcement"
+    },
+    {
+      "name": "Matheesha Pathirana",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.cricbuzz.com/cricket-news/140945/kkr-release-pathirana-but-retain-cameron-green",
+      "evidence": "Cricbuzz report; official auction entry not verified"
+    },
+    {
+      "name": "Mustafizur Rahman",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.cricbuzz.com/cricket-news/140945/kkr-release-pathirana-but-retain-cameron-green",
+      "evidence": "Cricbuzz report; official auction entry not verified"
+    },
+    {
+      "name": "Sanju Samson",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Ruturaj Gaikwad",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Ayush Mhatre",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Dewald Brevis",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Urvil Patel",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Kartik Sharma",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Sarfaraz Khan",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Anshul Kamboj",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Gurjapneet Singh",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Mukesh Choudhary",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Noor Ahmad",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Rahul Chahar",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Jamie Overton",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Ramakrishna Ghosh",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Shivam Dube",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Shreyas Gopal",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Akeal Hosein",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Liam Livingstone",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Jack Edwards",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Matthew Short",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Matt Henry",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Zak Foulkes",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Prashant Veer",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Aman Khan",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Kuldip Yadav",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Akash Madhwal",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Dian Forrester",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Macneil Noronha",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "MS Dhoni",
+      "status": "unavailable_or_retired",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Spencer Johnson",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Chennai Super Kings"
+    },
+    {
+      "name": "Ashutosh Sharma",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "KL Rahul",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Sameer Rizvi",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Tristan Stubbs",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "David Miller",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Prithvi Shaw",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Mukesh Kumar",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Tripurana Vijay",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Auqib Nabi",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Axar Patel",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Madhav Tiwari",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Vipraj Nigam",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Rishabh Pant",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Zeeshan Ansari",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Nitish Rana",
+      "status": "released_registration_unverified",
+      "source": "https://www.delhicapitals.in/news/sourav-ganguly-confident-of-turning-delhi-capitals-fortunes-around-as-franchise-retains-16-players-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Abishek Porel",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Pathum Nissanka",
+      "status": "released_registration_unverified",
+      "source": "https://www.delhicapitals.in/news/sourav-ganguly-confident-of-turning-delhi-capitals-fortunes-around-as-franchise-retains-16-players-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Ben Duckett",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Karun Nair",
+      "status": "released_registration_unverified",
+      "source": "https://www.delhicapitals.in/news/sourav-ganguly-confident-of-turning-delhi-capitals-fortunes-around-as-franchise-retains-16-players-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Sahil Parakh",
+      "status": "released_registration_unverified",
+      "source": "https://www.delhicapitals.in/news/sourav-ganguly-confident-of-turning-delhi-capitals-fortunes-around-as-franchise-retains-16-players-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Dushmantha Chamera",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Rehan Ahmed",
+      "status": "released_registration_unverified",
+      "source": "https://www.delhicapitals.in/news/sourav-ganguly-confident-of-turning-delhi-capitals-fortunes-around-as-franchise-retains-16-players-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Mitchell Starc",
+      "status": "unavailable_or_retired",
+      "source": "https://www.delhicapitals.in/news/sourav-ganguly-confident-of-turning-delhi-capitals-fortunes-around-as-franchise-retains-16-players-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Ajay Mandal",
+      "status": "released_registration_unverified",
+      "source": "https://www.delhicapitals.in/news/sourav-ganguly-confident-of-turning-delhi-capitals-fortunes-around-as-franchise-retains-16-players-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Anuj Rawat",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Jos Buttler",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Kumar Kushagra",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Sai Sudharsan",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Shubman Gill",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Tom Banton",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Gurnoor Brar",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Kagiso Rabada",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Mohammed Siraj",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Arshad Khan",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Prasidh Krishna",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Sai Kishore",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Rashid Khan",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Ashok Sharma",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Prithvi Raj Yarra",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Glenn Phillips",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Jayant Yadav",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Manav Suthar",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Nishant Sindhu",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Rahul Tewatia",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Washington Sundar",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Jason Holder",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Harshal Patel",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Ishant Sharma",
+      "status": "released_registration_unverified",
+      "source": "https://www.gujarattitansipl.com/news/gujarat-titans-part-ways-five-players-ahead-of-tata-ipl-2027",
+      "evidence": "official franchise announcement",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Luke Wood",
+      "status": "released_registration_unverified",
+      "source": "https://www.gujarattitansipl.com/news/gujarat-titans-part-ways-five-players-ahead-of-tata-ipl-2027",
+      "evidence": "official franchise announcement",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Kulwant Khejroliya",
+      "status": "released_registration_unverified",
+      "source": "https://www.gujarattitansipl.com/news/gujarat-titans-part-ways-five-players-ahead-of-tata-ipl-2027",
+      "evidence": "official franchise announcement",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Shahrukh Khan",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Connor Esterhuizen",
+      "status": "released_registration_unverified",
+      "source": "https://www.gujarattitansipl.com/news/gujarat-titans-part-ways-five-players-ahead-of-tata-ipl-2027",
+      "evidence": "official franchise announcement",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Angkrish Raghuvanshi",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Manish Pandey",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Finn Allen",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Tim Seifert",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Harshit Rana",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Vaibhav Arora",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Varun Chakaravarthy",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Kartik Tyagi",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Prashant Solanki",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Anukul Roy",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Ramandeep Singh",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Cameron Green",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Sarthak Ranjan",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Daksh Kamra",
+      "status": "conflicting_report",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Ajinkya Rahane",
+      "status": "unavailable_or_retired",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Akash Deep",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Blessing Muzarabani",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Luvinith Sisodia",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Navdeep Saini",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Rachin Ravindra",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Rahul Tripathi",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Tejasvi Singh",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Umran Malik",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Kolkata Knight Riders"
+    },
+    {
+      "name": "Abdul Samad",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Himmat Singh",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Nicholas Pooran",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Mukul Choudhary",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Akshat Raghuwanshi",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Josh Inglis",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Akash Singh",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Arjun Tendulkar",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Digvesh Rathi",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Mayank Yadav",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Mohsin Khan",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Prince Yadav",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Aiden Markram",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Ayush Badoni",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Mitchell Marsh",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Kuldeep Yadav",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Sam Curran",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Matthew Breetzke",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Anrich Nortje",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "George Linde",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Wanindu Hasaranga",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Naman Tiwari",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Arshin Kulkarni",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Avesh Khan",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Lucknow Super Giants"
+    },
+    {
+      "name": "Robin Minz",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Mumbai Indians"
+    },
+    {
+      "name": "Rohit Sharma",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Mumbai Indians"
+    },
+    {
+      "name": "Ryan Rickelton",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Mumbai Indians"
+    },
+    {
+      "name": "Sherfane Rutherford",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Mumbai Indians"
+    },
+    {
+      "name": "Tilak Varma",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Mumbai Indians"
+    },
+    {
+      "name": "Quinton de Kock",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Mumbai Indians"
+    },
+    {
+      "name": "Ashwani Kumar",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Mumbai Indians"
+    },
+    {
+      "name": "Raghu Sharma",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Mumbai Indians"
+    },
+    {
+      "name": "Corbin Bosch",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Mumbai Indians"
+    },
+    {
+      "name": "Mitchell Santner",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Mumbai Indians"
+    },
+    {
+      "name": "Naman Dhir",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Mumbai Indians"
+    },
+    {
+      "name": "Raj Bawa",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Mumbai Indians"
+    },
+    {
+      "name": "Will Jacks",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Mumbai Indians"
+    },
+    {
+      "name": "Atharva Ankolekar",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Mumbai Indians"
+    },
+    {
+      "name": "Keshav Maharaj",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Mumbai Indians"
+    },
+    {
+      "name": "Mohammed Izhar",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Mumbai Indians"
+    },
+    {
+      "name": "Danish Malewar",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Mumbai Indians"
+    },
+    {
+      "name": "Mayank Markande",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Mumbai Indians"
+    },
+    {
+      "name": "Mayank Rawat",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Mumbai Indians"
+    },
+    {
+      "name": "Harnoor Singh Pannu",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Punjab Kings"
+    },
+    {
+      "name": "Priyansh Arya",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Punjab Kings"
+    },
+    {
+      "name": "Vishnu Vinod",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Punjab Kings"
+    },
+    {
+      "name": "Vyshak Vijaykumar",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Punjab Kings"
+    },
+    {
+      "name": "Yash Thakur",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Punjab Kings"
+    },
+    {
+      "name": "Yuzvendra Chahal",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Punjab Kings"
+    },
+    {
+      "name": "Ben Dwarshius",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Punjab Kings"
+    },
+    {
+      "name": "Azmatullah Omarzai",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Punjab Kings"
+    },
+    {
+      "name": "Harpreet Brar",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Punjab Kings"
+    },
+    {
+      "name": "Marco Jansen",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Punjab Kings"
+    },
+    {
+      "name": "Marcus Stoinis",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Punjab Kings"
+    },
+    {
+      "name": "Musheer Khan",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Punjab Kings"
+    },
+    {
+      "name": "Suryansh Shedge",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Punjab Kings"
+    },
+    {
+      "name": "Cooper Connolly",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Punjab Kings"
+    },
+    {
+      "name": "Hardik Pandya",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Punjab Kings"
+    },
+    {
+      "name": "Mitch Owen",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Punjab Kings"
+    },
+    {
+      "name": "Pyla Avinash",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Punjab Kings"
+    },
+    {
+      "name": "Praveen Dubey",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Punjab Kings"
+    },
+    {
+      "name": "Vishal Nishad",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Punjab Kings"
+    },
+    {
+      "name": "Vaibhav Suryavanshi",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Rajasthan Royals"
+    },
+    {
+      "name": "Aman Rao",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Rajasthan Royals"
+    },
+    {
+      "name": "Yash Raj Punja",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Rajasthan Royals"
+    },
+    {
+      "name": "Devdutt Padikkal",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Jitesh Sharma",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Phil Salt",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Rajat Patidar",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Tim David",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Virat Kohli",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Jordan Cox",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Abhinandan Singh",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Bhuvneshwar Kumar",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Josh Hazlewood",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Nuwan Thushara",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Rasikh Dar",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Suyash Sharma",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Yash Dayal",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Jacob Duffy",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Vicky Ostwal",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Krunal Pandya",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Romario Shepherd",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Swapnil Singh",
+      "status": "released_registration_unverified",
+      "source": "https://www.royalchallengers.com/rcb-cricket-news/news/rcb-retain-20-players-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Venkatesh Iyer",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Kanishk Chouhan",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Jacob Bethell",
+      "status": "released_registration_unverified",
+      "source": "https://www.royalchallengers.com/rcb-cricket-news/news/rcb-retain-20-players-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement",
+      "team": "Royal Challengers Bengaluru",
+      "availability_note": "RCB reports recurrent knee injury and uncertain return timeline."
+    },
+    {
+      "name": "Mangesh Yadav",
+      "status": "released_registration_unverified",
+      "source": "https://www.royalchallengers.com/rcb-cricket-news/news/rcb-retain-20-players-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Richard Gleeson",
+      "status": "released_registration_unverified",
+      "source": "https://www.royalchallengers.com/rcb-cricket-news/news/rcb-retain-20-players-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Satwik Deswal",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Vihaan Malhotra",
+      "status": "released_registration_unverified",
+      "source": "https://www.royalchallengers.com/rcb-cricket-news/news/rcb-retain-20-players-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Aniket Verma",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Heinrich Klaasen",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Ishan Kishan",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Smaran Ravichandran",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Salil Arora",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Brydon Carse",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Eshan Malinga",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Pat Cummins",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Sakib Hassan",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Praful Hinge",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Abhishek Kumar",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Harsh Dubey",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Nitish Kumar Reddy",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Shivang Kumar",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Krains Fuletra",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Khaleel Ahmed",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Nathan Ellis",
+      "status": "reported_retained",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Travis Head",
+      "status": "unavailable_or_retired",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Kamindu Mendis",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Jaydev Unadkat",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "D Madushanka",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Onkar Tarmale",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Amit Kumar",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Shivam Mavi",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Gerald Coetzee",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "David Payne",
+      "status": "reported_release_registration_unverified",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "Wisden reported list; not official auction registration",
+      "team": "Sunrisers Hyderabad"
+    },
+    {
+      "name": "Abhishek Porel",
+      "status": "released_registration_unverified",
+      "source": "https://www.delhicapitals.in/news/sourav-ganguly-confident-of-turning-delhi-capitals-fortunes-around-as-franchise-retains-16-players-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "Dushmantha Chameera",
+      "status": "released_registration_unverified",
+      "source": "https://www.delhicapitals.in/news/sourav-ganguly-confident-of-turning-delhi-capitals-fortunes-around-as-franchise-retains-16-players-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement",
+      "team": "Delhi Capitals"
+    },
+    {
+      "name": "M Shahrukh Khan",
+      "status": "released_registration_unverified",
+      "source": "https://www.gujarattitansipl.com/news/gujarat-titans-part-ways-five-players-ahead-of-tata-ipl-2027",
+      "evidence": "official franchise announcement",
+      "team": "Gujarat Titans"
+    },
+    {
+      "name": "Satvik Deswal",
+      "status": "released_registration_unverified",
+      "source": "https://www.royalchallengers.com/rcb-cricket-news/news/rcb-retain-20-players-ahead-of-ipl-2027-auction",
+      "evidence": "official franchise announcement",
+      "team": "Royal Challengers Bengaluru"
+    },
+    {
+      "name": "Babar Azam",
+      "status": "auction_eligibility_unverified",
+      "source": "user-confirmed Unstop dropdown presence only",
+      "evidence": "Challenge selectability confirmed; IPL 2027 auction entry and availability not verified. Excluded from confirmed recruitment pool."
+    },
+    {
+      "name": "Abrar Ahmed",
+      "status": "auction_eligibility_unverified",
+      "source": "user-confirmed Unstop dropdown presence only",
+      "evidence": "Challenge selectability confirmed; IPL 2027 auction entry and availability not verified. Excluded from confirmed recruitment pool."
+    },
+    {
+      "name": "Imad Wasim",
+      "status": "auction_eligibility_unverified",
+      "source": "user-confirmed Unstop dropdown presence only",
+      "evidence": "Challenge selectability confirmed; IPL 2027 auction entry and availability not verified. Excluded from confirmed recruitment pool."
+    }
+  ],
+  "confirmed_auction_entries": [],
+  "registered_pool_status": "No official 2027 auction-entry list verified for this report. Release is not registration, availability or board clearance.",
+  "organizer_dropdown_evidence": {
+    "source": "user-confirmed Unstop dropdown presence",
+    "names": [
+      "Babar Azam",
+      "Abrar Ahmed",
+      "Imad Wasim"
+    ],
+    "scope": "challenge selectability only, not IPL auction eligibility"
+  },
+  "sources": [
+    {
+      "url": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released",
+      "publisher": "Rajasthan Royals",
+      "date": "2026-11-17",
+      "checked": "direct HTML and extracted body"
+    },
+    {
+      "url": "https://www.mumbaiindians.com/news/mumbai-indians-confirm-squad-composition-ahead-of-ipl-2027-auction",
+      "publisher": "Mumbai Indians",
+      "date": "2026-11-17",
+      "checked": "direct HTML and extracted body"
+    },
+    {
+      "url": "https://www.kkr.in/news/kolkata-knight-riders-announce-retained-players-ahead-of-tata-ipl-2027-auction",
+      "publisher": "Kolkata Knight Riders",
+      "date": "2026-11-17",
+      "checked": "direct HTML and extracted body"
+    },
+    {
+      "url": "https://www.punjabkingsipl.in/news/ipl-2027-meet-our-retained-shers",
+      "publisher": "Punjab Kings",
+      "date": "2026-11-17",
+      "checked": "official page indexed text"
+    },
+    {
+      "url": "https://www.cricbuzz.com/cricket-news/140945/kkr-release-pathirana-but-retain-cameron-green",
+      "publisher": "Cricbuzz",
+      "date": "2026-11-17",
+      "checked": "reported release; secondary source"
+    },
+    {
+      "url": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "publisher": "Wisden",
+      "date": "2026-11-17",
+      "checked": "full article; reported statuses flagged; discrepancies resolved in favour of primary franchise statements"
+    },
+    {
+      "url": "https://www.delhicapitals.in/news/sourav-ganguly-confident-of-turning-delhi-capitals-fortunes-around-as-franchise-retains-16-players-ahead-of-ipl-2027-auction",
+      "publisher": "Delhi Capitals",
+      "date": "2026-11-17",
+      "checked": "official announcement"
+    },
+    {
+      "url": "https://www.gujarattitansipl.com/news/gujarat-titans-part-ways-five-players-ahead-of-tata-ipl-2027",
+      "publisher": "Gujarat Titans",
+      "date": "2026-11-17",
+      "checked": "official announcement"
+    },
+    {
+      "url": "https://www.royalchallengers.com/rcb-cricket-news/news/rcb-retain-20-players-ahead-of-ipl-2027-auction",
+      "publisher": "Royal Challengers Bengaluru",
+      "date": "2026-11-17",
+      "checked": "official announcement"
+    }
+  ],
+  "franchise_coverage": [
+    {
+      "team": "Chennai Super Kings",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "reported cross-franchise list; primary announcements take precedence",
+      "released_names": [
+        "Matthew Short",
+        "Matt Henry",
+        "Zak Foulkes",
+        "Prashant Veer",
+        "Aman Khan",
+        "Kuldip Yadav",
+        "Akash Madhwal",
+        "Dian Forrester",
+        "Macneil Noronha",
+        "MS Dhoni",
+        "Spencer Johnson"
+      ],
+      "retained_names": [
+        "Sanju Samson",
+        "Ruturaj Gaikwad",
+        "Ayush Mhatre",
+        "Dewald Brevis",
+        "Urvil Patel",
+        "Kartik Sharma",
+        "Sarfaraz Khan",
+        "Anshul Kamboj",
+        "Gurjapneet Singh",
+        "Mukesh Choudhary",
+        "Noor Ahmad",
+        "Rahul Chahar",
+        "Jamie Overton",
+        "Ramakrishna Ghosh",
+        "Shivam Dube",
+        "Shreyas Gopal",
+        "Akeal Hosein",
+        "Liam Livingstone",
+        "Jack Edwards"
+      ]
+    },
+    {
+      "team": "Delhi Capitals",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "reported cross-franchise list; primary announcements take precedence",
+      "released_names": [
+        "Nitish Rana",
+        "Abishek Porel",
+        "Pathum Nissanka",
+        "Ben Duckett",
+        "Karun Nair",
+        "Sahil Parakh",
+        "Dushmantha Chamera",
+        "Rehan Ahmed",
+        "Mitchell Starc",
+        "Ajay Mandal"
+      ],
+      "retained_names": [
+        "Ashutosh Sharma",
+        "KL Rahul",
+        "Sameer Rizvi",
+        "Tristan Stubbs",
+        "David Miller",
+        "Prithvi Shaw",
+        "Mukesh Kumar",
+        "Tripurana Vijay",
+        "Auqib Nabi",
+        "Axar Patel",
+        "Madhav Tiwari",
+        "Vipraj Nigam",
+        "Rishabh Pant",
+        "Zeeshan Ansari"
+      ]
+    },
+    {
+      "team": "Gujarat Titans",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "reported cross-franchise list; primary announcements take precedence",
+      "released_names": [
+        "Ishant Sharma",
+        "Luke Wood",
+        "Kulwant Khejroliya",
+        "Shahrukh Khan",
+        "Connor Esterhuizen"
+      ],
+      "retained_names": [
+        "Anuj Rawat",
+        "Jos Buttler",
+        "Kumar Kushagra",
+        "Sai Sudharsan",
+        "Shubman Gill",
+        "Tom Banton",
+        "Gurnoor Brar",
+        "Kagiso Rabada",
+        "Mohammed Siraj",
+        "Arshad Khan",
+        "Prasidh Krishna",
+        "Sai Kishore",
+        "Rashid Khan",
+        "Ashok Sharma",
+        "Prithvi Raj Yarra",
+        "Glenn Phillips",
+        "Jayant Yadav",
+        "Manav Suthar",
+        "Nishant Sindhu",
+        "Rahul Tewatia",
+        "Washington Sundar",
+        "Jason Holder",
+        "Harshal Patel"
+      ]
+    },
+    {
+      "team": "Kolkata Knight Riders",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "reported cross-franchise list; primary announcements take precedence",
+      "released_names": [
+        "Ajinkya Rahane",
+        "Akash Deep",
+        "Blessing Muzarabani",
+        "Daksh Kamra",
+        "Luvinith Sisodia",
+        "Matheesha Pathirana",
+        "Mustafizur Rahman",
+        "Navdeep Saini",
+        "Rachin Ravindra",
+        "Rahul Tripathi",
+        "Tejasvi Singh",
+        "Umran Malik"
+      ],
+      "retained_names": [
+        "Angkrish Raghuvanshi",
+        "Manish Pandey",
+        "Rinku Singh",
+        "Rovman Powell",
+        "Finn Allen",
+        "Tim Seifert",
+        "Harshit Rana",
+        "Vaibhav Arora",
+        "Varun Chakaravarthy",
+        "Kartik Tyagi",
+        "Prashant Solanki",
+        "Anukul Roy",
+        "Ramandeep Singh",
+        "Sunil Narine",
+        "Cameron Green",
+        "Sarthak Ranjan",
+        "Daksh Kamra"
+      ]
+    },
+    {
+      "team": "Lucknow Super Giants",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "reported cross-franchise list; primary announcements take precedence",
+      "released_names": [
+        "Matthew Breetzke",
+        "Anrich Nortje",
+        "George Linde",
+        "Wanindu Hasaranga",
+        "Naman Tiwari",
+        "Arshin Kulkarni",
+        "Avesh Khan"
+      ],
+      "retained_names": [
+        "Abdul Samad",
+        "Himmat Singh",
+        "Nicholas Pooran",
+        "Mukul Choudhary",
+        "Akshat Raghuwanshi",
+        "Josh Inglis",
+        "Akash Singh",
+        "Arjun Tendulkar",
+        "Digvesh Rathi",
+        "Mayank Yadav",
+        "Mohsin Khan",
+        "Prince Yadav",
+        "Aiden Markram",
+        "Ayush Badoni",
+        "Mitchell Marsh",
+        "Kuldeep Yadav",
+        "Sam Curran"
+      ]
+    },
+    {
+      "team": "Mumbai Indians",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "reported cross-franchise list; primary announcements take precedence",
+      "released_names": [
+        "Deepak Chahar",
+        "Trent Boult",
+        "Allah Ghazanfar",
+        "Atharva Ankolekar",
+        "Keshav Maharaj",
+        "Mohammed Izhar",
+        "Danish Malewar",
+        "Mayank Markande",
+        "Mayank Rawat"
+      ],
+      "retained_names": [
+        "Robin Minz",
+        "Rohit Sharma",
+        "Ryan Rickelton",
+        "Sherfane Rutherford",
+        "Suryakumar Yadav",
+        "Tilak Varma",
+        "Quinton de Kock",
+        "Ashwani Kumar",
+        "Jasprit Bumrah",
+        "Raghu Sharma",
+        "Shardul Thakur",
+        "Corbin Bosch",
+        "Mitchell Santner",
+        "Naman Dhir",
+        "Raj Bawa",
+        "Will Jacks",
+        "Arshdeep Singh"
+      ]
+    },
+    {
+      "team": "Punjab Kings",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "reported cross-franchise list; primary announcements take precedence",
+      "released_names": [
+        "Lockie Ferguson",
+        "Mitch Owen",
+        "Nehal Wadhera",
+        "Pyla Avinash",
+        "Praveen Dubey",
+        "Vishal Nishad"
+      ],
+      "retained_names": [
+        "Harnoor Singh Pannu",
+        "Prabhsimran Singh",
+        "Priyansh Arya",
+        "Shashank Singh",
+        "Shreyas Iyer",
+        "Vishnu Vinod",
+        "Vyshak Vijaykumar",
+        "Xavier Bartlett",
+        "Yash Thakur",
+        "Yuzvendra Chahal",
+        "Ben Dwarshius",
+        "Azmatullah Omarzai",
+        "Harpreet Brar",
+        "Marco Jansen",
+        "Marcus Stoinis",
+        "Musheer Khan",
+        "Suryansh Shedge",
+        "Cooper Connolly",
+        "Hardik Pandya"
+      ]
+    },
+    {
+      "team": "Rajasthan Royals",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "reported cross-franchise list; primary announcements take precedence",
+      "released_names": [
+        "Adam Milne",
+        "Kwena Maphaka",
+        "Tushar Deshpande",
+        "Kuldeep Sen",
+        "Yudhvir Singh",
+        "Vignesh Puthur",
+        "Ravi Singh",
+        "Shimron Hetmyer"
+      ],
+      "retained_names": [
+        "Dhruv Jurel",
+        "Lhuan-dre Pretorius",
+        "Shubham Dubey",
+        "Vaibhav Suryavanshi",
+        "Aman Rao",
+        "Jofra Archer",
+        "Nandre Burger",
+        "Sandeep Sharma",
+        "Ravi Bishnoi",
+        "Sushant Mishra",
+        "Yash Raj Punja",
+        "Brijesh Sharma",
+        "Donovan Ferreira",
+        "Ravindra Jadeja",
+        "Riyan Parag",
+        "Mohammed Shami",
+        "Manimaran Siddharth"
+      ]
+    },
+    {
+      "team": "Royal Challengers Bengaluru",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "reported cross-franchise list; primary announcements take precedence",
+      "released_names": [
+        "Jacob Bethell",
+        "Mangesh Yadav",
+        "Richard Gleeson",
+        "Satwik Deswal",
+        "Vihaan Malhotra"
+      ],
+      "retained_names": [
+        "Devdutt Padikkal",
+        "Jitesh Sharma",
+        "Phil Salt",
+        "Rajat Patidar",
+        "Tim David",
+        "Virat Kohli",
+        "Jordan Cox",
+        "Abhinandan Singh",
+        "Bhuvneshwar Kumar",
+        "Josh Hazlewood",
+        "Nuwan Thushara",
+        "Rasikh Dar",
+        "Suyash Sharma",
+        "Yash Dayal",
+        "Jacob Duffy",
+        "Vicky Ostwal",
+        "Krunal Pandya",
+        "Romario Shepherd",
+        "Swapnil Singh",
+        "Venkatesh Iyer",
+        "Kanishk Chouhan"
+      ]
+    },
+    {
+      "team": "Sunrisers Hyderabad",
+      "source": "https://www.wisden.com/series/ipl-2027/cricket-news/ipl-2027-retention-list-full-list-retained-released",
+      "evidence": "reported cross-franchise list; primary announcements take precedence",
+      "released_names": [
+        "Travis Head",
+        "Kamindu Mendis",
+        "Jaydev Unadkat",
+        "D Madushanka",
+        "Onkar Tarmale",
+        "Amit Kumar",
+        "Shivam Mavi",
+        "Gerald Coetzee",
+        "David Payne"
+      ],
+      "retained_names": [
+        "Aniket Verma",
+        "Heinrich Klaasen",
+        "Ishan Kishan",
+        "Smaran Ravichandran",
+        "Salil Arora",
+        "Brydon Carse",
+        "Eshan Malinga",
+        "Pat Cummins",
+        "Sakib Hassan",
+        "Praful Hinge",
+        "Abhishek Kumar",
+        "Harsh Dubey",
+        "Nitish Kumar Reddy",
+        "Shivang Kumar",
+        "Krains Fuletra",
+        "Khaleel Ahmed",
+        "Nathan Ellis"
+      ]
+    }
+  ],
+  "checked_on": "2026-11-18",
+  "aliases": {
+    "Shahrukh Khan": "M Shahrukh Khan",
+    "AM Ghazanfar": "Allah Ghazanfar",
+    "Dushmantha Chamera": "Dushmantha Chameera",
+    "Abishek Porel": "Abhishek Porel"
+  }
+}

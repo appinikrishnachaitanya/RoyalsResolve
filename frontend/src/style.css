@@ -305,3 +305,65 @@ dialog.player-scorecard {
 .ranking-table .interval { font-size: 12px; }
 .ranking-table { border: 1px solid var(--line); border-radius: 8px; }
 @media(max-width:1400px) { .ranking-side-by-side { grid-template-columns: minmax(0,1fr); } }
+
+.auction-table { table-layout: fixed; min-width: 680px; }
+.auction-table col:nth-child(1) { width: 23%; }
+.auction-table col:nth-child(2) { width: 38%; }
+.auction-table col:nth-child(3) { width: 26%; }
+.auction-table col:nth-child(4) { width: 13%; }
+.auction-table :is(th, td) { vertical-align: top; text-align: left; overflow-wrap: anywhere; }
+.auction-table :is(th, td):last-child { text-align: center; }
+.auction-action { width: 100%; max-width: 6rem; }
+.auction-bids {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+  gap: .75rem 1rem;
+  align-items: end;
+  margin-block: 1rem;
+}
+.auction-bids label { display: grid; gap: .375rem; }
+.auction-bids input { width: 100%; min-width: 0; box-sizing: border-box; }
+.auction-reset { justify-self: start; }
+
+.auction-panel :is(.auction-action, .auction-reset) {
+  min-height: 42px;
+  padding: .5rem .85rem;
+  border: 1px solid var(--pink);
+  border-radius: 8px;
+  font-size: .875rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+.auction-action { background: var(--pink); color: white; }
+.auction-action:hover:not(:disabled) { background: #95114d; border-color: #95114d; }
+.auction-panel :is(.auction-action[aria-pressed="true"], .auction-reset) {
+  background: white;
+  color: var(--ink);
+  border-color: var(--line);
+}
+.auction-panel :is(.auction-action[aria-pressed="true"], .auction-reset):hover {
+  background: #fdf1f6;
+  color: #95114d;
+  border-color: var(--pink);
+}
+.auction-panel .auction-action:disabled {
+  background: #edf0f4;
+  color: #586273;
+  border-color: var(--line);
+  cursor: not-allowed;
+}
+.auction-panel button:focus-visible { outline: 2px solid var(--pink); }
+.auction-bids input { min-height: 42px; padding: .5rem .75rem; border: 1px solid var(--line); border-radius: 8px; }
+
+.auction-role-switch {
+  display: inline-grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: min(100%, 24rem);
+  margin-block: .25rem 1rem;
+}
+.auction-role-switch button {
+  min-width: 0;
+  min-height: 42px;
+  font-weight: 700;
+}
+.auction-role-switch button + button { border-left: 0; }

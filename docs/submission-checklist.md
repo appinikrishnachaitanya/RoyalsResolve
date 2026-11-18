@@ -1,51 +1,44 @@
 # Round 1 submission checklist
 
-The supplied Season 2 brief requires two ordered top-ten dropdown lists and a methodology document. Independent human pressure labels and prospective forecasting superiority are not required deliverables. They remain useful future validation. The submitted method is a transparent operational definition with documented limitations.
+Current analysis: `a9616ec62e10d1a2`. Updated reconstruction: 762 retained matches; 597 evaluation matches. IPL and T20I have equal delivery weights.
 
-Analysis ID: `85b2c412bb006226` (16 November rerun using the organizer-linked ball-by-ball CSV and the five supplied supporting tables; scores and ordered lists unchanged).
+The lists below are the statistical decision order. The submission policy excludes players mapped to Pakistan or Pakistan A in the supplied data. Verify the selected names against the Unstop dropdowns.
 
 ## Batters
 
 | Rank | Player |
 |---|---|
-| 1 | Towhid Hridoy |
-| 2 | Sanju Samson |
-| 3 | Shashank Singh |
-| 4 | Rinku Singh |
-| 5 | Nicholas Pooran |
-| 6 | Abdul Samad |
+| 1 | Suryakumar Yadav |
+| 2 | Abhishek Sharma |
+| 3 | Tim David |
+| 4 | Prabhsimran Singh |
+| 5 | Andre Russell |
+| 6 | Heinrich Klaasen |
 | 7 | Shubman Gill |
-| 8 | Liam Livingstone |
-| 9 | Rahul Tewatia |
-| 10 | Tim David |
+| 8 | Shreyas Iyer |
+| 9 | Shashank Singh |
+| 10 | Nicholas Pooran |
 
 ## Bowlers
 
 | Rank | Player |
 |---|---|
-| 1 | Shardul Thakur |
-| 2 | Jamie Overton |
-| 3 | Andre Russell |
-| 4 | Yash Dayal |
-| 5 | Jofra Archer |
-| 6 | Kyle Jamieson |
-| 7 | Karn Sharma |
-| 8 | Brijesh Sharma |
-| 9 | Kagiso Rabada |
-| 10 | Vaibhav Arora |
+| 1 | Jasprit Bumrah |
+| 2 | Sunil Narine |
+| 3 | Nasum Ahmed |
+| 4 | Mustafizur Rahman |
+| 5 | Matheesha Pathirana |
+| 6 | Matthew Humphreys |
+| 7 | Sikandar Raza |
+| 8 | Sakib Hussain |
+| 9 | Vipraj Nigam |
+| 10 | Nqabayomzi Peter |
 
 ## Submit
 
-1. Enter both lists in the Unstop dropdowns in exactly this order, with no duplicate within a list. Verify name matches against available dropdown entries.
-2. Upload `results/public/methodology.pdf`.
-3. If providing the dashboard link, manually deploy the latest Git commit and verify it in an incognito browser. Confirm the analysis ID above and that the methodology download works.
+1. Verify every player against the organizer’s available dropdown entries. If the permitted pool differs, filter and rerun the selection policy; do not substitute names by hand.
+2. Select both lists in exactly the report order.
+3. Upload `results/public/Royals_Resolve_methodology.pdf`. The current local report includes the RR role-first strategy.
+4. Deploy the intended dashboard version and check both ranking lists and the auction tab before sharing the link. Upload the current local PDF to Unstop.
 
-## Claims to use
-
-We compare contextual run contribution in specified demanding late-innings situations with each player’s own usual performance, using separate IPL/T20I baselines, sample shrinkage and match-level uncertainty. Rankings are descriptive findings from supplied data.
-
-Do not describe the formula as an industry standard, a psychological measurement, a proven future-performance predictor, or a verified 2027 auction recommendation. Wicket value, opponent and venue effects are not fully modelled. Independent review sheets are optional future research and have no fabricated labels.
-
-## Verification scope
-
-Repository contracts reconcile ranks, sample counts, scoring arithmetic and PDF agreement. Publication checks prevent source-record fields in public artifacts. The frontend production build is checked. These checks do not prove the pressure construct. Live Cloud Run deployment, Unstop dropdown matching and browser visual verification need a final user check.
+The rankings use conservative pressure output and separate improvement over usual. Bowling tiers also use credited-wicket evidence. Source weights are equal. See [methodology.md](methodology.md) for formulas and the decision rule.

@@ -54,6 +54,8 @@ You can instead pass `--input-zip PATH` or `--input-dir PATH` to a directory con
 
 ```powershell
 .venv\Scripts\python analysis/pipeline.py
+.venv\Scripts\python analysis/coach_backtest.py
+.venv\Scripts\python analysis/decision_audit.py
 .venv\Scripts\python analysis/report.py
 ```
 
@@ -67,7 +69,7 @@ $env:PORT = '8080'
 node deploy/server.mjs
 ```
 
-The report command writes the publication-safe analysis JSON and matching PDF under `results/public/`, then copies them into the frontend build inputs. The Vite build packages those saved results into `frontend/dist/`.
+The report command writes the publication-safe analysis JSON, RR scouting shortlist and matching PDF under `results/public/`, then copies them into the frontend build inputs. The Vite build packages those saved results into `frontend/dist/`.
 
 ## What the project does
 
@@ -100,6 +102,8 @@ The dashboard provides top-ten, top-twenty and all-eligible ranking filters, a s
 | `artifacts/private/` | Local audit tables, exclusions, replay and PDF review images; never publish |
 
 ## Current data and findings
+
+The revised reconstruction retains 762 of 837 IPL/T20I matches (75 excluded), including 597 later-season evaluation matches. Source no-ball codes are reconciled against complete overs, penalties, dismissal types and match results rather than discarding every affected match. The new decision policy uses pressure output with uncertainty, compares improvement separately, and uses credited-wicket evidence in bowling tiers. IPL and T20I deliveries receive equal weight; T20I-only players remain eligible pending the organizer’s dropdown list. See [the current method](docs/methodology.md) for the complete contract. Earlier validation documents describe previous versions unless marked otherwise.
 
 The supplied pack contains **200,999 deliveries across 883 matches**, dated 2022-01-22 through 2026-11-01. The Round 1 brief specifies IPL and T20I: the ranking includes **194,014 deliveries across 837 IPL/T20I matches** and excludes 6,985 deliveries from other T20 competitions in the pack. The pack does not identify its upstream provider, so this project does not label it Cricsheet.
 

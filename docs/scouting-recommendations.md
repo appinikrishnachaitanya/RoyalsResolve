@@ -1,45 +1,41 @@
-# Conditional scouting recommendations
+# RR role-first scouting review
 
-The statistical order is unchanged. These are conditional role-review recommendations, not verified auction purchases or squad upgrades. Prioritise role scouting only when pressure output is positive, the lift interval is above zero and the worst single-match-removal score remains positive. This review rule is transparent but not empirically calibrated as a selection policy.
+Current results use the recovered dataset and equal IPL/T20I delivery weights. Statistical inclusion does not establish 2027 availability or legal auction eligibility.
 
 ## Batters
 
-| Player / role | Pressure output / 100 | Lift / 100 | Pressure matches | Review recommendation |
-|---|---:|---:|---:|---|
-| 1. Towhid Hridoy / Middle order, Death overs | +28.2 | +36.3 | 6 | Exploratory scouting lead; 0 IPL pressure deliveries |
-| 2. Sanju Samson / Opener, Middle order | +32.8 | +33.6 | 7 | Prioritise role-specific scouting review; 50 IPL pressure deliveries |
-| 3. Shashank Singh / Death overs | +29.8 | +31.8 | 11 | Prioritise role-specific scouting review; 167 IPL pressure deliveries |
-| 4. Rinku Singh / Middle order, Death overs | +11.0 | +30.4 | 18 | Prioritise role-specific scouting review; 142 IPL pressure deliveries |
-| 5. Nicholas Pooran / Middle order, Death overs | +38.1 | +29.3 | 7 | Exploratory scouting lead; 64 IPL pressure deliveries |
-| 6. Abdul Samad / Death overs | +20.1 | +28.7 | 13 | Exploratory scouting lead; 129 IPL pressure deliveries |
-| 7. Shubman Gill / Opener, Death overs | +30.5 | +25.2 | 8 | Exploratory scouting lead; 58 IPL pressure deliveries |
-| 8. Liam Livingstone / Middle order, Death overs | +22.4 | +24.9 | 11 | Exploratory scouting lead; 70 IPL pressure deliveries |
-| 9. Rahul Tewatia / Death overs | +13.2 | +24.6 | 19 | Exploratory scouting lead; 102 IPL pressure deliveries |
-| 10. Tim David / Middle order, Death overs | +15.4 | +21.5 | 16 | Exploratory scouting lead; 79 IPL pressure deliveries |
-
-Before backing any player: verify the actual RR role gap, video and opposition context, availability, eligibility and price. An interval crossing zero means lift direction is uncertain. A comparison interval crossing zero does not establish an incumbent upgrade.
+| Rank / player | Observed role | Pressure output / 100 | Positive / all matches | Improvement / 100 |
+|---|---|---:|---:|---:|
+| 1. Suryakumar Yadav | Middle order, Death overs | +33.9 | 36 / 57 | +15.4 |
+| 2. Babar Azam | Opener, Middle order | +33.1 | 6 / 9 | +38.0 |
+| 3. Abhishek Sharma | Opener, Middle order | +32.6 | 15 / 19 | -4.2 |
+| 4. Tim David | Middle order, Death overs | +22.8 | 34 / 61 | +22.2 |
+| 5. Prabhsimran Singh | Opener, Middle order | +27.0 | 10 / 13 | +16.3 |
+| 6. Andre Russell | Middle order, Death overs | +28.9 | 15 / 35 | +23.3 |
+| 7. Heinrich Klaasen | Middle order, Death overs | +22.1 | 27 / 51 | +8.0 |
+| 8. Shubman Gill | Opener, Death overs | +28.8 | 11 / 22 | +23.4 |
+| 9. Shreyas Iyer | Middle order, Death overs | +21.6 | 23 / 42 | +13.2 |
+| 10. Shashank Singh | Middle order, Death overs | +23.9 | 16 / 30 | +25.9 |
 
 ## Bowlers
 
-| Player / role | Pressure output / 100 | Lift / 100 | Pressure matches | Review recommendation |
-|---|---:|---:|---:|---|
-| 1. Shardul Thakur / Death, Middle overs, Powerplay | +19.5 | +36.0 | 7 | Prioritise role-specific scouting review; 89 IPL pressure deliveries |
-| 2. Jamie Overton / Death, Middle overs | +7.6 | +33.6 | 7 | Prioritise role-specific scouting review; 38 IPL pressure deliveries |
-| 3. Andre Russell / Death, Middle overs | +7.2 | +29.8 | 11 | Prioritise role-specific scouting review; 64 IPL pressure deliveries |
-| 4. Yash Dayal / Death, Middle overs, Powerplay | +23.8 | +28.9 | 10 | Prioritise role-specific scouting review; 76 IPL pressure deliveries |
-| 5. Jofra Archer / Death, Middle overs, Powerplay | +22.9 | +28.3 | 14 | Prioritise role-specific scouting review; 81 IPL pressure deliveries |
-| 6. Kyle Jamieson / Death, Middle overs, Powerplay | +7.6 | +27.2 | 10 | Prioritise role-specific scouting review; 21 IPL pressure deliveries |
-| 7. Karn Sharma / Middle overs | -17.5 | +25.6 | 7 | Exploratory scouting lead; 73 IPL pressure deliveries |
-| 8. Brijesh Sharma / insufficient role sample | +14.1 | +23.7 | 5 | Prioritise role-specific scouting review; 45 IPL pressure deliveries |
-| 9. Kagiso Rabada / Death, Middle overs, Powerplay | +8.3 | +21.7 | 15 | Prioritise role-specific scouting review; 106 IPL pressure deliveries |
-| 10. Vaibhav Arora / Death, Powerplay | +0.7 | +21.0 | 11 | Exploratory scouting lead; 99 IPL pressure deliveries |
+| Rank / player | Observed role | Pressure output / 100 | Positive / all matches | Improvement / 100 |
+|---|---|---:|---:|---:|
+| 1. Jasprit Bumrah | Death, Middle overs, Powerplay | +33.3 | 39 / 50 | +11.1 |
+| 2. Sunil Narine | Death, Middle overs, Powerplay | +25.7 | 25 / 35 | +13.3 |
+| 3. Abrar Ahmed | Death, Middle overs, Powerplay | +26.2 | 20 / 28 | +22.6 |
+| 4. Matthew Humphreys | Middle overs, Powerplay | +17.0 | 7 / 11 | +15.6 |
+| 5. Nasum Ahmed | Middle overs, Powerplay | +20.8 | 10 / 11 | +14.8 |
+| 6. Mustafizur Rahman | Death, Middle overs, Powerplay | +21.7 | 32 / 44 | +5.8 |
+| 7. Matheesha Pathirana | Death, Middle overs | +17.5 | 31 / 42 | +5.5 |
+| 8. Imad Wasim | Middle overs | +19.0 | 7 / 8 | +10.4 |
+| 9. Mohammad Nawaz | Middle overs, Powerplay | +15.4 | 14 / 21 | +13.8 |
+| 10. Sikandar Raza | Death, Middle overs, Powerplay | +22.0 | 17 / 23 | +19.5 |
 
-Before backing any player: verify the actual RR role gap, video and opposition context, availability, eligibility and price. An interval crossing zero means lift direction is uncertain. A comparison interval crossing zero does not establish an incumbent upgrade.
+## Recruitment evidence as of 18 November 2026
 
-## Implications for selection
+The statistical order is unchanged. Official 17 November franchise statements place Suryakumar Yadav and Jasprit Bumrah with MI and Sunil Narine with KKR; they are retained benchmarks, not released-player acquisition recommendations.
 
-Retrospective selection results are mixed; contextual selection has not established consistent forecasting superiority over ordinary or phase-rate baselines. The final policy is therefore a statistical pressure-lift order plus separate conditional scouting review, not an automatic auction decision. Absolute pressure output and wickets must remain visible rather than being silently blended with lift.
+The separate cross-franchise review checks released players from all ten teams, preferring primary franchise statements to conflicting reporting. It identifies Matheesha Pathirana (reported release, strong supported IPL output), M Shahrukh Khan (official GT release, exploratory late-batting option) and Gerald Coetzee (reported release, combined versus IPL transfer concern) as due-diligence cases. Release is not registration, fitness, NOC or availability. No player passes the strict confirmed-acquisition filter without documented entry and availability.
 
-## Exclusion sensitivity boundary
-
-509 of 837 in-scope matches were conservatively excluded; 475 have ambiguous extras/penalty semantics, with overlapping reasons. There is no verified alternative interpretation of those source codes in the current evidence. No counterfactual shortlist under guessed extras semantics is claimed. Recovering those matches requires source documentation or independently reconciled scorecards before an alternative reconstruction can be defensibly tested. The selection-bias risk remains.
+The PDF uses the official RR squad/purse announcement to frame role hypotheses, rather than assuming an unavailable star can be purchased. It reports the actual decision-objective sensitivity, IPL-only comparisons and weak historical forward validation. Full dated evidence is in `config/auction_evidence_2027.json`; `analysis/recruitment.py` applies the status filter. No player was scored differently to match release status or a preferred name.

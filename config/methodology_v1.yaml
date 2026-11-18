@@ -1,4 +1,6 @@
-version: 1.0.0
+version: 2.1.0
+ipl_evidence_weight: 1.0
+t20i_evidence_weight: 1.0
 seed: 2718
 tau: 0.20
 tau_sensitivity: [0.15, 0.20, 0.25]
@@ -18,16 +20,17 @@ pooling_balls: 60
 bootstrap_replicates: 400
 holdout_start: '2026-01-01'
 development_years: [2023, 2024, 2025]
-rank_policy: shrunk_pressure_vs_usual_contextual_run_lift_per_100_deliveries
+rank_policy: format_weighted_conservative_pressure_output_bowling_Pareto_run_and_wicket_evidence
 tie_rules: [pressure_matches_desc, player_id_asc]
 reference_exposure: player_pressure_vs_own_nonpressure_contextual_residual_within_format
-primary_extras_policy: quarantine_ambiguous_match
+primary_extras_policy: reconcile_no_ball_codes_with_over_innings_and_result_contracts
 first_innings_benchmark: earlier_complete_first_innings_median
 final_ranking_scope: rolling_out_of_time_predictions_2023_2026
 competition_scope: IPL_and_T20I_only
 excluded_competitions: other_T20_leagues
 publication: eligible_player_aggregates_only
-fallback_pressure: 'chase: remaining<=60 and required_rate>=8; first innings: remaining<=30 and wickets_lost>=3'
+primary_pressure: 'late demand OR >=2 wickets in prior 12 legal balls; exclude chase states needing >6 runs per remaining legal ball'
+selection_scope: 'IPL or T20I sample-qualified players with supported roles; equal IPL/T20I delivery weights; no IPL appearance gate'
 fallback_trigger: fewer_than_ten_eligible_players_in_either_role
 entry_legal_balls: 6
 collapse_wicket_window_legal_balls: 12

@@ -1,3 +1,5 @@
+> Historical decision from 14 November. Superseded by the 17 November data-recovery and conservative-output selection policy in [methodology.md](methodology.md). The earlier rankings and exclusion counts below are not the current submission.
+
 # Final method decision for Monday submission
 
 14 November 2026. Submission planned for Monday, 16 November 2026.

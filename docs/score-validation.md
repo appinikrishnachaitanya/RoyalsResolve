@@ -1,3 +1,5 @@
+> Historical validation on the earlier, heavily filtered dataset. For the current reconstruction, pressure rules and selection policy, see [methodology.md](methodology.md). These older numbers do not describe the current run.
+
 # Pressure score validation and recommendation
 
 Reviewed 14 November 2026 against published analysis `80843dd8cd70f131`.

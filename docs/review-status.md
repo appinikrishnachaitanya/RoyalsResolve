@@ -1,9 +1,11 @@
-# Evidence review
+# Current evidence review
 
-Unsupported ages, prices, auction availability, replacement wins and squad simulation are omitted at the user's request. No official affiliation, human-only authorship or model superiority claim is made.
+The 17 November revision recovers 435 previously excluded matches with reconciled no-ball semantics. Of 837 in-scope IPL/T20I matches, 762 are retained and 597 are later-season evaluation matches. One formerly retained match fails a new independent reconciliation check. IPL and T20I deliveries have equal weight.
 
-Implemented: safe ingestion; source-scope filter for IPL/T20I; real audit; exclusions; pre-delivery state; chronological contextual run models; experimental margin; explicit coverage fallback; player pressure-vs-usual score; supported role samples; match-cluster uncertainty; common-assignment comparisons; raw-stat leaders; retrospective checks; sourced 2026 RR coverage; private replay; React dashboard; Round 1 methodology and evidence PDF.
+Pressure includes late demand or a recent two-wicket collapse. Context models use earlier seasons only. Improvement is a separate diagnostic; conservative output and bowling wicket evidence determine the decision order. A positive-output support group precedes weaker evidence, and no nationality or previous-IPL-appearance gate is imposed. Eligibility against the organizer dropdown remains unverified.
 
-Limits: ambiguous extras and conservative exclusions create selection bias. Margin coverage cannot support both top tens, so the fallback pressure definition is used. Run-only scores omit wicket value. Venue/opponent effects are not fitted. Stress-path support and prospective generalisation remain unvalidated. Holdout results do not validate player-ranking prediction. No supported 2027 purchase recommendation or future-win estimate is asserted.
+Checks include source semantics, complete overs, numeric result margins, sample and score reconciliation, bootstrap intervals, selection-policy tests, future-cohort comparisons, PDF agreement, frontend build and publication allowlist. Prospective superiority is not established. A current RR role-first strategy is included in the PDF, with one concise limitations paragraph.
 
-Interactive browser/mobile checks stopped due browser-tool restrictions. Docker engine is stopped. Deployment is manual. These are not successful checks.
+Current work remains local; the user requested that the PDF not be pushed. Live deployment and final organizer dropdown matching are not verified.
+
+The 18 November report review leaves performance scores and order unchanged. An independent audit reproduces the exact selection inputs and tests pressure alternatives, priors, seeds and 2,000 resamples. The PDF includes an IPL-only comparison, full bowling lower-bound inputs/support groups and a dominance example, dismissal-risk diagnostics, explicit retrospective framing and dated cross-franchise recruitment evidence. All-ten-team release coverage distinguishes primary statements from reported statuses; no confirmed registration/availability is invented.

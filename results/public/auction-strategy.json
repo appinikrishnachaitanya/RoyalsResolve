@@ -1,0 +1,395 @@
+{
+  "analysis_id": "a9616ec62e10d1a2",
+  "as_of": "2026-11-17",
+  "squad": {
+    "retained_players": [
+      "Riyan Parag",
+      "Yashasvi Jaiswal",
+      "Vaibhav Sooryavanshi",
+      "Ravindra Jadeja",
+      "Dhruv Jurel",
+      "Jofra Archer",
+      "Aman Rao Perala",
+      "Brijesh Sharma",
+      "Nandre Burger",
+      "Dasun Shanaka",
+      "Donovan Ferreira",
+      "Lhuan-dre Pretorius",
+      "Ravi Bishnoi",
+      "Sandeep Sharma",
+      "Shubham Dubey",
+      "Sushant Mishra",
+      "Yash Punja",
+      "Mohammed Shami",
+      "Manimaran Siddharth"
+    ],
+    "released_players": [
+      "Tushar Deshpande",
+      "Adam Milne",
+      "Kuldeep Sen",
+      "Yudhvir Singh",
+      "Kwena Maphaka",
+      "Vignesh Puthur",
+      "Shimron Hetmyer",
+      "Ravi Singh",
+      "Emanjot Singh Chahal"
+    ],
+    "squad_size": 19,
+    "purse_crore": 27.05,
+    "maximum_vacancies": 6,
+    "source": "https://www.rajasthanroyals.com/latest-news/ipl-2027-rr-players-retention-list-retained-released"
+  },
+  "picks": [
+    {
+      "name": "M Shahrukh Khan",
+      "role": "batting",
+      "assignments": [
+        "Middle order",
+        "Death overs"
+      ],
+      "rationale": "Finisher to review first after Hetmyer\u2019s departure. Compare his death-overs scoring with RR\u2019s current options.",
+      "status": "Official release; registration unverified",
+      "ipl_output": 16.196,
+      "ipl_range": [
+        -3.5578,
+        35.126
+      ],
+      "deliveries": 163,
+      "matches": 25,
+      "positive_matches": 17
+    },
+    {
+      "name": "Abishek Porel",
+      "role": "batting",
+      "assignments": [
+        "Opener",
+        "Middle order"
+      ],
+      "rationale": "Opening or middle-order depth. Consider if RR needs flexible batting cover.",
+      "status": "Official release; registration unverified",
+      "ipl_output": 6.3745,
+      "ipl_range": [
+        -20.5706,
+        36.3124
+      ],
+      "deliveries": 97,
+      "matches": 18,
+      "positive_matches": 7
+    },
+    {
+      "name": "Nitish Rana",
+      "role": "batting",
+      "assignments": [
+        "Middle order"
+      ],
+      "rationale": "Middle-order depth if RR needs an experienced alternative. Review against the current batting unit.",
+      "status": "Official release; registration unverified",
+      "ipl_output": 4.8325,
+      "ipl_range": [
+        -13.8289,
+        20.0527
+      ],
+      "deliveries": 131,
+      "matches": 20,
+      "positive_matches": 9
+    },
+    {
+      "name": "Nehal Wadhera",
+      "role": "batting",
+      "assignments": [
+        "Middle order",
+        "Death overs"
+      ],
+      "rationale": "Middle and late-overs depth. Listed uncapped at the 2025 auction. Exploratory option given below-expected IPL pressure output.",
+      "status": "Official release; registration unverified",
+      "ipl_output": -2.2648,
+      "ipl_range": [
+        -19.313,
+        17.9177
+      ],
+      "deliveries": 249,
+      "matches": 25,
+      "positive_matches": 10
+    },
+    {
+      "name": "Jacob Bethell",
+      "role": "batting",
+      "assignments": [
+        "Opener",
+        "Middle order",
+        "Death overs"
+      ],
+      "rationale": "Flexible batting prospect. The direct IPL pressure sample is too small for a supported estimate.",
+      "status": "Official release; registration unverified",
+      "ipl_output": null,
+      "ipl_range": null,
+      "deliveries": 5,
+      "matches": 1,
+      "positive_matches": 0
+    },
+    {
+      "name": "Rahul Tripathi",
+      "role": "batting",
+      "assignments": [
+        "Middle order"
+      ],
+      "rationale": "Domestic middle-order alternative. Review his scoring against pace and spin in RR\u2019s intended batting position.",
+      "status": "Reported release; registration unverified",
+      "ipl_output": -9.6689,
+      "ipl_range": [
+        -24.107,
+        3.5437
+      ],
+      "deliveries": 46,
+      "matches": 9,
+      "positive_matches": 3
+    },
+    {
+      "name": "Shimron Hetmyer",
+      "role": "batting",
+      "assignments": [
+        "Middle order",
+        "Death overs"
+      ],
+      "rationale": "Familiar finishing benchmark and possible return option. His IPL pressure output was below expectation.",
+      "status": "Official release; registration unverified",
+      "ipl_output": -3.7112,
+      "ipl_range": [
+        -20.3546,
+        12.4192
+      ],
+      "deliveries": 384,
+      "matches": 37,
+      "positive_matches": 15
+    },
+    {
+      "name": "Kamindu Mendis",
+      "role": "batting",
+      "assignments": [
+        "Middle order",
+        "Death overs"
+      ],
+      "rationale": "Overseas middle-order and late-overs option. Review how often RR could field him in that role.",
+      "status": "Reported release; registration unverified",
+      "ipl_output": null,
+      "ipl_range": null,
+      "deliveries": 28,
+      "matches": 5,
+      "positive_matches": 2
+    },
+    {
+      "name": "Rachin Ravindra",
+      "role": "batting",
+      "assignments": [
+        "Opener",
+        "Middle order"
+      ],
+      "rationale": "Overseas opening or middle-order cover if squad balance calls for another top-order option.",
+      "status": "Reported release; registration unverified",
+      "ipl_output": null,
+      "ipl_range": null,
+      "deliveries": 19,
+      "matches": 2,
+      "positive_matches": 2
+    },
+    {
+      "name": "Matthew Short",
+      "role": "batting",
+      "assignments": [
+        "Opener",
+        "Middle order"
+      ],
+      "rationale": "Overseas top-order alternative. Compare with RR\u2019s established openers before spending a slot.",
+      "status": "Reported release; registration unverified",
+      "ipl_output": null,
+      "ipl_range": null,
+      "deliveries": 28,
+      "matches": 3,
+      "positive_matches": 1
+    },
+    {
+      "name": "Matheesha Pathirana",
+      "role": "bowling",
+      "assignments": [
+        "Death",
+        "Middle overs"
+      ],
+      "rationale": "Specialist death cover for Archer. Strong direct IPL pressure evidence. Check fitness and overseas slot.",
+      "status": "Reported release; registration unverified",
+      "ipl_output": 22.2701,
+      "ipl_range": [
+        10.797,
+        32.8789
+      ],
+      "deliveries": 448,
+      "matches": 26,
+      "positive_matches": 20
+    },
+    {
+      "name": "Gerald Coetzee",
+      "role": "bowling",
+      "assignments": [
+        "Death",
+        "Middle overs",
+        "Powerplay"
+      ],
+      "rationale": "Overseas pace cover. Review his specific assignments because IPL-only output is uncertain.",
+      "status": "Reported release; registration unverified",
+      "ipl_output": -0.3798,
+      "ipl_range": [
+        -11.3359,
+        9.4896
+      ],
+      "deliveries": 102,
+      "matches": 11,
+      "positive_matches": 6
+    },
+    {
+      "name": "Ishant Sharma",
+      "role": "bowling",
+      "assignments": [
+        "Death",
+        "Middle overs",
+        "Powerplay"
+      ],
+      "rationale": "Domestic seam cover across phases. Consider if preserving an overseas slot matters.",
+      "status": "Official release; registration unverified",
+      "ipl_output": 3.9873,
+      "ipl_range": [
+        -17.6483,
+        21.4446
+      ],
+      "deliveries": 133,
+      "matches": 19,
+      "positive_matches": 10
+    },
+    {
+      "name": "Trent Boult",
+      "role": "bowling",
+      "assignments": [
+        "Death",
+        "Middle overs",
+        "Powerplay"
+      ],
+      "rationale": "New-ball alternative if RR needs specialist cover. Compare powerplay output with Shami and Archer.",
+      "status": "Official release; registration unverified",
+      "ipl_output": -2.3026,
+      "ipl_range": [
+        -19.1566,
+        15.1796
+      ],
+      "deliveries": 284,
+      "matches": 35,
+      "positive_matches": 17
+    },
+    {
+      "name": "Dushmantha Chameera",
+      "role": "bowling",
+      "assignments": [
+        "Death",
+        "Middle overs",
+        "Powerplay"
+      ],
+      "rationale": "Overseas pace depth across phases. Watchlist option with insufficient support for an IPL-only estimate.",
+      "status": "Official release; registration unverified",
+      "ipl_output": null,
+      "ipl_range": null,
+      "deliveries": 56,
+      "matches": 6,
+      "positive_matches": 2
+    },
+    {
+      "name": "Avesh Khan",
+      "role": "bowling",
+      "assignments": [
+        "Death",
+        "Middle overs",
+        "Powerplay"
+      ],
+      "rationale": "Domestic pace alternative for death and powerplay cover. Compare his death-overs assignments with RR\u2019s incumbents.",
+      "status": "Reported release; registration unverified",
+      "ipl_output": 8.1138,
+      "ipl_range": [
+        -5.7746,
+        21.892
+      ],
+      "deliveries": 407,
+      "matches": 37,
+      "positive_matches": 22
+    },
+    {
+      "name": "Mustafizur Rahman",
+      "role": "bowling",
+      "assignments": [
+        "Death",
+        "Middle overs",
+        "Powerplay"
+      ],
+      "rationale": "Left-arm death-bowling alternative. Stronger combined output than IPL-only output warrants a role-specific review.",
+      "status": "Reported release; registration unverified",
+      "ipl_output": 1.0831,
+      "ipl_range": [
+        -21.3822,
+        18.5391
+      ],
+      "deliveries": 147,
+      "matches": 12,
+      "positive_matches": 8
+    },
+    {
+      "name": "Jaydev Unadkat",
+      "role": "bowling",
+      "assignments": [
+        "Death",
+        "Middle overs",
+        "Powerplay"
+      ],
+      "rationale": "Domestic left-arm pace cover. Compare across phases where RR needs a backup.",
+      "status": "Reported release; registration unverified",
+      "ipl_output": -3.7158,
+      "ipl_range": [
+        -23.532,
+        15.2973
+      ],
+      "deliveries": 122,
+      "matches": 14,
+      "positive_matches": 7
+    },
+    {
+      "name": "Akash Madhwal",
+      "role": "bowling",
+      "assignments": [
+        "Death",
+        "Middle overs",
+        "Powerplay"
+      ],
+      "rationale": "Domestic seam option to scout for death-overs cover. Review his recent IPL execution in that phase.",
+      "status": "Reported release; registration unverified",
+      "ipl_output": -5.039,
+      "ipl_range": [
+        -30.3068,
+        21.4503
+      ],
+      "deliveries": 151,
+      "matches": 12,
+      "positive_matches": 7
+    },
+    {
+      "name": "Mayank Markande",
+      "role": "bowling",
+      "assignments": [
+        "Middle overs"
+      ],
+      "rationale": "Domestic middle-overs spin depth if RR needs cover for Bishnoi.",
+      "status": "Reported release; registration unverified",
+      "ipl_output": -13.9137,
+      "ipl_range": [
+        -37.2965,
+        13.8367
+      ],
+      "deliveries": 112,
+      "matches": 12,
+      "positive_matches": 4
+    }
+  ]
+}
